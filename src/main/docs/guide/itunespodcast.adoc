@@ -1,0 +1,10 @@
+dependency:micronaut-itunespodcast[groupId="io.micronaut.configuration"]
+
+An https://itunespartner.apple.com/en/podcasts/overview[Itunes podcast] feed, is a valid RSS 2.0 feed with additional tags.
+
+For example, the following bean will generate the https://help.apple.com/itc/podcasts_connect/#/itcbaf351599[Itunes Podcast RSS Feed's sample]
+
+[source, java]
+----
+include::{sourcedir}/itunespodcast/src/test/groovy/io/micronaut/rss/itunespodcast/DefaultRssFeedProvider.java[tag=class]
+----
