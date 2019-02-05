@@ -1,11 +1,11 @@
 language: java
 install: true
 jdk:
-  - openjdk8
-  - openjdk11
+- openjdk8
+- openjdk11
 script:
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis-build-pr.sh; fi
-  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis-build.sh; fi
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis-build-pr.sh; fi
+- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis-build.sh; fi
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -13,3 +13,8 @@ cache:
   directories:
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
+env:
+  global:
+  - secure: AxL/5rAHRhAZPjIxzGQL2yzF0udtdHoLwrNWDPv0VU5gaMkHBr+DEJFw1kogNdtIN7oZxCV1rRymX1/4bsUUCIefJuwYA/ff4G1bao3OJfBxGLqRRmiCMX+khDeZvG6RRltKJdz59BxM9iX+YWabFZueuZ+ket5mQG3pKziopZCgRZe0iVejggeTaQxPVYH5MC2o+iGmpwzoItiDWIKafQZboamPL7c4rVdZPbFseQDovppPBCsLbL9qbsJ1cgeDE2QxsS4SgCPL1ixVDK1nD6PnD66Lzp1bq2ItOZeK0XjhTo+N6n1KGGqJv7OAhBsCCtDKFunSPze3ZYA0fyN3GOOoVsI6L6Qw4+hAcP48zTUGfHVeHjsxJNJ2RCAc5rK1ck/Ve0KUqna7ianmCQ/0Vw5fZs4veWXMSkXkqfpd5PKxr3l0bIamGTG0cx8QAFNjSpp4HEyIgjHj975Nu8G36E1feQClejVpuofvoWMfDfN1teBgw+X9hFlZVnlSCmWDADtovCBHzmiOU+Zva95sepMaGIwcbm5s+QGwZP1/kaxDkGit8L8rQ8o1mhimGRvuo7PUvyN1GwXpCk4n6nj5wRfs/7bSf3cIZx5dAjjyhSl1q2/hRiNqjUb2R67NommdbUtFE2XvUwp89dtqtnUtCpV9hzNr1PluT+5rHYmJrmQ=
+  - secure: b/hmHuitm+nT8JNVp9/ICi48RY1epZS+pxb5KL48qN1kHVfmtXqQYN9JDacdlEW/IBaiArHeNnGPB3shTBRyjtNyFN3SkZttV2/C4NRR4Ds3ciiLEEDauZ/xDUzfobJ9wGJl7JFF2p5dFWKWXry/Tm1SKpRWkY68rbXbo2yP1Ff7zk6/2bm3zqhiq6cyGvZYeMCEnpg9G4aCNIfb+ByVr8Gqdqe6j0WleRWr/hv21mO9xA+DcnLTR8wlov0pxDQa2ApesozE5y1XnPTPoClBAvzBpHnUAFq4Wucm1Dxc4dHSf7fnG5YUg9Ea6VZafdoMeEgeI4NPqmHMrRpbseJALCmvyBN7s9+YK2ch8hj1G8SvE1Z43zCuRdBX4Lp77jRB3bA1JrBo5+kXYEkT+nhJz/XTEoZMKPsN9A8yNo0ps56TvzetVtwimagNdfgxil0gh/Bapchm+U/bdY2EJ+9jqgR2rVwEDj+z92JE7g8MO2FJ+d/qtfTcguTRYRV627yBJ+QZ8v+8kmUo3AiJjNCmfP70zB3G0FCg7s7xBGzqJmwO4rTHSCvwlLpL1YpLIxtJL7PK5cB23tY+wQNmjrPeP4CvY0IJC4iIUukWrrIFP7ZJK73gvvHthGYOCvd/kJ6MXVZsDhSaNt6BDLyceqVW1Vwdh2BXuoOGPJ5ERnYwi3o=
+  - secure: omCo8HwWFkA3dApDcWCu6YK6sGs7R5ej/cZItZVXeuBwndhFoUTKvEOg0U2dAH9ncpA2KdbI0Rj+Klac6PQ2wzJV38c0kBITTHkVZghciOALJ2Lt4HyLXWZC37Y2zrAADm6GY4nLo6YIVDmExoVGeG+RbWmybPSk1FfonMAEr3rLoS7WWu7xLpqITVfRMj5HH2GJYWEWj8B6LnfN4kEhnr9VKzPuJO35aNVo18Fwl9hzn063kio64a7xc6vTdPxwl1WWXXJxnSN6tMbeErl3P+EK0nfnsqOi57Im8IL2OHux+adnmU9WnAtmbkL9u7iQqkB9Vh2Kkejp3Tkvm7JZ1bgCsly+mGkOgaFk3pw1xotf/qnl0ZkV7NsS/1rQ4M2CV24L2WEsO81KeMyWaycv5J94BezebPM36//PbLJ+HfS1IsnZ2TZ6uCF9DhYh+iOQjw3DovbuOicVqtlp9iS9KuVkjPulrxevjeJ1isN5NwExc2p4vqoyfipYo04/ZPoyHgjJISy2sQY0OfYC2ANtes48WftxVfoOKNYDAEKE+rRmOwz2Z9lmBIz38zTsKsJcFwuJ5RqU+cErNfojo74/XR6fY77IcNOi7GkCr3/rfc04hILnaJ0fPgIRwLxuJmqjiPHM3RJ46gA4p3EinqXO+RhnTdThgiY01iCALWi0koM=
