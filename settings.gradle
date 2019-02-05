@@ -1,4 +1,0 @@
-include 'rss'
-include 'itunespodcast'
-
-rootProject.name = 'micronaut-rss'
