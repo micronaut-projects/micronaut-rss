@@ -1,5 +1,3 @@
-dependency:micronaut-rss[groupId="io.micronaut.configuration"]
-
 This modules exposes a controller api:rss.FeedController[] which exposes feeds as described by https://cyber.harvard.edu/rss/rss.html[RSS 2.0 Specification].
 
 The following table displays several characteristics which can be configured:
