@@ -43,9 +43,11 @@
                             <a href="../guide/index.html" class="button">Table of contents</a>
                             <div id="nav-summary-childs" style="display:none;">
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#rss"><strong>1</strong><span>RSS 2.0</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#installation"><strong>1</strong><span>Installation</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#itunespodcast"><strong>2</strong><span>Itunes Podcast RSS Feed</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#rss"><strong>2</strong><span>RSS 2.0</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#itunespodcast"><strong>3</strong><span>Itunes Podcast RSS Feed</span></a></div>
                                 
                             </div>
                         </div>
@@ -77,9 +79,11 @@
 
         <h2>Table of Contents</h2>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-rss"><a href="#rss"><strong>1</strong><span>RSS 2.0</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-installation"><a href="#installation"><strong>1</strong><span>Installation</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>2</strong><span>Itunes Podcast RSS Feed</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-rss"><a href="#rss"><strong>2</strong><span>RSS 2.0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>3</strong><span>Itunes Podcast RSS Feed</span></a></div>
         
         </div>
     </div>
@@ -93,7 +97,44 @@
     </div>
     
 
-<h1 id="rss">1 RSS 2.0</h1>
+<h1 id="installation">1 Installation</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/installation.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>This project eases RSS 2.0. feeds generation with Micronaut.</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="gradle">compile <span class="hljs-string">'io.micronaut.configuration:micronaut-rss:1.0.0.BUILD-SNAPSHOT'</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-rss&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0.BUILD-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+<div class="paragraph">
+<p>To use the <code>BUILD-SNAPSHOT</code> version of this library, check the <a href="https://docs.micronaut.io/latest/guide/index.html#usingsnapshots">documentation to use snapshots</a>.</p>
+</div>
+<div class="paragraph">
+<p>Code can be found at the <a href="https://github.com/micronaut-projects/micronaut-rss">micronaut-rss</a> repository.</p>
+</div>
+
+
+<h1 id="rss">2 RSS 2.0</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/rss.adoc"'>
@@ -102,22 +143,6 @@
 </div>
 
 
-<div class="paragraph">
-<p>        <div class="listingblock multi-language-sample">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="gradle">compile <span class="hljs-string">'io.micronaut.configuration:micronaut-rss'</span></code></pre>
-</div>
-</div>
-<div class="listingblock multi-language-sample">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
-    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
-    &lt;artifactId&gt;micronaut-rss&lt;/artifactId&gt;
-&lt;/dependency&gt;</code></pre>
-</div>
-</div>
-</p>
-</div>
 <div class="paragraph">
 <p>This modules exposes a controller <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
 </div>
@@ -215,7 +240,7 @@ class MockRssFeedProvider implements RssFeedProvider {
 </div>
 
 
-<h1 id="itunespodcast">2 Itunes Podcast RSS Feed</h1>
+<h1 id="itunespodcast">3 Itunes Podcast RSS Feed</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/itunespodcast.adoc"'>
