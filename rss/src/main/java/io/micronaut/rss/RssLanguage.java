@@ -16,8 +16,10 @@
 
 package io.micronaut.rss;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Languages for RSS.
@@ -165,5 +167,11 @@ public enum RssLanguage {
         m.put("name", getLanguageName());
         m.put("code", getLanguageCode());
         return m;
+    }
+
+    public Optional<RssLanguage> of(String languageCode) {
+        return Arrays.stream(RssLanguage.values())
+            .filter(lang -> lang.getLanguageCode().equals(languageCode))
+            .findFirst();
     }
 }
