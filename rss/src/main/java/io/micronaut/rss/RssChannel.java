@@ -109,7 +109,7 @@ public class RssChannel {
      * <p>It's how people refer to your service. If you have an HTML website that contains the same information as your RSS file, the title of your channel should be the same as the title of your website.</p>
      * @return The name of the channel.
      */
-    String getTitle() {
+    public String getTitle() {
         return title;
     }
 
