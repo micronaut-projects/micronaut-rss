@@ -59,6 +59,11 @@ public class ItunesPodcastEpisode extends RssItem {
     @Nullable
     private String image;
 
+    @Nullable
+    public String getImage() {
+        return image;
+    }
+
     /**
      * Sets the episode type.
      * @param episodeType Episode's type
