@@ -4,7 +4,6 @@ dependencies {
     compileOnly "io.micronaut:micronaut-inject-java"
     compile "io.micronaut:micronaut-inject"
     compile project(":rss")
-
     testCompile "org.codehaus.groovy:groovy-xml:$groovyVersion"
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"
     testCompile "io.micronaut:micronaut-http-client"
