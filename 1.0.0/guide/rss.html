@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>2 RSS 2.0 1.0.0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
+    <script type="text/javascript">
+function addJsClass() {
+    var classes = document.body.className.split(" ");
+    classes.push("js");
+    document.body.className = classes.join(" ");
+}
+    </script>
+</head>
+
+<body class="body" onload="addJsClass();">
+<div id="navigation">
+    <div class="navTitle">
+        
+        Micronaut RSS
+    </div>
+    <div class="navLinks">
+        <ul>
+            <li>
+                <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
+                    <a href="../guide/index.html" class="button">Table of contents</a>
+
+                    <div id="nav-summary-childs" style="display:none;">
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/installation.html"><strong>1</strong><span>Installation</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/rss.html"><strong>2</strong><span>RSS 2.0</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/itunespodcast.html"><strong>3</strong><span>Itunes Podcast RSS Feed</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li class="separator selected">
+                <a id="ref-button" onclick="localToggle(); return false;" href="#">Quick Reference</a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<table id="colset" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td id="col1">
+            <div id="main" class="corner-all">
+
+                
+                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>1</strong><span>Installation</span></a></div>
+                
+
+                <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
+
+                
+                    <div class="toc-item next-right"><a href="../guide/itunespodcast.html"><strong>3</strong><span>Itunes Podcast RSS Feed</span> >></a></div>
+                
+
+
+                <div class="project">
+                    <h1>2 RSS 2.0</h1>
+
+                    <p><strong>Version:</strong> 1.0.0</p>
+                </div>
+
+                
+
+                
+
+<h1 id="rss">2 RSS 2.0</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/rss.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>This modules exposes a controller <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following table displays several characteristics which can be configured:</p>
+</div>
+<a id="io.micronaut.rss.FeedControllerConfigurationProperties" href="#io.micronaut.rss.FeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> should be enabled. Default value (true).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> path. Default value "/feed"</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DeafultRssFeedRenderer.html">DeafultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you wanted to generate a feed as the one described in the <a href="https://cyber.harvard.edu/rss/examples/rss2sample.xml"&gt;https://cyber.harvard.edu/rss/examples/rss2sample.xml">RSS 2.0 specifiation&#8217;s sample</a> you could create the next bean:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+class MockRssFeedProvider implements RssFeedProvider {
+    RssChannel rssChannel = RssChannel.builder("Liftoff News", "http://liftoff.msfc.nasa.gov/", "Liftoff to Space Exploration.")
+            .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
+            .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 10, 4, 0, 0), ZoneId.of("GMT")))
+            .lastBuildDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 10, 9, 41, 1), ZoneId.of("GMT")))
+            .docs("http://blogs.law.harvard.edu/tech/rss")
+            .generator("Weblog Editor 2.0")
+            .managingEditor("editor@example.com")
+            .webMaster("webmaster@example.com")
+            .item(RssItem.builder()
+                .title("Star City")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp")
+                .description("How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia's &amp;lt;a href=\"http://howe.iki.rssi.ru/GCTC/gctc_e.htm\"&amp;gt;Star City&amp;lt;/a&amp;gt;.")
+               .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 3, 9, 39, 21), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/06/03.html#item573")
+                .build())
+            .item(RssItem.builder()
+                .description("Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a &amp;lt;a href=\"http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm\"&amp;gt;partial eclipse of the Sun&amp;lt;/a&amp;gt; on Saturday, May 31st.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 30, 11, 6, 42), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/30.html#item572")
+                .build())
+            .item(RssItem.builder()
+                .title("The Engine That Does More")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-VASIMR.asp")
+                .description("Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 27, 8, 37, 32), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/27.html#item571")
+            .build())
+            .item(RssItem.builder()
+                .title("Astronauts' Dirty Laundry")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp")
+                .description("Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 20, 8, 56, 02), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/20.html#item570")
+                .build())
+            .build();
+
+    @Override
+    public RssChannel fetch() {
+        return rssChannel;
+    }
+
+    @Override
+    public RssChannel fetchById(Serializable id) {
+        if(id != null &amp;&amp; id.equals("1")) {
+            return rssChannel;
+        }
+        return null;
+    }
+}</code></pre>
+</div>
+</div>
+
+
+                <div style="clear:both;margin-top:15px;"></div>
+                
+                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>1</strong><span>Installation</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../guide/itunespodcast.html"><strong>3</strong><span>Itunes Podcast RSS Feed</span> >></a></div>
+                
+                <div style="clear:both"></div>
+            </div>
+        </td>
+        <td id="col2">
+            <div class="local clearfix">
+                <div class="local-title">
+                    <a href="../guide/index.html" target="mainFrame">Quick Reference</a>
+                    <span class="toggle">(<a href="#" onclick="localToggle(); return false;">hide</a>)</span>
+                </div>
+                <div class="menu">
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div id="footer">
+    
+    
+</div>
+
+<script type="text/javascript" src="../js/docs.js"></script>
+
+</body>
+</html>

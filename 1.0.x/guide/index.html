@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>Micronaut RSS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
+    <link rel="stylesheet" href="../css/custom.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
+    <link rel="stylesheet" href="../css/highlight/agate.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/guide.js"></script>
+    <script src="../js/multi-language-sample.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="../css/multi-language-sample.css"/>
+    <script src="../js/docs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+    <script type="text/javascript">
+        function addJsClass(el) {
+            var classes = document.body.className.split(" ");
+            classes.push("js");
+            document.body.className = classes.join(" ");
+        }
+    </script>
+
+</head>
+
+<body class="body" id="docs" onload="addJsClass();" onhashchange="highlightMenu()">
+
+<div id="table-of-content-nav-link" class="desktop">
+    <a title="Collapse/Open Table of contents" title="Hide Table of Contents" href="javascript:hideTableOfContents();" class="button">[ + ]</a>
+</div>
+
+<div id="main">
+    <div id="navigation" class="no-print">
+        <div class="navTitle">
+            <span id="logo"><a href="http://micronaut.io" title="Go to Micronaut Website"><img src="../img/micronaut-logo-white.svg" alt="Micronaut"/></a></span>
+        </div>
+        <div class="navLinks">
+            <ul>
+                    <li>
+                        <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)" class="desktop">
+                            <a href="../guide/index.html" class="button">Table of contents</a>
+                            <div id="nav-summary-childs" style="display:none;">
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#installation"><strong>1</strong><span>Installation</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#rss"><strong>2</strong><span>RSS 2.0</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#itunespodcast"><strong>3</strong><span>Itunes Podcast RSS Feed</span></a></div>
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                <li id="table-of-content-nav-link-mobile" class="mobile">
+                    <a title="Scroll to Table of contents" href="javascript:scrollToTop();" class="button">Toc</a>
+                </li>
+                <li class="desktop">
+                    <a title="Go to API documentation" href="../api/index.html" class="button">API Reference</a>
+                </li>
+                <li class="mobile">
+                    <a title="Go to API documentation" href="../api/index.html" class="button">API</a>
+                </li>
+                <li class="desktop">
+                    <a title="Go to Configuration Reference documentation" href="../guide/configurationreference.html" class="button">Configuration Reference</a>
+                </li>
+                <li class="mobile">
+                    <a title="Go to Configuration Reference documentation" href="../guide/configurationreference.html" class="button">Conf</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    
+    <div id="table-of-content">
+        <div class="toc-content">
+
+        <h2>Table of Contents</h2>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-installation"><a href="#installation"><strong>1</strong><span>Installation</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-rss"><a href="#rss"><strong>2</strong><span>RSS 2.0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>3</strong><span>Itunes Podcast RSS Feed</span></a></div>
+        
+        </div>
+    </div>
+    
+    <div class="docs-content">
+    <div class="project">
+        <h1>Micronaut RSS</h1>
+        <p></p>
+        <p>It eases the creation of RSS feeds with Micronaut</p>
+        <p><strong>Version:</strong> 1.0.0</p>
+    </div>
+    
+
+<h1 id="installation">1 Installation</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/installation.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>This project eases RSS 2.0. feeds generation with Micronaut.</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="gradle">compile <span class="hljs-string">'io.micronaut.configuration:micronaut-rss:1.0.0'</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-rss&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+<div class="paragraph">
+<p>To use the <code>BUILD-SNAPSHOT</code> version of this library, check the <a href="https://docs.micronaut.io/latest/guide/index.html#usingsnapshots">documentation to use snapshots</a>.</p>
+</div>
+<div class="paragraph">
+<p>Code can be found at the <a href="https://github.com/micronaut-projects/micronaut-rss">micronaut-rss</a> repository.</p>
+</div>
+
+
+<h1 id="rss">2 RSS 2.0</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/rss.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>This modules exposes a controller <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following table displays several characteristics which can be configured:</p>
+</div>
+<a id="io.micronaut.rss.FeedControllerConfigurationProperties" href="#io.micronaut.rss.FeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> should be enabled. Default value (true).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> path. Default value "/feed"</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DeafultRssFeedRenderer.html">DeafultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you wanted to generate a feed as the one described in the <a href="https://cyber.harvard.edu/rss/examples/rss2sample.xml"&gt;https://cyber.harvard.edu/rss/examples/rss2sample.xml">RSS 2.0 specifiation&#8217;s sample</a> you could create the next bean:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+class MockRssFeedProvider implements RssFeedProvider {
+    RssChannel rssChannel = RssChannel.builder("Liftoff News", "http://liftoff.msfc.nasa.gov/", "Liftoff to Space Exploration.")
+            .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
+            .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 10, 4, 0, 0), ZoneId.of("GMT")))
+            .lastBuildDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 10, 9, 41, 1), ZoneId.of("GMT")))
+            .docs("http://blogs.law.harvard.edu/tech/rss")
+            .generator("Weblog Editor 2.0")
+            .managingEditor("editor@example.com")
+            .webMaster("webmaster@example.com")
+            .item(RssItem.builder()
+                .title("Star City")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp")
+                .description("How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia's &amp;lt;a href=\"http://howe.iki.rssi.ru/GCTC/gctc_e.htm\"&amp;gt;Star City&amp;lt;/a&amp;gt;.")
+               .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 3, 9, 39, 21), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/06/03.html#item573")
+                .build())
+            .item(RssItem.builder()
+                .description("Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a &amp;lt;a href=\"http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm\"&amp;gt;partial eclipse of the Sun&amp;lt;/a&amp;gt; on Saturday, May 31st.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 30, 11, 6, 42), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/30.html#item572")
+                .build())
+            .item(RssItem.builder()
+                .title("The Engine That Does More")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-VASIMR.asp")
+                .description("Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 27, 8, 37, 32), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/27.html#item571")
+            .build())
+            .item(RssItem.builder()
+                .title("Astronauts' Dirty Laundry")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp")
+                .description("Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 20, 8, 56, 02), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/20.html#item570")
+                .build())
+            .build();
+
+    @Override
+    public RssChannel fetch() {
+        return rssChannel;
+    }
+
+    @Override
+    public RssChannel fetchById(Serializable id) {
+        if(id != null &amp;&amp; id.equals("1")) {
+            return rssChannel;
+        }
+        return null;
+    }
+}</code></pre>
+</div>
+</div>
+
+
+<h1 id="itunespodcast">3 Itunes Podcast RSS Feed</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/itunespodcast.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="gradle">compile <span class="hljs-string">'io.micronaut.configuration:micronaut-itunespodcast'</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-itunespodcast&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+<div class="paragraph">
+<p>An <a href="https://itunespartner.apple.com/en/podcasts/overview">Itunes podcast</a> feed, is a valid RSS 2.0 feed with additional tags.</p>
+</div>
+<div class="paragraph">
+<p>For example, the following bean will generate the <a href="https://help.apple.com/itc/podcasts_connect/#/itcbaf351599">Itunes Podcast RSS Feed&#8217;s sample</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+public class DefaultRssFeedProvider implements RssFeedProvider {
+
+    @Override
+    public RssChannel fetch() {
+        return ItunesPodcast.builder()
+                .title("Hiking Treks")
+                .link("https://www.apple.com/itunes/podcasts/")
+                .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
+                .copyright("&amp;#8471; &amp;amp; &amp;#xA9; 2017 John Appleseed")
+                .description("Love to get outdoors and discover nature&amp;apos;s treasures? Hiking Treks is the show for you. We review hikes and excursions, review outdoor gear and interview a variety of naturalists and adventurers. Look for new episodes each week.")
+                .subtitle("Find your trail. Great hikes and outdoor adventures.")
+                .author("The Sunset Explorers")
+                .subtitle("Find your trail. Great hikes and outdoor adventures.")
+                .type(ItunesPodcastType.SERIAL)
+                .owner(ItunesPodcastOwner.builder()
+                        .name("Sunset Explorers")
+                        .email("mountainscape@icloud.com")
+                        .build())
+                .image(RssChannelImage
+                        .builder("Hiking Treks", "http://podcasts.apple.com/resources/example/hiking_treks/images/cover_art.jpg", "https://www.apple.com/itunes/podcasts/")
+                        .build())
+                .summary("Love to get outdoors and discover nature&amp;apos;s treasures? Hiking Treks is the show for you. We review hikes and excursions, review outdoor gear and interview a variety of naturalists and adventurers. Look for new episodes each week.")
+                .category(Arrays.asList(ItunesPodcastCategory.SPORTS_AND_RECREATION_OUTDOOR.getCategories()))
+                .explict(false)
+                .item(ItunesPodcastEpisode.builder("Hiking Treks Trailer")
+                        .episodeType(ItunesPodcastEpisodeType.TRAILER)
+                        .author("The Sunset Adventurers")
+                        .subtitle("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States.")
+                        .summary("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States.")
+                        .description("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States.")
+                        .contentEncoded("&lt;![CDATA[The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on &lt;a href=\"https://www.apple.com/itunes/podcasts/\"&gt;Apple Podcasts&lt;/a&gt;]]&gt;")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160418.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2016, 4, 12, 1, 15, 0), ZoneId.of("GMT")))
+                        .duration("17:59")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Mt. Hood, Oregon")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(4)
+                        .season(2)
+                        .title("S02 EP04 Mt. Hood, Oregon")
+                        .author("The Sunset Explorers")
+                        .subtitle("Tips for trekking around the tallest mountain in Oregon")
+                        .summary("Tips for trekking around the tallest mountain in Oregon")
+                        .description("Tips for trekking around the tallest mountain in Oregon")
+                        .contentEncoded("Tips for trekking around the tallest mountain in Oregon")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(8727310)
+                                .type("audio/x-m4a")
+                                .url("http://example.com/podcasts/everything/mthood.m4a")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170606.m4a")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2016, 6, 06, 12, 0, 0), ZoneId.of("GMT")))
+                        .duration("17:04")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Bouldering Around Boulder")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(3)
+                        .season(2)
+                        .title("S02 EP03 Bouldering Around Boulder")
+                        .author("The Sunset Adventurers")
+                        .subtitle("We explore fun walks to climbing areas about the beautiful Colorado city of Boulder.")
+                        .summary("We explore fun walks to climbing areas about the beautiful Colorado city of Boulder.")
+                        .description("We explore fun walks to climbing areas about the beautiful Colorado city of Boulder.")
+                        .image("http://example.com/podcasts/everything/AllAboutEverything/Episode2.jpg")
+                        .contentEncoded("href=\"http://example.com/podcasts/everything/\"")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(5650889)
+                                .type("video/mp4")
+                                .url("http://example.com/podcasts/boulder.mp4")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170530.mp4")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 30, 13, 0, 0), ZoneId.of("GMT")))
+                        .duration("06:27")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Caribou Mountain, Maine")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(2)
+                        .season(2)
+                        .title("S02 EP02 Caribou Mountain, Maine")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Put your fitness to the test with this invigorating hill climb.")
+                        .summary("Put your fitness to the test with this invigorating hill climb.")
+                        .description("Put your fitness to the test with this invigorating hill climb.")
+                        .image("http://example.com/podcasts/everything/AllAboutEverything/Episode3.jpg")
+                        .contentEncoded("href=\"http://example.com/podcasts/everything/\"")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(5650889)
+                                .type("audio/x-m4v")
+                                .url("http://example.com/podcasts/everything/caribou.m4v")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170523.m4v")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 23, 02, 0, 0), ZoneId.of("GMT")))
+                        .duration("04:34")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Stawamus Chief")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(1)
+                        .season(2)
+                        .title("S02 EP01 Stawamus Chief")
+                        .author("The Sunset Adventurers")
+                        .subtitle("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .summary("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .description("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .contentEncoded("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170516.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 16, 02, 0, 0), ZoneId.of("GMT")))
+                        .duration("13:24")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Kuliouou Ridge Trail")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(4)
+                        .season(1)
+                        .title("S01 EP04 Kuliouou Ridge Trail")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .summary("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .description("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .contentEncoded("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160509.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 10, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("15:29")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Blood Mountain Loop")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(3)
+                        .season(1)
+                        .title("S01 EP03 Blood Mountain Loop")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .summary("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .description("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .contentEncoded("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160502.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 3, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("24:59")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Garden of the Gods Wilderness")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(2)
+                        .season(1)
+                        .title("S01 EP02 Garden of the Gods Wilderness")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .summary("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .description("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .contentEncoded("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160425.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 4, 26, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("13:59")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Upper Priest Lake Trail to Continental Creek Trail")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(1)
+                        .season(1)
+                        .title("S01 EP01 Upper Priest Lake Trail to Continental Creek Trail")
+                        .author("The Sunset Adventurers")
+                        .subtitle("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .summary("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .description("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .contentEncoded("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160418a.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 4, 19, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("23:59")
+                        .explicit(false)
+                        .contentEncoded("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on &lt;a href=\"https://www.apple.com/itunes/podcasts/\"&gt;Apple Podcasts&lt;/a&gt;")
+                        .build()).build();
+    }
+
+    @Override
+    public RssChannel fetchById(Serializable id) {
+        return null;
+    }
+}</code></pre>
+</div>
+</div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
