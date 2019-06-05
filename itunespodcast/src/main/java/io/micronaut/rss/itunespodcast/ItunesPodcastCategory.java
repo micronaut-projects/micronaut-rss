@@ -193,11 +193,11 @@ public enum ItunesPodcastCategory {
     TECHNOLOGY_SOFTWARE_HOWTO(Arrays.asList("Technology", "Software How-To")),
 
     TV_AND_FILM(Arrays.asList("TV &amp; Film")),
-    TV_AND_FILM_AFTERSHOWS(Arrays.asList("TV &amp; Film","Aftershows")),
-    TV_AND_FILM_FILM_HISTORY(Arrays.asList("TV &amp; Film","Film History")),
-    TV_AND_FILM_FILM_INTERVIEWS(Arrays.asList("TV &amp; Film","Film Interviews")),
-    TV_AND_FILM_FILM_REVIEWS(Arrays.asList("TV &amp; Film","Film Reviews")),
-    TV_AND_FILM_TV_REVIEWS(Arrays.asList("TV &amp; Film","TV Reviews"));
+    TV_AND_FILM_AFTERSHOWS(Arrays.asList("TV &amp; Film", "Aftershows")),
+    TV_AND_FILM_FILM_HISTORY(Arrays.asList("TV &amp; Film", "Film History")),
+    TV_AND_FILM_FILM_INTERVIEWS(Arrays.asList("TV &amp; Film", "Film Interviews")),
+    TV_AND_FILM_FILM_REVIEWS(Arrays.asList("TV &amp; Film", "Film Reviews")),
+    TV_AND_FILM_TV_REVIEWS(Arrays.asList("TV &amp; Film", "TV Reviews"));
 
     private final List<String> categories;
 

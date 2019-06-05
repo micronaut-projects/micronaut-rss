@@ -59,6 +59,10 @@ public class ItunesPodcastEpisode extends RssItem {
     @Nullable
     private String image;
 
+    /**
+     *
+     * @return Get Podcast episode image
+     */
     @Nullable
     public String getImage() {
         return image;
