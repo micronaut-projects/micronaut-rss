@@ -24,7 +24,7 @@ import javax.validation.constraints.Positive;
 /**
  *
  * RSS Item enclosure.
- * @see <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt">Rss Item enclosure</a>.
+ * @see <a href="https://cyber.harvard.edu/rss/rss.html#ltenclosuregtSubelementOfLtitemgt">Rss Item enclosure</a>
  *
  * @author Sergio del Amo
  * @since 1.0

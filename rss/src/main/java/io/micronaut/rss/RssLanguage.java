@@ -24,7 +24,7 @@ import java.util.Optional;
 /**
  * Languages for RSS.
  *
- * @see <a href="https://cyber.harvard.edu/rss/languages.html">Allowable values for language in RSS</a>.
+ * @see <a href="https://cyber.harvard.edu/rss/languages.html">Allowable values for language in RSS</a>
  *
  * @author Sergio del Amo
  * @since 1.0

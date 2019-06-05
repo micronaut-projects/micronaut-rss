@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * @see <a href="https://cyber.harvard.edu/rss/rss.html#hrelementsOfLtitemgt">Rss Item</a>.
+ * @see <a href="https://cyber.harvard.edu/rss/rss.html#hrelementsOfLtitemgt">Rss Item</a>
  *
  * @author Sergio del Amo
  * @since 1.0

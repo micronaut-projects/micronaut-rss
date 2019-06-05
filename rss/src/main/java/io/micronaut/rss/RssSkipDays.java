@@ -17,7 +17,8 @@
 package io.micronaut.rss;
 
 /**
- * @see <a href="https://cyber.harvard.edu/rss/skipHoursDays.html#skipdays">RSS SkipDays</a>.
+ * RSS SkipDays element.
+ * @see <a href="https://cyber.harvard.edu/rss/skipHoursDays.html#skipdays">RSS SkipDays</a>
  *
  * An XML element that contains up to seven <day> sub-elements whose value is . Aggregators may not read the channel during days listed in the skipDays element.
  *

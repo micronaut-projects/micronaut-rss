@@ -17,7 +17,7 @@
 package io.micronaut.rss;
 
 /**
- * @see <a href="https://cyber.harvard.edu/rss/skipHoursDays.html#skiphours">RSS skipHours</a>.
+ * @see <a href="https://cyber.harvard.edu/rss/skipHoursDays.html#skiphours">RSS skipHours</a>
  *
  * An XML element that contains up to 24 <hour> sub-elements whose value is a number between 0 and 23, representing a time in GMT, when aggregators, if they support the feature, may not read the channel on hours listed in the skipHours element.
  *

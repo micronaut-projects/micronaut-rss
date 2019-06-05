@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 
 /**
- * @see <a href="https://cyber.harvard.edu/rss/rss.html#ltimagegtSubelementOfLtchannelgt">RSS Image element</a>.
+ * @see <a href="https://cyber.harvard.edu/rss/rss.html#ltimagegtSubelementOfLtchannelgt">RSS Image element</a>
  * @author Sergio del Amo
  * @since 1.0
  */
