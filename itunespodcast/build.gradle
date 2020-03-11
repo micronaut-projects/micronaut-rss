@@ -1,8 +1,10 @@
 dependencies {
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion"
+    annotationProcessor "io.micronaut:micronaut-validation"
     compileOnly "io.micronaut:micronaut-inject-java"
     implementation "io.micronaut:micronaut-inject"
+    implementation "io.micronaut:micronaut-validation"
     implementation project(":rss")
     testImplementation "org.codehaus.groovy:groovy-xml:$groovyVersion"
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"
