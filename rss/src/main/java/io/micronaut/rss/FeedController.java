@@ -68,21 +68,6 @@ public class FeedController {
     }
 
     /**
-     * Provides a HEAD endpoint for the default RSS 2.0 feed.
-     * @return 200 or 404
-     */
-    @Head
-    @Produces(MediaType.APPLICATION_XML)
-    public HttpResponse head() {
-        RssChannel rssChannel = rssFeedProvider.fetch();
-        if (rssChannel == null) {
-            return HttpResponse.notFound();
-        }
-        return HttpResponse.ok();
-
-    }
-
-    /**
      *
      * @param id RSS guid
      * @return Return the RSS 2.0 identified by the path parameter provided by {@link io.micronaut.rss.RssFeedProvider} and rendered by {@link io.micronaut.rss.RssFeedRenderer}.
@@ -97,19 +82,4 @@ public class FeedController {
         return HttpResponse.ok(rssFeedRenderer.render(rssChannel));
     }
 
-    /**
-     *
-     * @param id RSS guid
-     * Provides a HEAD endpoint for the RSS 2.0 feed identified by the path parameter.
-     * @return 200 or 404
-     */
-    @Produces(MediaType.APPLICATION_XML)
-    @Head("/{id}")
-    public HttpResponse headFind(Serializable id) {
-        RssChannel rssChannel = rssFeedProvider.fetchById(id);
-        if (rssChannel == null) {
-            return HttpResponse.notFound();
-        }
-        return HttpResponse.ok();
-    }
 }
