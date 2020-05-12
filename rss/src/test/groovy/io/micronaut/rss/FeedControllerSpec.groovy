@@ -1,79 +1,76 @@
 package io.micronaut.rss
 
-import io.micronaut.context.ApplicationContext
-import io.micronaut.context.env.Environment
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
-import io.micronaut.http.client.RxHttpClient
 import io.micronaut.http.client.exceptions.HttpClientResponseException
-import io.micronaut.runtime.server.EmbeddedServer
-import spock.lang.AutoCleanup
 import spock.lang.Shared
-import spock.lang.Specification
 
-class FeedControllerSpec extends Specification {
-
-    @Shared
-    @AutoCleanup
-    ApplicationContext context = ApplicationContext.run([
-            'spec.name': getClass().simpleName
-    ])
+class FeedControllerSpec extends EmbeddedServerSpecification {
 
     @Shared
-    @AutoCleanup
-    EmbeddedServer embeddedServer = context.getBean(EmbeddedServer).start()
-
-    @Shared
-    @AutoCleanup
-    RxHttpClient client = embeddedServer.applicationContext.createBean(RxHttpClient, embeddedServer.getURL())
+    List<String> expectedGuids = [
+            "http://liftoff.msfc.nasa.gov/2003/06/03.html#item573",
+            "http://liftoff.msfc.nasa.gov/2003/05/30.html#item572",
+            "http://liftoff.msfc.nasa.gov/2003/05/27.html#item571",
+            "http://liftoff.msfc.nasa.gov/2003/05/20.html#item570",
+    ]
 
     void "fetch feed"() {
         expect:
         embeddedServer.applicationContext.containsBean(MockRssFeedProvider)
 
         when:
-        HttpRequest request = HttpRequest.GET('/feed')
-        String rsp  = client.toBlocking().retrieve(request)
-        def rss = new XmlParser().parseText(rsp)
+        HttpRequest request = HttpRequest.HEAD('/feed')
+        HttpResponse httpResponse = client.exchange(request)
 
         then:
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/06/03.html#item573"}
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/05/30.html#item572"}
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/05/27.html#item571"}
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/05/20.html#item570"}
+        noExceptionThrown()
+        httpResponse.status() == HttpStatus.OK
+
+        when:
+        request = HttpRequest.GET('/feed')
+        String rsp  = client.retrieve(request, String)
+
+        then:
+        noExceptionThrown()
+
+        when:
+        Node rss = new XmlParser().parseText(rsp)
+
+        then:
+        expectedGuids.each { guid ->
+            assert rss.channel.item.find { it.guid.text() == guid }
+        }
 
         when:
         request = HttpRequest.GET('/feed/1')
-        rsp  = client.toBlocking().retrieve(request)
+        rsp  = client.retrieve(request, String)
+
+        then:
+        noExceptionThrown()
+
+        when:
         rss = new XmlParser().parseText(rsp)
 
         then:
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/06/03.html#item573"}
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/05/30.html#item572"}
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/05/27.html#item571"}
-        rss.channel.item.find { it.guid.text() == "http://liftoff.msfc.nasa.gov/2003/05/20.html#item570"}
-
-        when:
-        request = HttpRequest.HEAD('/feed/')
-        HttpResponse httpResponse = client.toBlocking().exchange(request)
-
-        then:
-        httpResponse.status() == HttpStatus.OK
+        expectedGuids.each { guid ->
+            assert rss.channel.item.find { it.guid.text() == guid }
+        }
 
         when:
         request = HttpRequest.HEAD('/feed/1')
-        httpResponse = client.toBlocking().exchange(request)
+        httpResponse = client.exchange(request)
 
         then:
+        noExceptionThrown()
         httpResponse.status() == HttpStatus.OK
 
         when:
-        client.toBlocking().retrieve(HttpRequest.GET('/feed/4'))
+        client.retrieve(HttpRequest.GET('/feed/4'))
 
         then:
-        def e = thrown(HttpClientResponseException)
+        HttpClientResponseException e = thrown()
         e.response.status() == HttpStatus.NOT_FOUND
     }
-
 }
