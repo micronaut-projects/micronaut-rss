@@ -1,10 +1,29 @@
 # Micronaut RSS
 
-It eases the creation of RSS feeds with [Micronaut](http://micronaut.io).
+[![Maven Central](https://img.shields.io/maven-central/v/io.micronaut.configuration/micronaut-rss.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.micronaut.configuration%22%20AND%20a:%22micronaut-rss%22)
+[![Build Status](https://github.com/micronaut-projects/micronaut-rss/workflows/Java%20CI/badge.svg)](https://github.com/micronaut-projects/micronaut-rss/actions)
+
 ## Documentation
 
-[Snapshot Documentation](https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html) for more information.
+See the [Documentation](https://micronaut-projects.github.io/micronaut-rss/latest/guide/) for more information. 
 
-To generate the docs use: 
+See the [Snapshot Documentation](https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/) for the current development docs.
 
-`./gradlew docs --no-daemon`
+## Examples
+
+Examples can be found in the [examples](https://github.com/micronaut-projects/micronaut-rss/tree/master/examples) directory.
+
+## Snapshots and Releases
+
+Snaphots are automatically published to [JFrog OSS](https://oss.jfrog.org/artifactory/oss-snapshot-local/) using [Github Actions](https://github.com/micronaut-projects/micronaut-rss/actions).
+
+See the documentation in the [Micronaut Docs](https://docs.micronaut.io/latest/guide/index.html#usingsnapshots) for how to configure your build to use snapshots.
+
+Releases are published to JCenter and Maven Central via [Github Actions](https://github.com/micronaut-projects/micronaut-rss/actions).
+
+A release is performed with the following steps:
+
+* [Edit the version](https://github.com/micronaut-projects/micronaut-rss/edit/master/gradle.properties) specified by `projectVersion` in `gradle.properties` to a semantic, unreleased version. Example `1.0.0`
+* [Create a new release](https://github.com/micronaut-projects/micronaut-rss/releases/new). The Git Tag should start with `v`. For example `v1.0.0`.
+* [Monitor the Workflow](https://github.com/micronaut-projects/micronaut-rss/actions?query=workflow%3ARelease) to check it passed successfully.
+* Celebrate!
