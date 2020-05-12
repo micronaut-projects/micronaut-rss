@@ -90,11 +90,43 @@ public class DefaultRssFeedRenderer implements RssFeedRenderer {
      * @param sw An XML Stream writer
      * @param rssItem An RSS Item
      */
+    protected void writeRssItemDescription(XMLStreamWriter sw, RssItem rssItem) {
+        rssItem.getDescription().ifPresent(description -> {
+            if (shouldWrapDescriptionWithCData(description)) {
+                try {
+                    sw.writeStartElement(DESCRIPTION);
+                    sw.writeCData(description);
+                    sw.writeEndElement();
+                } catch (XMLStreamException e) {
+                    if (LOG.isErrorEnabled()) {
+                        LOG.error(e.getMessage());
+                    }
+                }
+            } else {
+                writeElement(sw, DESCRIPTION, description);
+            }
+        });
+    }
+
+    /**
+     *
+     * @param description RSS Item description
+     * @return Whether description should be wrapped with <![CDATA[ ]]
+     */
+    protected boolean shouldWrapDescriptionWithCData(@Nonnull String description) {
+        return description.contains(LOWER_THAN);
+    }
+
+    /**
+     *
+     * @param sw An XML Stream writer
+     * @param rssItem An RSS Item
+     */
     protected void writeRssItem(XMLStreamWriter sw, RssItem rssItem) {
         try {
             rssItem.getTitle().ifPresent(title -> writeElement(sw, TITLE, title));
             rssItem.getLink().ifPresent(link -> writeElement(sw, "link", link));
-            rssItem.getDescription().ifPresent(description -> writeElement(sw, "description", description));
+            writeRssItemDescription(sw, rssItem);
             rssItem.getAuthor().ifPresent(author -> writeElement(sw, "author", author));
 
             if (rssItem.getCategory().isPresent()) {
