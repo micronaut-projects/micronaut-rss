@@ -235,11 +235,6 @@ public class DefaultRssFeedRenderer implements RssFeedRenderer {
         }
     }
 
-    /**
-     *
-     * @param rssChannel The RSS Channel
-     * @return The rendered RSS Channel
-     */
     @Override
     public void render(Writer writer, RssChannel rssChannel) {
             XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newFactory();
