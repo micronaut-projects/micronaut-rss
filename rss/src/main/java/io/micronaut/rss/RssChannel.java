@@ -500,7 +500,7 @@ public class RssChannel {
     /**
      * RSS Channel Builder.
      */
-    static final class Builder {
+    public static final class Builder {
 
         private RssChannel rssChannel = new RssChannel();
 

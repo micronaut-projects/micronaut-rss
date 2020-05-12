@@ -260,7 +260,7 @@ public class RssItem {
     /**
      * A RSS Item Channel.
      */
-    static final class Builder {
+    public static final class Builder {
 
         private RssItem rssItem = new RssItem();
 
