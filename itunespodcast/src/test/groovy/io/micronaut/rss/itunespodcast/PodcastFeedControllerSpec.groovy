@@ -10,13 +10,10 @@ import spock.lang.Shared
 import spock.lang.Specification
 
 class PodcastFeedControllerSpec extends Specification {
-    static final SPEC_NAME_PROPERTY = 'spec.name'
 
     @Shared
     @AutoCleanup
-    ApplicationContext context = ApplicationContext.run([
-            (SPEC_NAME_PROPERTY):getClass().simpleName
-    ])
+    ApplicationContext context = ApplicationContext.run(['spec.name': getClass().simpleName])
 
     @Shared
     @AutoCleanup

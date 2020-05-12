@@ -4,13 +4,12 @@ import io.micronaut.context.ApplicationContext
 import spock.lang.Specification
 
 class FeedControllerEnabledSpec extends Specification {
-    static final SPEC_NAME_PROPERTY = 'spec.name'
 
     void "FeedController can be disabled with micronaut.rss.feed.enabled=false"() {
         given:
         ApplicationContext context = ApplicationContext.run([
                 'micronaut.rss.feed.enabled': false,
-                (SPEC_NAME_PROPERTY): getClass().simpleName
+                'spec.name': getClass().simpleName
         ])
 
         expect:
@@ -23,7 +22,7 @@ class FeedControllerEnabledSpec extends Specification {
     void "FeedController is enabled by default"() {
         given:
         ApplicationContext context = ApplicationContext.run([
-                (SPEC_NAME_PROPERTY): getClass().simpleName
+                'spec.name': getClass().simpleName
         ])
 
         expect:

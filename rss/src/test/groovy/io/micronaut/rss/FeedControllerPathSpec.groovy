@@ -7,17 +7,14 @@ import io.micronaut.core.annotation.AnnotationValue
 import io.micronaut.core.util.PathMatcher
 import io.micronaut.core.util.StringUtils
 import io.micronaut.http.annotation.Controller
-import io.micronaut.http.annotation.Filter
 import spock.lang.Specification
 
 class FeedControllerPathSpec extends Specification {
 
-    static final SPEC_NAME_PROPERTY = 'spec.name'
-
     void "Default FeedController path is /feed"() {
         given:
         ApplicationContext context = ApplicationContext.run([
-                (SPEC_NAME_PROPERTY):getClass().simpleName
+                'spec.name': getClass().simpleName
         ])
 
         when:
@@ -59,7 +56,7 @@ class FeedControllerPathSpec extends Specification {
         given:
         ApplicationContext context = ApplicationContext.run([
                 'micronaut.rss.feed.path': '/rss',
-                (SPEC_NAME_PROPERTY):getClass().simpleName
+                'spec.name': getClass().simpleName
         ])
 
         when:
