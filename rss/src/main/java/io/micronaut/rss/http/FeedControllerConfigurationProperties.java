@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package io.micronaut.rss;
+package io.micronaut.rss.http;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
+import io.micronaut.rss.RssConfiguration;
 
 /**
- * {@link io.micronaut.context.annotation.ConfigurationProperties} for {@link io.micronaut.rss.FeedController}.
+ * {@link io.micronaut.context.annotation.ConfigurationProperties} for {@link FeedController}.
  *
  * @author Sergio del Amo
  * @since 1.0
@@ -51,7 +52,7 @@ public class FeedControllerConfigurationProperties implements FeedControllerConf
     }
 
     /**
-     * Whether {@link io.micronaut.rss.FeedController} should be enabled. Default value ({@value #DEFAULT_ENABLED}).
+     * Whether {@link FeedController} should be enabled. Default value ({@value #DEFAULT_ENABLED}).
      * @param enabled enabled flag
      */
     public void setEnabled(boolean enabled) {
@@ -59,7 +60,7 @@ public class FeedControllerConfigurationProperties implements FeedControllerConf
     }
 
     /**
-     * Configures {@link io.micronaut.rss.FeedController} path. Default value {@value #DEFAULT_PATH}
+     * Configures {@link FeedController} path. Default value {@value #DEFAULT_PATH}
      * @param path Path to be matched by Token Propagation Filter.
      */
     public void setPath(String path) {
@@ -68,7 +69,7 @@ public class FeedControllerConfigurationProperties implements FeedControllerConf
 
     /**
      *
-     * @return the path where {@link io.micronaut.rss.FeedController} listens.
+     * @return the path where {@link FeedController} listens.
      */
     @Override
     public String getPath() {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.micronaut.rss;
+package io.micronaut.rss.http;
 
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.core.io.Writable;
@@ -22,8 +22,10 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.Head;
 import io.micronaut.http.annotation.Produces;
+import io.micronaut.rss.RssChannel;
+import io.micronaut.rss.RssFeedProvider;
+import io.micronaut.rss.RssFeedRenderer;
 
 import java.io.Serializable;
 

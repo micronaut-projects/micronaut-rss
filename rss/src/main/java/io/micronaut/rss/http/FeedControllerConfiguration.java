@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package io.micronaut.rss;
+package io.micronaut.rss.http;
 
 import io.micronaut.core.util.Toggleable;
 
 /**
- * Defines interface for Configuration options of {@link io.micronaut.rss.FeedController}.
+ * Defines interface for Configuration options of {@link FeedController}.
  *
  * @author Sergio del Amo
  * @since 1.0
@@ -28,7 +28,7 @@ public interface FeedControllerConfiguration extends Toggleable  {
 
     /**
      *
-     * @return the path where {@link io.micronaut.rss.FeedController} listens.
+     * @return the path where {@link FeedController} listens.
      */
     String getPath();
 }

@@ -16,10 +16,12 @@
 
 package io.micronaut.rss;
 
+import io.micronaut.rss.http.FeedController;
+
 import java.io.Serializable;
 
 /**
- * Defines an interface to provide RSS 2.0 feeds. Any bean implementing will be consumed by {@link io.micronaut.rss.FeedController}.
+ * Defines an interface to provide RSS 2.0 feeds. Any bean implementing will be consumed by {@link FeedController}.
  * @author Sergio del Amo
  * @since 1.0
  */

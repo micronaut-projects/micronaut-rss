@@ -1,6 +1,7 @@
-package io.micronaut.rss
+package io.micronaut.rss.http
 
 import io.micronaut.context.ApplicationContext
+import io.micronaut.rss.http.FeedController
 import spock.lang.Specification
 
 class FeedControllerEnabledSpec extends Specification {

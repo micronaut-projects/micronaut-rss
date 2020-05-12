@@ -1,12 +1,12 @@
-package io.micronaut.rss
+package io.micronaut.rss.http
 
 import io.micronaut.context.ApplicationContext
-import io.micronaut.context.env.Environment
 import io.micronaut.core.annotation.AnnotationMetadataResolver
 import io.micronaut.core.annotation.AnnotationValue
 import io.micronaut.core.util.PathMatcher
 import io.micronaut.core.util.StringUtils
 import io.micronaut.http.annotation.Controller
+import io.micronaut.rss.http.FeedController
 import spock.lang.Specification
 
 class FeedControllerPathSpec extends Specification {

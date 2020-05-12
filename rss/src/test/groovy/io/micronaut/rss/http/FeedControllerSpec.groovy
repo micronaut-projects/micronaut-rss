@@ -1,4 +1,4 @@
-package io.micronaut.rss
+package io.micronaut.rss.http
 
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse

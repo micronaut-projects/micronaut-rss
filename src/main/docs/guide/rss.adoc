@@ -2,7 +2,7 @@ This modules exposes a controller api:rss.FeedController[] which exposes feeds a
 
 The following table displays several characteristics which can be configured:
 
-include::{includedir}configurationProperties/io.micronaut.rss.FeedControllerConfigurationProperties.adoc[]
+include::{includedir}configurationProperties/io.micronaut.rss.http.FeedControllerConfigurationProperties.adoc[]
 
 `FeedController` requires two beans to be present api:rss.RssFeedProvider[] and api:RssFeedRenderer[]. While api:rss.DeafultRssFeedRenderer[] provides a default implementation for `RssFeedRenderer`, you will need to provide an implementation for `RssFeedProvider`.
 
@@ -10,5 +10,5 @@ For example, if you wanted to generate a feed as the one described in the https:
 
 [source, java]
 ----
-include::{sourcedir}/rss/src/test/groovy/io/micronaut/rss/MockRssFeedProvider.java[tag=class]
+include::{sourcedir}/rss/src/test/groovy/io/micronaut/rss/http/MockRssFeedProvider.java[tag=class]
 ----
