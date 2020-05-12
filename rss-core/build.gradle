@@ -3,5 +3,5 @@ dependencies {
     annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut:micronaut-validation"
     implementation "io.micronaut:micronaut-validation"
-    implementation "io.micronaut:micronaut-inject"
+    api "io.micronaut:micronaut-inject"
 }

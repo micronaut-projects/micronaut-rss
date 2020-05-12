@@ -16,7 +16,6 @@
 
 package io.micronaut.rss;
 
-import io.micronaut.core.io.Writable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -179,11 +178,11 @@ public class DefaultRssFeedRenderer implements RssFeedRenderer {
 
         if (rssChannel.getSkipHours().isPresent()) {
             try {
-                sw.writeStartElement("skipHours");
-                for (RssSkipHours skipHours : rssChannel.getSkipHours().get()) {
-                    writeElement(sw, "hour", String.valueOf(skipHours.getValue()));
-                }
-                sw.writeEndElement();
+            sw.writeStartElement("skipHours");
+            for (RssSkipHours skipHours : rssChannel.getSkipHours().get()) {
+                writeElement(sw, "hour", String.valueOf(skipHours.getValue()));
+            }
+            sw.writeEndElement();
             } catch (XMLStreamException e) {
                 if (LOG.isErrorEnabled()) {
                     LOG.error(e.getMessage());
@@ -236,30 +235,35 @@ public class DefaultRssFeedRenderer implements RssFeedRenderer {
         }
     }
 
+    /**
+     *
+     * @param rssChannel The RSS Channel
+     * @return The rendered RSS Channel
+     */
     @Override
     public void render(Writer writer, RssChannel rssChannel) {
-        XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newFactory();
-        try {
-            final XMLStreamWriter sw = xmlOutputFactory.createXMLStreamWriter(writer);
+            XMLOutputFactory xmlOutputFactory = XMLOutputFactory.newFactory();
+            try {
+                final XMLStreamWriter sw = xmlOutputFactory.createXMLStreamWriter(writer);
 
-            if (sw != null && rssChannel != null) {
-                sw.writeStartDocument("UTF-8", "1.0");
-                sw.writeStartElement("rss");
-                for (String key : getRssAttributes().keySet()) {
-                    sw.writeAttribute(key, getRssAttributes().get(key));
+                if (sw != null && rssChannel != null) {
+                    sw.writeStartDocument("UTF-8", "1.0");
+                    sw.writeStartElement("rss");
+                    for (String key : getRssAttributes().keySet()) {
+                        sw.writeAttribute(key, getRssAttributes().get(key));
+                    }
+
+                    sw.writeStartElement("channel");
+                    writeRssChannel(sw, rssChannel);
+                    sw.writeEndElement();
+
+                    sw.writeEndElement();
+                    sw.writeEndDocument();
                 }
-
-                sw.writeStartElement("channel");
-                writeRssChannel(sw, rssChannel);
-                sw.writeEndElement();
-
-                sw.writeEndElement();
-                sw.writeEndDocument();
+            } catch (XMLStreamException e) {
+                if (LOG.isErrorEnabled()) {
+                    LOG.error(e.getMessage());
+                }
             }
-        } catch (XMLStreamException e) {
-            if (LOG.isErrorEnabled()) {
-                LOG.error(e.getMessage());
-            }
-        }
     }
 }

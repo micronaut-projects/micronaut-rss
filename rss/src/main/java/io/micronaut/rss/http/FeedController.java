@@ -89,4 +89,5 @@ public class FeedController {
             rssFeedRenderer.render(writer, rssChannel);
         };
     }
+
 }

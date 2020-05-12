@@ -1,16 +1,15 @@
 dependencies {
-    annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion"
+    annotationProcessor "io.micronaut:micronaut-inject-java"
     annotationProcessor "io.micronaut:micronaut-validation"
-    compileOnly "io.micronaut:micronaut-inject-java"
-    implementation "io.micronaut:micronaut-inject"
     implementation "io.micronaut:micronaut-validation"
-    implementation project(":rss-core")
-    testImplementation "org.codehaus.groovy:groovy-xml:$groovyVersion"
-    testImplementation project(":rss")
+    api "io.micronaut:micronaut-inject"
+    api project(":rss-core")
+
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"
+    testImplementation project(":rss")
+    testImplementation "org.codehaus.groovy:groovy-xml:$groovyVersion"
     testImplementation "io.micronaut:micronaut-http-client"
     testImplementation "io.micronaut:micronaut-http-server-netty"
     testImplementation "io.micronaut:micronaut-inject-groovy"
-    testImplementation 'com.sun.activation:javax.activation:1.2.0' // Java 11
 }
