@@ -16,19 +16,19 @@
 
 package io.micronaut.rss;
 
-import io.micronaut.core.io.Writable;
+import java.io.Writer;
 
 /**
- * Interface which defines the render of an {@link io.micronaut.rss.RssChannel} to {@link io.micronaut.core.io.Writable}.
+ * Interface which defines the render of an {@link io.micronaut.rss.RssChannel} to {@link java.io.Writer}.
  *
  * @author Sergio del Amo
  * @since 1.0
  */
 public interface RssFeedRenderer {
     /**
-     * Renders an RSS channel to a {@link io.micronaut.core.io.Writable}.
+     * Writes an RSS channel to a {@link java.io.Writer}.
      * @param rssChannel The RSS channel to render
-     * @return A {@link io.micronaut.core.io.Writable}.
+     * @param writer A Writer to write the RSS feed into
      */
-    Writable render(RssChannel rssChannel);
+    void render(Writer writer, RssChannel rssChannel);
 }

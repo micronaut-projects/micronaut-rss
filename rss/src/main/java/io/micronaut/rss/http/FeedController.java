@@ -66,7 +66,7 @@ public class FeedController {
         if (rssChannel == null) {
             return HttpResponse.notFound();
         }
-        return HttpResponse.ok(rssFeedRenderer.render(rssChannel));
+        return HttpResponse.ok(render(rssChannel));
     }
 
     /**
@@ -81,6 +81,12 @@ public class FeedController {
         if (rssChannel == null) {
             return HttpResponse.notFound();
         }
-        return HttpResponse.ok(rssFeedRenderer.render(rssChannel));
+        return HttpResponse.ok(render(rssChannel));
+    }
+
+    private Writable render(RssChannel rssChannel) {
+        return (writer) -> {
+            rssFeedRenderer.render(writer, rssChannel);
+        };
     }
 }
