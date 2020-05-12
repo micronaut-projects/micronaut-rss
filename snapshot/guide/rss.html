@@ -11,7 +11,7 @@
 
         gtag('config', 'UA-82213539-2');
     </script>
-    <title>2 RSS 2.0 1.0.1.BUILD-SNAPSHOT</title>
+    <title>4 RSS 2.0 2.0.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -38,16 +38,22 @@ function addJsClass() {
 
                     <div id="nav-summary-childs" style="display:none;">
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/installation.html"><strong>1</strong><span>Installation</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/whatsNew.html"><strong>1</strong><span>What's New?</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/rss.html"><strong>2</strong><span>RSS 2.0</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/breaks.html"><strong>2</strong><span>Breaking Changes</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/itunespodcast.html"><strong>3</strong><span>Itunes Podcast RSS Feed</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/installation.html"><strong>3</strong><span>Installation</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/repository.html"><strong>4</strong><span>Repository</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/rss.html"><strong>4</strong><span>RSS 2.0</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/itunespodcast.html"><strong>5</strong><span>Itunes Podcast RSS Feed</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/repository.html"><strong>6</strong><span>Repository</span></a>
                         </div>
                         
                     </div>
@@ -68,26 +74,26 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>1</strong><span>Installation</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>3</strong><span>Installation</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/itunespodcast.html"><strong>3</strong><span>Itunes Podcast RSS Feed</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/itunespodcast.html"><strong>5</strong><span>Itunes Podcast RSS Feed</span> >></a></div>
                 
 
 
                 <div class="project">
-                    <h1>2 RSS 2.0</h1>
+                    <h1>4 RSS 2.0</h1>
 
-                    <p><strong>Version:</strong> 1.0.1.BUILD-SNAPSHOT</p>
+                    <p><strong>Version:</strong> 2.0.0.BUILD-SNAPSHOT</p>
                 </div>
 
                 
 
                 
-<h1 id="rss"><a class="anchor" href="#rss"></a>2 RSS 2.0</h1>
+<h1 id="rss"><a class="anchor" href="#rss"></a>4 RSS 2.0</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/rss.adoc"'>
@@ -102,9 +108,9 @@ function addJsClass() {
 <div class="paragraph">
 <p>The following table displays several characteristics which can be configured:</p>
 </div>
-<a id="io.micronaut.rss.FeedControllerConfigurationProperties" href="#io.micronaut.rss.FeedControllerConfigurationProperties">&#128279;</a>
+<a id="io.micronaut.rss.http.FeedControllerConfigurationProperties" href="#io.micronaut.rss.http.FeedControllerConfigurationProperties">&#128279;</a>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -121,12 +127,12 @@ function addJsClass() {
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.enabled</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> should be enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether {@link FeedController} should be enabled. Default value ({@value #DEFAULT_ENABLED}).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> path. Default value {@value #DEFAULT_PATH}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures {@link FeedController} path. Default value {@value #DEFAULT_PATH}</p></td>
 </tr>
 </tbody>
 </table>
@@ -195,9 +201,9 @@ class MockRssFeedProvider implements RssFeedProvider {
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>1</strong><span>Installation</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/installation.html">&lt;&lt; <strong>3</strong><span>Installation</span></a></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/itunespodcast.html"><strong>3</strong><span>Itunes Podcast RSS Feed</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/itunespodcast.html"><strong>5</strong><span>Itunes Podcast RSS Feed</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>

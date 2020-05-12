@@ -11,7 +11,7 @@
 
         gtag('config', 'UA-82213539-2');
     </script>
-    <title>3 Installation 2.0.0.BUILD-SNAPSHOT</title>
+    <title>2 Breaking Changes 2.0.0.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -74,18 +74,18 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../guide/breaks.html">&lt;&lt; <strong>2</strong><span>Breaking Changes</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/whatsNew.html">&lt;&lt; <strong>1</strong><span>What's New?</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/rss.html"><strong>4</strong><span>RSS 2.0</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/installation.html"><strong>3</strong><span>Installation</span> >></a></div>
                 
 
 
                 <div class="project">
-                    <h1>3 Installation</h1>
+                    <h1>2 Breaking Changes</h1>
 
                     <p><strong>Version:</strong> 2.0.0.BUILD-SNAPSHOT</p>
                 </div>
@@ -93,49 +93,28 @@ function addJsClass() {
                 
 
                 
-<h1 id="installation"><a class="anchor" href="#installation"></a>3 Installation</h1>
+<h1 id="breaks"><a class="anchor" href="#breaks"></a>2 Breaking Changes</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/installation.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breaks.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
 
 
 <div class="paragraph">
-<p>This project eases RSS 2.0. feeds generation with Micronaut.</p>
+<p><a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>, <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedControllerConfiguration.html">FeedControllerConfiguration</a> and <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedControllerProperties.html">FeedControllerProperties</a> moved to package <code>io.micronaut.rss.http</code>.</p>
 </div>
 <div class="paragraph">
-<p>        <div class="listingblock multi-language-sample">
-<div class="title"></div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.configuration:micronaut-rss:2.0.0.BUILD-SNAPSHOT")</span></code></pre>
-</div>
-</div>
-<div class="listingblock multi-language-sample">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
-    &lt;groupId&gt;io.micronaut.configuration&lt;/groupId&gt;
-    &lt;artifactId&gt;micronaut-rss&lt;/artifactId&gt;
-    &lt;version&gt;2.0.0.BUILD-SNAPSHOT&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-</div>
-</div>
-</p>
-</div>
-<div class="paragraph">
-<p>To use the <code>BUILD-SNAPSHOT</code> version of this library, check the <a href="https://docs.micronaut.io/latest/guide/index.html#usingsnapshots">documentation to use snapshots</a>.</p>
-</div>
-<div class="paragraph">
-<p>Code can be found at the <a href="https://github.com/micronaut-projects/micronaut-rss">micronaut-rss</a> repository.</p>
+<p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
 </div>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../guide/breaks.html">&lt;&lt; <strong>2</strong><span>Breaking Changes</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/whatsNew.html">&lt;&lt; <strong>1</strong><span>What's New?</span></a></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/rss.html"><strong>4</strong><span>RSS 2.0</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/installation.html"><strong>3</strong><span>Installation</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>
