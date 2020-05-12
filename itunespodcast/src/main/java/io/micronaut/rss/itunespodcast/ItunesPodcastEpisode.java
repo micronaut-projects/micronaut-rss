@@ -19,7 +19,7 @@ package io.micronaut.rss.itunespodcast;
 import io.micronaut.rss.RssItem;
 import io.micronaut.rss.RssItemEnclosure;
 
-import javax.annotation.Nullable;
+import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.validation.constraints.Positive;
 import java.time.ZonedDateTime;
 import java.util.Optional;

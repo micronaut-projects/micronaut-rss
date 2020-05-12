@@ -16,7 +16,9 @@
 
 package io.micronaut.rss;
 
-import javax.annotation.Nonnull;
+
+import edu.umd.cs.findbugs.annotations.NonNull;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -35,7 +37,7 @@ public class RssItemEnclosure {
      * The URL attribute points to your podcast content. The file extension specified within the URL attribute determines whether or note content appears in the podcast directory. Supported file formats include M4A, MP3, MOV, MP4, M4V, PDF, and EPUB.
      */
     @NotBlank
-    @Nonnull
+    @NonNull
     private String url;
 
     /**
@@ -43,11 +45,11 @@ public class RssItemEnclosure {
      */
     @Positive
     @NotNull
-    @Nonnull
+    @NonNull
     private Integer length;
 
     @NotNull
-    @Nonnull
+    @NonNull
     private String type;
 
     /**

@@ -16,10 +16,10 @@
 
 package io.micronaut.rss;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.annotation.Nonnull;
 import javax.inject.Singleton;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -113,7 +113,7 @@ public class DefaultRssFeedRenderer implements RssFeedRenderer {
      * @param description RSS Item description
      * @return Whether description should be wrapped with <![CDATA[ ]]
      */
-    protected boolean shouldWrapDescriptionWithCData(@Nonnull String description) {
+    protected boolean shouldWrapDescriptionWithCData(@NonNull String description) {
         return description.contains(LOWER_THAN);
     }
 

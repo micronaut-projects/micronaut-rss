@@ -16,6 +16,7 @@
 
 package io.micronaut.rss.itunespodcast;
 
+import edu.umd.cs.findbugs.annotations.Nullable;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssChannelImage;
 import io.micronaut.rss.RssItem;
@@ -24,7 +25,6 @@ import io.micronaut.rss.RssSkipDays;
 import io.micronaut.rss.RssSkipHours;
 import io.micronaut.rss.RssTextInput;
 
-import javax.annotation.Nullable;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;

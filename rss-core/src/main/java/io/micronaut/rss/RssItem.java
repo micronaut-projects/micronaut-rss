@@ -16,7 +16,7 @@
 
 package io.micronaut.rss;
 
-import javax.annotation.Nullable;
+import edu.umd.cs.findbugs.annotations.Nullable;
 import java.time.ZonedDateTime;
 import java.util.List;
 
