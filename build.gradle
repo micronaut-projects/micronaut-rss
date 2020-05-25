@@ -52,9 +52,9 @@ subprojects { Project subproject ->
 
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
-    if (subproject.name != 'rss-core') {
+    
     apply from:"https://raw.githubusercontent.com/micronaut-projects/micronaut-build/v${micronautBuildVersion}/publishing.gradle"
-    }
+    
 
     jar {
         manifest {
