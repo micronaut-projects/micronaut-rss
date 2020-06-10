@@ -23,6 +23,7 @@ import java.io.Writer;
  * @author Sergio del Amo
  * @since 1.0
  */
+@FunctionalInterface
 public interface RssFeedRenderer {
     /**
      * Writes an RSS channel to a {@link java.io.Writer}.
