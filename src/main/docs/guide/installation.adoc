@@ -1,7 +1,0 @@
-This project eases RSS 2.0. feeds generation with Micronaut.
-
-dependency:micronaut-rss[version="{version}",groupId="io.micronaut.configuration"]
-
-To use the `BUILD-SNAPSHOT` version of this library, check the https://docs.micronaut.io/latest/guide/index.html#usingsnapshots[documentation to use snapshots].
-
-Code can be found at the https://github.com/micronaut-projects/micronaut-rss[micronaut-rss] repository.

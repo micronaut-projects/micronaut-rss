@@ -3,6 +3,8 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.micronaut.rss/micronaut-rss.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.micronaut.rss%22%20AND%20a:%22micronaut-rss%22)
 [![Build Status](https://github.com/micronaut-projects/micronaut-rss/workflows/Java%20CI/badge.svg)](https://github.com/micronaut-projects/micronaut-rss/actions)
 
+Micronaut RSS is...
+
 ## Documentation
 
 See the [Documentation](https://micronaut-projects.github.io/micronaut-rss/latest/guide/) for more information. 

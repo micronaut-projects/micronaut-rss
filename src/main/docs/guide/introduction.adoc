@@ -1,0 +1,1 @@
+Micronaut RSS eases the creation of RSS feeds with Micronaut.
