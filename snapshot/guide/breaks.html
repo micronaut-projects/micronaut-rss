@@ -11,7 +11,7 @@
 
         gtag('config', 'UA-82213539-2');
     </script>
-    <title>2 Breaking Changes 2.0.1.BUILD-SNAPSHOT</title>
+    <title>3 Breaking Changes 2.0.1.BUILD-SNAPSHOT</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
     <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
@@ -38,13 +38,13 @@ function addJsClass() {
 
                     <div id="nav-summary-childs" style="display:none;">
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/whatsNew.html"><strong>1</strong><span>What's New?</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/introduction.html"><strong>1</strong><span>Introduction</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/breaks.html"><strong>2</strong><span>Breaking Changes</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/whatsNew.html"><strong>2</strong><span>What's New?</span></a>
                         </div>
                         
-                        <div class="toc-item" style="margin-left:0"><a href="../guide/installation.html"><strong>3</strong><span>Installation</span></a>
+                        <div class="toc-item" style="margin-left:0"><a href="../guide/breaks.html"><strong>3</strong><span>Breaking Changes</span></a>
                         </div>
                         
                         <div class="toc-item" style="margin-left:0"><a href="../guide/rss.html"><strong>4</strong><span>RSS 2.0</span></a>
@@ -74,18 +74,18 @@ function addJsClass() {
             <div id="main" class="corner-all">
 
                 
-                    <div class="toc-item prev-left"><a href="../guide/whatsNew.html">&lt;&lt; <strong>1</strong><span>What's New?</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/whatsNew.html">&lt;&lt; <strong>2</strong><span>What's New?</span></a></div>
                 
 
                 <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
                 
-                    <div class="toc-item next-right"><a href="../guide/installation.html"><strong>3</strong><span>Installation</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/rss.html"><strong>4</strong><span>RSS 2.0</span> >></a></div>
                 
 
 
                 <div class="project">
-                    <h1>2 Breaking Changes</h1>
+                    <h1>3 Breaking Changes</h1>
 
                     <p><strong>Version:</strong> 2.0.1.BUILD-SNAPSHOT</p>
                 </div>
@@ -93,7 +93,7 @@ function addJsClass() {
                 
 
                 
-<h1 id="breaks"><a class="anchor" href="#breaks"></a>2 Breaking Changes</h1>
+<h1 id="breaks"><a class="anchor" href="#breaks"></a>3 Breaking Changes</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breaks.adoc"'>
@@ -108,13 +108,40 @@ function addJsClass() {
 <div class="paragraph">
 <p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
 </div>
+<div class="paragraph">
+<p>The artifacts' maven group has been changed to <code>micronaut-rss</code>. The next table shows the maven coordinates changes:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Old</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.configuration:micronaut-rss</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:micronaut-rss</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.configuration:micronaut-itunespodcast</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:micronaut-itunespodcast</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:rss-core</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:rss-core</code></p></td>
+</tr>
+</tbody>
+</table>
 
 
                 <div style="clear:both;margin-top:15px;"></div>
                 
-                    <div class="toc-item prev-left"><a href="../guide/whatsNew.html">&lt;&lt; <strong>1</strong><span>What's New?</span></a></div>
+                    <div class="toc-item prev-left"><a href="../guide/whatsNew.html">&lt;&lt; <strong>2</strong><span>What's New?</span></a></div>
                 
-                    <div class="toc-item next-right"><a href="../guide/installation.html"><strong>3</strong><span>Installation</span> >></a></div>
+                    <div class="toc-item next-right"><a href="../guide/rss.html"><strong>4</strong><span>RSS 2.0</span> >></a></div>
                 
                 <div style="clear:both"></div>
             </div>
