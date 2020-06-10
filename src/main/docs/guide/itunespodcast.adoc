@@ -1,4 +1,4 @@
-dependency:micronaut-itunespodcast[groupId="io.micronaut.configuration"]
+dependency:micronaut-itunespodcast[groupId="io.micronaut.rss"]
 
 An https://itunespartner.apple.com/en/podcasts/overview[Itunes podcast] feed, is a valid RSS 2.0 feed with additional tags.
 

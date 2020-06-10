@@ -1,6 +1,8 @@
+introduction:
+  title: Introduction
+  releaseHistory: Release History
 whatsNew: What's New?
 breaks: Breaking Changes
-installation: Installation
 rss:
   title: RSS 2.0
 itunespodcast:

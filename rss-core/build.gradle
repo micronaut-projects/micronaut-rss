@@ -1,9 +1,13 @@
-group 'io.micronaut.rss'
-
 dependencies {
-    annotationProcessor "io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion"
-    annotationProcessor "io.micronaut:micronaut-inject-java"
-    annotationProcessor "io.micronaut:micronaut-validation"
-    implementation "io.micronaut:micronaut-validation"
-    api "io.micronaut:micronaut-inject"
+    annotationProcessor("io.micronaut:micronaut-inject-java")
+    annotationProcessor("io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion")
+    annotationProcessor("io.micronaut:micronaut-validation")
+    implementation("io.micronaut:micronaut-validation")
+
+    implementation("io.micronaut:micronaut-inject")
+
+    testImplementation("org.spockframework:spock-core:${spockVersion}") {
+        exclude module:'groovy-all'
+    }
+    testImplementation("io.micronaut.test:micronaut-test-spock:$micronautTestVersion")
 }
