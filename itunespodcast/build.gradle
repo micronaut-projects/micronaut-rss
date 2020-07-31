@@ -15,4 +15,6 @@ dependencies {
     testImplementation("io.micronaut.test:micronaut-test-spock:$micronautTestVersion")
     testImplementation("io.micronaut:micronaut-http-server-netty")
     testImplementation("io.micronaut:micronaut-http-client")
+    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
+    testImplementation project(":rss")
 }
