@@ -6,5 +6,5 @@ For example, the following bean will generate the https://help.apple.com/itc/pod
 
 [source, java]
 ----
-include::{sourcedir}/itunespodcast/src/test/groovy/io/micronaut/rss/itunespodcast/DefaultRssFeedProvider.java[tag=class]
+include::{sourcedir}/itunespodcast/src/test/java/io/micronaut/rss/itunespodcast/DefaultRssFeedProvider.java[tag=class]
 ----
