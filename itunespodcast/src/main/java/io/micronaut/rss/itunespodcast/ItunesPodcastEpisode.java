@@ -45,7 +45,7 @@ public class ItunesPodcastEpisode extends RssItem {
 
     private ItunesPodcastEpisodeType episodeType;
 
-    private boolean explict;
+    private boolean explicit;
 
     @Positive
     @Nullable
@@ -163,19 +163,37 @@ public class ItunesPodcastEpisode extends RssItem {
     }
 
     /**
-     *
-     * @return whether an episode is explict.
+     * @deprecated Use {@link ItunesPodcastEpisode#isExplicit()} instead
+     * @return whether an episode is explicit.
      */
+    @Deprecated
     public boolean isExplict() {
-        return this.explict;
+        return isExplicit();
     }
 
     /**
      *
-     * @param explict whether an episode is explict.
+     * @return whether an episode is explicit.
      */
-    public void setExplict(boolean explict) {
-        this.explict = explict;
+    public boolean isExplicit() {
+        return explicit;
+    }
+
+    /**
+     * @param explicit whether an episode is explicit.
+     * @deprecated Use {@link ItunesPodcastEpisode#setExplicit(boolean)} instead.
+     */
+    @Deprecated
+    public void setExplict(boolean explicit) {
+        setExplicit(explicit);
+    }
+
+    /**
+     *
+     * @param explicit whether an episode is explicit.
+     */
+    public void setExplicit(boolean explicit) {
+        this.explicit = explicit;
     }
 
     /**
@@ -369,7 +387,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @return a Episode Builder
          */
         public Builder explicit(boolean explicit) {
-            episode.setExplict(explicit);
+            episode.setExplicit(explicit);
             return this;
         }
 

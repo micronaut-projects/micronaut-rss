@@ -61,7 +61,7 @@ public class DefaultRssFeedProvider implements RssFeedProvider {
                         .build())
                 .summary("Love to get outdoors and discover nature&apos;s treasures? Hiking Treks is the show for you. We review hikes and excursions, review outdoor gear and interview a variety of naturalists and adventurers. Look for new episodes each week.")
                 .category(Arrays.asList(ItunesPodcastCategory.SPORTS_AND_RECREATION_OUTDOOR.getCategories()))
-                .explict(false)
+                .explicit(false)
                 .item(ItunesPodcastEpisode.builder("Hiking Treks Trailer")
                         .episodeType(ItunesPodcastEpisodeType.TRAILER)
                         .author("The Sunset Adventurers")
