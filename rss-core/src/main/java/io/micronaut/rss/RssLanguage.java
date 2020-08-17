@@ -168,7 +168,7 @@ public enum RssLanguage {
         return m;
     }
 
-    public Optional<RssLanguage> of(String languageCode) {
+    public static Optional<RssLanguage> of(String languageCode) {
         return Arrays.stream(RssLanguage.values())
             .filter(lang -> lang.getLanguageCode().equals(languageCode))
             .findFirst();
