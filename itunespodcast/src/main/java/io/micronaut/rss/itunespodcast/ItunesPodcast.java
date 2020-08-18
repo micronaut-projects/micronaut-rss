@@ -45,7 +45,7 @@ public class ItunesPodcast extends RssChannel {
 
     private ItunesPodcastType type;
 
-    private boolean explict;
+    private boolean explicit;
 
     @Nullable
     private String subtitle;
@@ -130,19 +130,38 @@ public class ItunesPodcast extends RssChannel {
     }
 
     /**
-     *
+     * @deprecated Use {@link ItunesPodcast#isExplicit()} instead
      * @return The podcast explicit flag.
      */
+    @Deprecated
     public boolean isExplict() {
-        return explict;
+        return isExplicit();
     }
 
     /**
-     * Sets the Podcast's explict flag.
-     * @param explict Podcast's explict flag.
+     *
+     * @return The podcast explicit flag.
      */
-    public void setExplict(boolean explict) {
-        this.explict = explict;
+    public boolean isExplicit() {
+        return explicit;
+    }
+
+    /**
+     * Sets the Podcast's explicit flag.
+     * @param explicit Podcast's explicit flag.
+     * @deprecated Use {@link ItunesPodcast#setExplicit(boolean)} instead.
+     */
+    @Deprecated
+    public void setExplict(boolean explicit) {
+        setExplicit(explicit);
+    }
+
+    /**
+     *
+     * @param explicit Podcast's explicit flag.
+     */
+    public void setExplicit(boolean explicit) {
+        this.explicit = explicit;
     }
 
     /**
@@ -230,9 +249,20 @@ public class ItunesPodcast extends RssChannel {
          * @param explicit Podcast's explicit flag
          * @return a Podcast Builder
          */
-        public Builder explict(boolean explicit) {
+        public Builder explicit(boolean explicit) {
             podcast.setExplict(explicit);
             return this;
+        }
+
+        /**
+         * Populates Podcast's explicit flag.
+         * @param explicit Podcast's explicit flag
+         * @deprecated {@link ItunesPodcast.Builder#setExplicit(boolean)} instead.
+         * @return a Podcast Builder
+         */
+        @Deprecated
+        public Builder explict(boolean explicit) {
+            return explicit(explicit);
         }
 
         /**

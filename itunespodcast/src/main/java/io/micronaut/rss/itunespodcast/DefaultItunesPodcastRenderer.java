@@ -82,7 +82,7 @@ public class DefaultItunesPodcastRenderer extends DefaultRssFeedRenderer {
                     .stream()
                     .reduce((a, b) -> a + ", " + b).ifPresent(keywords -> writeElement(sw, "itunes:keywords", keywords));
 
-            writeElement(sw, "itunes:explicit", itunesPodcast.isExplict() ? "yes" : "no");
+            writeElement(sw, "itunes:explicit", itunesPodcast.isExplicit() ? "yes" : "no");
             writeElement(sw, "itunes:block", itunesPodcast.shouldBlock() ? "yes" : "no");
         }
     }
@@ -124,7 +124,7 @@ public class DefaultItunesPodcastRenderer extends DefaultRssFeedRenderer {
             itunesPodcastEpisode.getEpisode().ifPresent(episode -> writeElement(sw, "itunes:episode", String.valueOf(episode)));
             itunesPodcastEpisode.getSeason().ifPresent(season -> writeElement(sw, "itunes:season", String.valueOf(season)));
             //itunesPodcastEpisode.getImage().ifPresent(image -> writeItunesImage(sw, image));
-            writeElement(sw, "itunes:explicit", itunesPodcastEpisode.isExplict() ? "yes" : "no");
+            writeElement(sw, "itunes:explicit", itunesPodcastEpisode.isExplicit() ? "yes" : "no");
 
         }
     }
