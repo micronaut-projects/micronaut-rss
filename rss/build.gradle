@@ -11,6 +11,7 @@ dependencies {
         exclude module:'groovy-all'
     }
     testAnnotationProcessor("io.micronaut:micronaut-inject-java")
+    testImplementation("org.codehaus.groovy:groovy-xml")
     testImplementation "io.micronaut.test:micronaut-test-spock:$micronautTestVersion"
     testImplementation("io.micronaut:micronaut-http-server-netty")
     testImplementation("io.micronaut:micronaut-http-client")
