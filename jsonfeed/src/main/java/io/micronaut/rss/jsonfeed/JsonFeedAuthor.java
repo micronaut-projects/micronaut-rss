@@ -18,7 +18,7 @@ package io.micronaut.rss.jsonfeed;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import java.util.Objects;
 
-public class JsonFeedAuthor {
+public final class JsonFeedAuthor {
 
     @Nullable
     private String name;
@@ -28,7 +28,7 @@ public class JsonFeedAuthor {
     private String avatar;
 
     /**
-     * Name of the author
+     * Name of the author.
      *
      * @return name of the author
      */
@@ -37,7 +37,7 @@ public class JsonFeedAuthor {
     }
 
     /**
-     * Name of the author
+     * Name of the author.
      *
      * @param name name of the author
      */
@@ -46,7 +46,7 @@ public class JsonFeedAuthor {
     }
 
     /**
-     * The URL of a site owned by the author
+     * The URL of a site owned by the author.
      *
      * @return the URL of a site owned by the author
      */
@@ -55,7 +55,7 @@ public class JsonFeedAuthor {
     }
 
     /**
-     * The URL of a site owned by the author
+     * The URL of a site owned by the author.
      *
      * @param url the URL of a site owned by the author
      */
@@ -101,7 +101,7 @@ public class JsonFeedAuthor {
         }
 
         /**
-         * Name of the author
+         * Name of the author.
          *
          * @param name name of the author
          * @return Builder
@@ -112,7 +112,7 @@ public class JsonFeedAuthor {
         }
 
         /**
-         * The URL of a site owned by the author
+         * The URL of a site owned by the author.
          *
          * @param url the URL of a site owned by the author
          * @return Builder
@@ -125,7 +125,7 @@ public class JsonFeedAuthor {
         /**
          * The URL for an image for the author. It should be square and relatively large such as 512
          * x 512 pixels and should use transparency where appropriate, since it may be rendered on a
-         * non-white background.  *
+         * non-white background.
          *
          * @param avatar the URL for an image for the author.
          * @return Builder

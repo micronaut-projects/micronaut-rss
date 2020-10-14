@@ -19,7 +19,7 @@ import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.annotation.Nonnull;
 import javax.validation.constraints.NotBlank;
 
-public class JsonFeedAttachment {
+public final class JsonFeedAttachment {
 
     @Nonnull
     @NotBlank
@@ -43,7 +43,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Location of the attachment
+     * Location of the attachment.
      *
      * @return location of the attachment
      */
@@ -53,7 +53,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Specifies the location of the attachment
+     * Specifies the location of the attachment.
      *
      * @param url the location of the attachment
      */
@@ -62,7 +62,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Mime type of the attachment
+     * Mime type of the attachment.
      *
      * @return mime type of the attachment
      */
@@ -72,7 +72,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Mime type of the attachment
+     * Mime type of the attachment.
      *
      * @param mimeType mime type of the attachment
      */
@@ -81,7 +81,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Name of the attachment
+     * Name of the attachment.
      *
      * @return name of the attachment
      */
@@ -91,7 +91,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Name of the attachment
+     * Name of the attachment.
      *
      * @param title name of the attachment
      */
@@ -100,7 +100,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Specifies how large the file is in bytes
+     * Specifies how large the file is in bytes.
      *
      * @return specifies how large the file is in bytes
      */
@@ -110,7 +110,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Specifies how large the file is in bytes
+     * Specifies how large the file is in bytes.
      *
      * @param sizeInBytes specifies how large the file is in bytes
      */
@@ -119,7 +119,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Specifies how long it takes to listen to or watch, when played at normal speed
+     * Specifies how long it takes to listen to or watch, when played at normal speed.
      *
      * @return specifies duration of the attachment
      */
@@ -129,7 +129,7 @@ public class JsonFeedAttachment {
     }
 
     /**
-     * Specifies how long it takes to listen to or watch, when played at normal speed
+     * Specifies how long it takes to listen to or watch, when played at normal speed.
      *
      * @param durationInSeconds duration of the attachment
      */
@@ -145,7 +145,7 @@ public class JsonFeedAttachment {
         }
 
         /**
-         * Specifies the location of the attachment
+         * Specifies the location of the attachment.
          *
          * @param url the location of the attachment
          * @return The Builder
@@ -156,7 +156,7 @@ public class JsonFeedAttachment {
         }
 
         /**
-         * Mime type of the attachment
+         * Mime type of the attachment.
          *
          * @param mimeType mime type of the attachment
          * @return The Builder
@@ -167,7 +167,7 @@ public class JsonFeedAttachment {
         }
 
         /**
-         * Name of the attachment
+         * Name of the attachment.
          *
          * @param title name of the attachment
          * @return The Builder
@@ -178,7 +178,7 @@ public class JsonFeedAttachment {
         }
 
         /**
-         * Specifies how large the file is in bytes
+         * Specifies how large the file is in bytes.
          *
          * @param sizeInBytes sive of the file in bytes
          * @return The Builder
@@ -189,7 +189,7 @@ public class JsonFeedAttachment {
         }
 
         /**
-         * Specifies how long it takes to listen to or watch, when played at normal speed
+         * Specifies how long it takes to listen to or watch, when played at normal speed.
          *
          * @param durationInSeconds duration of the attachment in seconds
          * @return The Builder

@@ -40,6 +40,7 @@ public class JsonFeedController {
     private final String APPLICATION_JSON_FEED = "application/json+feed";
 
     /**
+     * @param jsonFeedProvider A bean which returns JSON 1.1 feeds.
      * @param jsonFeedRenderer Provides a bean to render {@link io.micronaut.rss.jsonfeed.JsonFeed}
      */
     public JsonFeedController(JsonFeedProvider jsonFeedProvider,

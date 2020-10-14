@@ -27,7 +27,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 @JsonSerialize
-public class JsonFeedItem {
+public final class JsonFeedItem {
 
     @NotBlank
     @Nonnull
@@ -147,7 +147,7 @@ public class JsonFeedItem {
 
 
     /**
-     * Title of the item in feed
+     * Title of the item in feed.
      *
      * @return title of the item in feed
      */
@@ -157,7 +157,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Title of the item in feed
+     * Title of the item in feed.
      *
      * @param title title of the item in feed
      */
@@ -166,7 +166,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The html content of the item in the feed
+     * The html content of the item in the feed.
      *
      * @return the html content of the item in the feed
      */
@@ -175,7 +175,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The html content of the item in the feed
+     * The html content of the item in the feed.
      *
      * @param contentHtml the html content of the item in the feed
      */
@@ -184,7 +184,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The text content of the item in the feed
+     * The text content of the item in the feed.
      *
      * @return the text content of the item in the feed
      */
@@ -193,7 +193,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The text content of the item in the feed
+     * The text content of the item in the feed.
      *
      * @param contentText the text content of the item in the feed
      */
@@ -220,7 +220,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The URL of the main image for the item
+     * The URL of the main image for the item.
      *
      * @return the URL of the main image for the item
      */
@@ -229,7 +229,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The URL of the main image for the item
+     * The URL of the main image for the item.
      *
      * @param image the URL of the main image for the item
      */
@@ -238,7 +238,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The URL of an image to use as a banner
+     * The URL of an image to use as a banner.
      *
      * @return the URL of an image to use as a banner
      */
@@ -247,7 +247,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The URL of an image to use as a banner
+     * The URL of an image to use as a banner.
      *
      * @param bannerImage the URL of an image to use as a banner
      */
@@ -256,7 +256,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Specifies the publishing date in RFC 3339
+     * Specifies the publishing date in RFC 3339.
      *
      * @return specifies the publishing date in RFC 3339
      */
@@ -266,7 +266,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Specifies the publishing date in RFC 3339
+     * Specifies the publishing date in RFC 3339.
      *
      * @param datePublished specifies the publishing date in RFC 3339
      */
@@ -275,7 +275,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Specifies the last modified date in RFC 3339
+     * Specifies the last modified date in RFC 3339.
      *
      * @return specifies the last modified date in RFC 3339
      */
@@ -284,7 +284,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Specifies the last modified date in RFC 3339
+     * Specifies the last modified date in RFC 3339.
      *
      * @param dateModified specifies the last modified date in RFC 3339
      */
@@ -293,7 +293,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The author of the feed
+     * The author of the feed.
      *
      * @return the author of the feed
      */
@@ -303,7 +303,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * The author of the feed
+     * The author of the feed.
      *
      * @param author the author of the feed
      */
@@ -312,7 +312,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * List of authors of the item
+     * List of authors of the item.
      *
      * @return list of authors of the item
      */
@@ -322,7 +322,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * List of authors of the item
+     * List of authors of the item.
      *
      * @param authors list of authors of the item
      */
@@ -331,7 +331,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Tags associated with the item
+     * Tags associated with the item.
      *
      * @return tags associated with the item
      */
@@ -341,7 +341,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Tags associated with the item
+     * Tags associated with the item.
      *
      * @param tags associated tags with the item
      */
@@ -368,7 +368,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Attachments associated with the item
+     * Attachments associated with the item.
      *
      * @return attachments associated with the item
      */
@@ -378,7 +378,7 @@ public class JsonFeedItem {
     }
 
     /**
-     * Attachments associated with the item
+     * Attachments associated with the item.
      *
      * @param attachments attachments associated with the item
      */
@@ -443,6 +443,7 @@ public class JsonFeedItem {
          * The URL of a page elsewhere. This is especially useful for linkblogs
          *
          * @param externalUrl the URL of a page
+         * @return Builder
          */
         public Builder externalUrl(String externalUrl) {
             feedItem.setExternalUrl(externalUrl);
@@ -450,7 +451,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * Title of the item in feed
+         * Title of the item in feed.
          *
          * @param title title of the item in feed
          * @return Builder
@@ -461,7 +462,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * The html content of the item in the feed
+         * The html content of the item in the feed.
          *
          * @param contentHtml the html content of the item in the feed
          * @return Builder
@@ -472,7 +473,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * The text content of the item in the feed
+         * The text content of the item in the feed.
          *
          * @param contentText the text content of the item in the feed
          * @return Builder
@@ -494,7 +495,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * The URL of the main image for the item
+         * The URL of the main image for the item.
          *
          * @param image the URL of the main image for the item
          * @return Builder
@@ -505,7 +506,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * The URL of an image to use as a banner
+         * The URL of an image to use as a banner.
          *
          * @param bannerImage the URL of an image to use as a banner
          * @return Builder
@@ -516,9 +517,10 @@ public class JsonFeedItem {
         }
 
         /**
-         * Specifies the publishing date in RFC 3339
+         * Specifies the publishing date in RFC 3339.
          *
          * @param datePublished specifies the publishing date in RFC 3339
+         * @return Builder
          */
         public Builder datePublished(ZonedDateTime datePublished) {
             feedItem.setDatePublished(datePublished);
@@ -526,9 +528,10 @@ public class JsonFeedItem {
         }
 
         /**
-         * Specifies the last modified date in RFC 3339
+         * Specifies the last modified date in RFC 3339.
          *
          * @param dateModified specifies the last modified date in RFC 3339
+         * @return Builder
          */
         public Builder dateModified(ZonedDateTime dateModified) {
             feedItem.setDateModified(dateModified);
@@ -536,7 +539,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * Adds an author to the feed
+         * Adds an author to the feed.
          *
          * @param author An author of the feed
          * @return Builder
@@ -547,7 +550,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * The author of the feed
+         * The author of the feed.
          *
          * @param author the author of the feed
          * @return Builder
@@ -559,9 +562,10 @@ public class JsonFeedItem {
         }
 
         /**
-         * Associate a tag with the item
+         * Associate a tag with the item.
          *
-         * @return tag associate a tag with the item
+         * @param tag associate a tag with the item
+         * @return Builder
          */
         public Builder tag(String tag) {
             feedItem.addTag(tag);
@@ -580,7 +584,7 @@ public class JsonFeedItem {
         }
 
         /**
-         * Attachments associated with the item
+         * Attachments associated with the item.
          *
          * @param attachment attachments associated with the item
          * @return Builder

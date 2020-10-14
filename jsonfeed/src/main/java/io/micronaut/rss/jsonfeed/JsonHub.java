@@ -29,7 +29,7 @@ public class JsonHub {
     private String url;
 
     /**
-     * Describes the protocol used to talk to the hub
+     * Describes the protocol used to talk to the hub.
      *
      * @return type describes the protocol used to talk to the hub
      */
@@ -38,7 +38,7 @@ public class JsonHub {
     }
 
     /**
-     * Describes the protocol used to talk to the hub
+     * Describes the protocol used to talk to the hub.
      *
      * @param type describes the protocol used to talk to the hub
      */
@@ -46,9 +46,8 @@ public class JsonHub {
         this.type = type;
     }
 
-
     /**
-     * Url where the hub is present
+     * Url where the hub is present.
      *
      * @return url where the hub is present
      */
@@ -57,7 +56,7 @@ public class JsonHub {
     }
 
     /**
-     * Url where the hub is present
+     * Url where the hub is present.
      *
      * @param url location where the hub is present
      */
@@ -69,7 +68,7 @@ public class JsonHub {
         return new Builder();
     }
 
-    public static class Builder {
+    public static final class Builder {
 
         private JsonHub jsonHub = new JsonHub();
 
@@ -77,7 +76,7 @@ public class JsonHub {
         }
 
         /**
-         * Describes the protocol used to talk to the hub
+         * Describes the protocol used to talk to the hub.
          *
          * @param type describes the protocol used to talk to the hub
          * @return Builder
@@ -88,7 +87,7 @@ public class JsonHub {
         }
 
         /**
-         * Url where the hub is present
+         * Url where the hub is present.
          *
          * @param url location where the hub is present
          * @return Builder

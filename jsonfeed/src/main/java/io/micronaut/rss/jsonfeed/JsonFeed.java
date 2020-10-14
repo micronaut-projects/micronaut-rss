@@ -24,7 +24,7 @@ import javax.annotation.Nonnull;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-public class JsonFeed {
+public final class JsonFeed {
 
     @NotBlank
     @Nonnull
@@ -80,7 +80,7 @@ public class JsonFeed {
     }
 
     /**
-     * URL of the version of the format the feed uses
+     * URL of the version of the format the feed uses.
      *
      * @param version of JSON feed
      */
@@ -89,7 +89,7 @@ public class JsonFeed {
     }
 
     /**
-     * Returns the URL of the version of the format the feed uses
+     * Returns the URL of the version of the format the feed uses.
      *
      * @return version of JSON feed
      */
@@ -97,9 +97,8 @@ public class JsonFeed {
         return this.version;
     }
 
-
     /**
-     * The name of the feed, which will often correspond to the name of the website
+     * The name of the feed, which will often correspond to the name of the website.
      *
      * @return the name of the feed
      */
@@ -108,7 +107,7 @@ public class JsonFeed {
     }
 
     /**
-     * The name of the feed, which will often correspond to the name of the website
+     * The name of the feed, which will often correspond to the name of the website.
      *
      * @param title the name of the feed
      */
@@ -155,7 +154,7 @@ public class JsonFeed {
     }
 
     /**
-     * the URL of the feed, and serves as the unique identifier for the feed
+     * The URL of the feed, and serves as the unique identifier for the feed.
      *
      * @return the URL of the feed, and serves as the unique identifier for the feed
      */
@@ -165,7 +164,7 @@ public class JsonFeed {
     }
 
     /**
-     * the URL of the feed, and serves as the unique identifier for the feed
+     * The URL of the feed, and serves as the unique identifier for the feed.
      *
      * @param feedUrl the URL of the feed, and serves as the unique identifier for the feed
      */
@@ -278,7 +277,7 @@ public class JsonFeed {
     }
 
     /**
-     * The author of the feed
+     * The author of the feed.
      *
      * @return author the author of the feed
      */
@@ -288,7 +287,7 @@ public class JsonFeed {
     }
 
     /**
-     * The author of the feed
+     * The author of the feed.
      *
      * @param author the author of the feed
      */
@@ -310,14 +309,14 @@ public class JsonFeed {
     /**
      * The primary language for the feed in the format specified in RFC 5646.
      *
-     * @return the primary language for the feed
+     * @param language the primary language for the feed
      */
     public void setLanguage(@Nullable RssLanguage language) {
         this.language = language;
     }
 
     /**
-     * Says whether or not the feed is finished — that is, whether or not it will ever update again
+     * Says whether or not the feed is finished — that is, whether or not it will ever update again.
      *
      * @return expired says whether or not the feed is finished
      */
@@ -327,7 +326,7 @@ public class JsonFeed {
     }
 
     /**
-     * Says whether or not the feed is finished — that is, whether or not it will ever update again
+     * Says whether or not the feed is finished — that is, whether or not it will ever update again.
      *
      * @param expired says whether or not the feed is finished
      */
@@ -337,7 +336,7 @@ public class JsonFeed {
 
     /**
      * Describes endpoints that can be used to subscribe to real-time notifications from the
-     * publisher of this feed
+     * publisher of this feed.
      *
      * @return Describes endpoints that can be used to subscribe to real-time notifications
      */
@@ -348,7 +347,7 @@ public class JsonFeed {
 
     /**
      * Describes endpoints that can be used to subscribe to real-time notifications from the
-     * publisher of this feed
+     * publisher of this feed.
      *
      * @param hubs Describes endpoints that can be used to subscribe to real-time notifications
      */
@@ -364,7 +363,7 @@ public class JsonFeed {
     }
 
     /**
-     * The items in the field
+     * The items in the field.
      *
      * @return list of items in the feed
      */
@@ -373,6 +372,8 @@ public class JsonFeed {
     }
 
     /**
+     * The items in the field.
+     *
      * @param items list of items in the feed
      */
     public void setItems(List<JsonFeedItem> items) {
@@ -410,7 +411,7 @@ public class JsonFeed {
         }
 
         /**
-         * The name of the feed, which will often correspond to the name of the website
+         * The name of the feed, which will often correspond to the name of the website.
          *
          * @param title the name of the feed
          * @return Builder
@@ -433,7 +434,7 @@ public class JsonFeed {
         }
 
         /**
-         * the URL of the feed, and serves as the unique identifier for the feed
+         * The URL of the feed, and serves as the unique identifier for the feed.
          *
          * @param feedUrl the URL of the feed, and serves as the unique identifier for the feed
          * @return Builder
@@ -505,7 +506,7 @@ public class JsonFeed {
         }
 
         /**
-         * Content of the feed
+         * Content of the feed.
          *
          * @param item content of the feed
          * @return Builder
@@ -516,7 +517,7 @@ public class JsonFeed {
         }
 
         /**
-         * Adds an author to the feed
+         * Adds an author to the feed.
          *
          * @param author An author of the feed
          * @return Builder
@@ -527,7 +528,7 @@ public class JsonFeed {
         }
 
         /**
-         * The author of the feed
+         * The author of the feed.
          *
          * @param author the author of the feed
          * @return Builder
@@ -551,7 +552,7 @@ public class JsonFeed {
 
         /**
          * Says whether or not the feed is finished — that is, whether or not it will ever update
-         * again
+         * again.
          *
          * @param expired says whether or not the feed is finished
          * @return Builder
@@ -563,7 +564,7 @@ public class JsonFeed {
 
         /**
          * Describes endpoints that can be used to subscribe to real-time notifications from the
-         * publisher of this feed
+         * publisher of this feed.
          *
          * @param hub Describes endpoints that can be used to subscribe to real-time notifications
          * @return Builder
