@@ -1,0 +1,10 @@
+dependency:micronaut-jsonfeed[groupId="io.micronaut.rss"]
+
+This module produces a valid https://jsonfeed.org/version/1.1[JSON 1.1] feed with additional tags.
+
+For example, the following bean will generate a JSON 1.1 Feed
+
+[source, java]
+----
+include::{sourcedir}/jsonfeed/src/test/java/io/micronaut/rss/jsonfeed/DefaultJsonFeedProvider.java[tag=class]
+----
