@@ -15,6 +15,8 @@
  */
 package io.micronaut.rss.itunespodcast;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
+
 /**
  * Itunes Podcast owner.
  *
@@ -101,6 +103,7 @@ public class ItunesPodcastOwner {
          *
          * @return a fully constructed {@link ItunesPodcastOwner}.
          */
+        @NonNull
         public ItunesPodcastOwner build() {
             return this.owner;
         }

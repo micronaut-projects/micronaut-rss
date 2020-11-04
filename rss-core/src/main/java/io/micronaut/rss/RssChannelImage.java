@@ -15,6 +15,7 @@
  */
 package io.micronaut.rss;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import java.util.Optional;
 
@@ -228,6 +229,7 @@ public class RssChannelImage {
          * Builds an RSS Channel.
          * @return a {@link RssChannelImage}
          */
+        @NonNull
         public RssChannelImage build() {
             return this.image;
         }

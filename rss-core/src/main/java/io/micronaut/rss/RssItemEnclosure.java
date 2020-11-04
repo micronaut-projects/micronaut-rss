@@ -153,6 +153,7 @@ public class RssItemEnclosure {
          *
          * @return A {@link RssItemEnclosure}
          */
+        @NonNull
         public RssItemEnclosure build() {
             return this.enclosure;
         }

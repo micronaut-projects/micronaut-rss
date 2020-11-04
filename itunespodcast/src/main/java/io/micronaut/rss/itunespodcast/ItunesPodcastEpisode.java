@@ -15,6 +15,7 @@
  */
 package io.micronaut.rss.itunespodcast;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import io.micronaut.rss.RssItem;
 import io.micronaut.rss.RssItemEnclosure;
 
@@ -267,6 +268,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * Builds a {@link ItunesPodcastEpisode}.
          * @return A fully constructed {@link ItunesPodcastEpisode}
          */
+        @NonNull
         public ItunesPodcastEpisode build() {
             return this.episode;
         }
@@ -276,6 +278,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param type Episode's type
          * @return a Episode Builder
          */
+        @NonNull
         public Builder episodeType(ItunesPodcastEpisodeType type) {
             episode.setEpisodeType(type);
             return this;
@@ -286,6 +289,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param title Episode's title
          * @return a Episode Builder
          */
+        @NonNull
         public Builder title(String title) {
             episode.setTitle(title);
             return this;
@@ -296,6 +300,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param author Episode's author.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder author(String author) {
             episode.setAuthor(author);
             return this;
@@ -306,6 +311,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param subtitle Episode's subtitle.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder subtitle(String subtitle) {
             episode.setSubtitle(subtitle);
             return this;
@@ -316,6 +322,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param summary Episode's summary.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder summary(String summary) {
             episode.setSummary(summary);
             return this;
@@ -326,6 +333,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param description Episode's description.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder description(String description) {
             episode.setDescription(description);
             return this;
@@ -336,6 +344,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param guid Episode unique identifier.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder guid(String guid) {
             episode.setGuid(guid);
             return this;
@@ -346,6 +355,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param pubDate Episode publication date.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder pubDate(ZonedDateTime pubDate) {
             episode.setPubDate(pubDate);
             return this;
@@ -356,6 +366,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param contentEncoded episode content encoded.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder contentEncoded(String contentEncoded) {
             episode.setContentEncoded(contentEncoded);
             return this;
@@ -366,6 +377,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param enclosure Episode enclosure.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder enclosure(RssItemEnclosure enclosure) {
             episode.setEnclosure(enclosure);
             return this;
@@ -376,6 +388,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param duration Episode's duration.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder duration(String duration) {
             episode.setDuration(duration);
             return this;
@@ -386,6 +399,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param explicit if episode is explicit.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder explicit(boolean explicit) {
             episode.setExplicit(explicit);
             return this;
@@ -396,6 +410,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param episode Episode number
          * @return a Episode Builder
          */
+        @NonNull
         public Builder episode(Integer episode) {
             this.episode.setEpisode(episode);
             return this;
@@ -406,6 +421,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param season episode season number.
          * @return a Episode Builder
          */
+        @NonNull
         public Builder season(Integer season) {
             this.episode.setSeason(season);
             return this;
@@ -416,6 +432,7 @@ public class ItunesPodcastEpisode extends RssItem {
          * @param image Episode's image
          * @return a Episode Builder
          */
+        @NonNull
         public Builder image(String image) {
             this.episode.setImage(image);
             return this;

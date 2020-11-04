@@ -15,6 +15,7 @@
  */
 package io.micronaut.rss;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -272,6 +273,7 @@ public class RssItem {
          * @param title The title of the item.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder title(String title) {
             rssItem.setTitle(title);
             return this;
@@ -282,6 +284,7 @@ public class RssItem {
          * @param link The URL of the item.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder link(String link) {
             rssItem.setLink(link);
             return this;
@@ -292,6 +295,7 @@ public class RssItem {
          * @param description The item synopsis.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder description(String description) {
             rssItem.setDescription(description);
             return this;
@@ -302,6 +306,7 @@ public class RssItem {
          * @param author Email address of the author of the item.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder author(String author) {
             rssItem.setAuthor(author);
             return this;
@@ -312,6 +317,7 @@ public class RssItem {
          * @param category A list of categories.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder category(List<String> category) {
             rssItem.setCategory(category);
             return this;
@@ -322,6 +328,7 @@ public class RssItem {
          * @param comments URL of a page for comments relating to the item.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder comments(String comments) {
             rssItem.setComments(comments);
             return this;
@@ -332,6 +339,7 @@ public class RssItem {
          * @param enclosure A media object that is attached to the item.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder enclosure(RssItemEnclosure enclosure) {
             rssItem.setEnclosure(enclosure);
             return this;
@@ -342,6 +350,7 @@ public class RssItem {
          * @param pubDate When the item was published.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder pubDate(ZonedDateTime pubDate) {
             rssItem.setPubDate(pubDate);
             return this;
@@ -352,6 +361,7 @@ public class RssItem {
          * @param guid A string that uniquely identifies the item.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder guid(String guid) {
             rssItem.setGuid(guid);
             return this;
@@ -362,6 +372,7 @@ public class RssItem {
          * @param source The RSS channel that the item came from.
          * @return {@link RssItem.Builder}
          */
+        @NonNull
         public Builder source(String source) {
             rssItem.setSource(source);
             return this;
@@ -371,6 +382,7 @@ public class RssItem {
          *
          * @return Builds a {@link RssItem}
          */
+        @NonNull
         public RssItem build() {
             return this.rssItem;
         }
