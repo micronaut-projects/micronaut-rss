@@ -15,6 +15,7 @@
  */
 package io.micronaut.rss.itunespodcast;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssChannelImage;
@@ -239,6 +240,7 @@ public class ItunesPodcast extends RssChannel {
          * @param type Podcast's type
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder type(ItunesPodcastType type) {
             podcast.setType(type);
             return this;
@@ -249,6 +251,7 @@ public class ItunesPodcast extends RssChannel {
          * @param explicit Podcast's explicit flag
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder explicit(boolean explicit) {
             podcast.setExplict(explicit);
             return this;
@@ -261,6 +264,7 @@ public class ItunesPodcast extends RssChannel {
          * @return a Podcast Builder
          */
         @Deprecated
+        @NonNull
         public Builder explict(boolean explicit) {
             return explicit(explicit);
         }
@@ -270,6 +274,7 @@ public class ItunesPodcast extends RssChannel {
          * @param author Podcast's author
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder author(String author) {
             podcast.setAuthor(author);
             return this;
@@ -280,6 +285,7 @@ public class ItunesPodcast extends RssChannel {
          * @param owner Podcast's owner
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder owner(ItunesPodcastOwner owner) {
             podcast.setOwner(owner);
             return this;
@@ -290,6 +296,7 @@ public class ItunesPodcast extends RssChannel {
          * @param link Podcast's link
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder link(String link) {
             podcast.setLink(link);
             return this;
@@ -300,6 +307,7 @@ public class ItunesPodcast extends RssChannel {
          * @param description Podcast's description
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder description(String description) {
             podcast.setDescription(description);
             return this;
@@ -310,6 +318,7 @@ public class ItunesPodcast extends RssChannel {
          * @param language Podcast's language
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder language(RssLanguage language) {
             podcast.setLanguage(language);
             return this;
@@ -320,6 +329,7 @@ public class ItunesPodcast extends RssChannel {
          * @param copyright Podcast's copyright
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder copyright(String copyright) {
             podcast.setCopyright(copyright);
             return this;
@@ -330,6 +340,7 @@ public class ItunesPodcast extends RssChannel {
          * @param managingEditor Podcast's managingEditor
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder managingEditor(String managingEditor) {
             podcast.setManagingEditor(managingEditor);
             return this;
@@ -340,6 +351,7 @@ public class ItunesPodcast extends RssChannel {
          * @param webMaster Podcast's webMaster
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder webMaster(String webMaster) {
             podcast.setWebMaster(webMaster);
             return this;
@@ -350,6 +362,7 @@ public class ItunesPodcast extends RssChannel {
          * @param pubDate Podcast's Publication date
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder pubDate(ZonedDateTime pubDate) {
             podcast.setPubDate(pubDate);
             return this;
@@ -360,6 +373,7 @@ public class ItunesPodcast extends RssChannel {
          * @param lastBuildDate Podcast's lastBuildDate
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder lastBuildDate(ZonedDateTime lastBuildDate) {
             podcast.setLastBuildDate(lastBuildDate);
             return this;
@@ -370,6 +384,7 @@ public class ItunesPodcast extends RssChannel {
          * @param category Podcast's category
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder category(List<List<String>> category) {
             podcast.setCategory(category);
             return this;
@@ -380,6 +395,7 @@ public class ItunesPodcast extends RssChannel {
          * @param generator Podcast's generator
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder generator(String generator) {
             podcast.setGenerator(generator);
             return this;
@@ -390,6 +406,7 @@ public class ItunesPodcast extends RssChannel {
          * @param docs Podcast's docs
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder docs(String docs) {
             podcast.setDocs(docs);
             return this;
@@ -400,6 +417,7 @@ public class ItunesPodcast extends RssChannel {
          * @param cloud Podcast's cloud
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder cloud(String cloud) {
             podcast.setCloud(cloud);
             return this;
@@ -410,6 +428,7 @@ public class ItunesPodcast extends RssChannel {
          * @param ttl Podcast's ttl
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder ttl(Integer ttl) {
             podcast.setTtl(ttl);
             return this;
@@ -420,6 +439,7 @@ public class ItunesPodcast extends RssChannel {
          * @param image Podcast's image
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder image(RssChannelImage image) {
             podcast.setImage(image);
             return this;
@@ -430,6 +450,7 @@ public class ItunesPodcast extends RssChannel {
          * @param rating Podcast's rating
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder rating(String rating) {
             podcast.setRating(rating);
             return this;
@@ -440,6 +461,7 @@ public class ItunesPodcast extends RssChannel {
          * @param textInput Podcast's textInput
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder textInput(RssTextInput textInput) {
             podcast.setTextInput(textInput);
             return this;
@@ -450,6 +472,7 @@ public class ItunesPodcast extends RssChannel {
          * @param skipHours Podcast's skipHours
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder skipHours(List<RssSkipHours> skipHours) {
             podcast.setSkipHours(skipHours);
             return this;
@@ -460,6 +483,7 @@ public class ItunesPodcast extends RssChannel {
          * @param skipDays Podcast's skipDays
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder skipDays(List<RssSkipDays> skipDays) {
             podcast.setSkipDays(skipDays);
             return this;
@@ -470,6 +494,7 @@ public class ItunesPodcast extends RssChannel {
          * @param item Podcast's item
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder item(RssItem item) {
             if (podcast.getItem().isPresent()) {
                 podcast.addItem(item);
@@ -484,6 +509,7 @@ public class ItunesPodcast extends RssChannel {
          * @param subtitle Podcast's subtitle
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder subtitle(String subtitle) {
             podcast.setSubtitle(subtitle);
             return this;
@@ -494,6 +520,7 @@ public class ItunesPodcast extends RssChannel {
          * @param summary Podcast's summary
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder summary(String summary) {
             podcast.setSummary(summary);
             return this;
@@ -504,6 +531,7 @@ public class ItunesPodcast extends RssChannel {
          * @param keyword Podcast's keyword
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder keyword(String keyword) {
             this.podcast.keywords.add(keyword);
             return this;
@@ -514,6 +542,7 @@ public class ItunesPodcast extends RssChannel {
          * @param block Podcast's block
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder block(boolean block) {
             this.podcast.setBlock(block);
             return this;
