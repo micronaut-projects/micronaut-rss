@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.micronaut.rss;
+package io.micronaut.rss.language;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -27,9 +27,7 @@ import java.util.Optional;
  *
  * @author Sergio del Amo
  * @since 1.0
- * @deprecated Use {@link io.micronaut.rss.language.RssLanguage} instead.
  */
-@Deprecated
 public enum RssLanguage {
 
     LANG_AFRIKAANS("Afrikaans", "af"),
