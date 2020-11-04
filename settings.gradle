@@ -1,6 +1,6 @@
 include 'rss'
 include 'rss-core'
 include 'itunespodcast'
-
+include 'jsonfeed-core'
 include 'rss-language'
 rootProject.name = 'micronaut-rss'
