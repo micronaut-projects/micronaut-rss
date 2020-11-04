@@ -15,6 +15,7 @@
  */
 package io.micronaut.rss;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -521,6 +522,7 @@ public class RssChannel {
          * @param language The language the channel is written in.
          * @return The Builder.
          */
+        @NonNull
         public Builder language(RssLanguage language) {
             rssChannel.setLanguage(language);
             return this;
@@ -531,6 +533,7 @@ public class RssChannel {
          * @param copyright Copyright notice for content in the channel.
          * @return The Builder.
          */
+        @NonNull
         public Builder copyright(String copyright) {
             rssChannel.setCopyright(copyright);
             return this;
@@ -541,6 +544,7 @@ public class RssChannel {
          * @param managingEditor Email address for person responsible for editorial content.
          * @return The Builder.
          */
+        @NonNull
         public Builder managingEditor(String managingEditor) {
             rssChannel.setManagingEditor(managingEditor);
             return this;
@@ -551,6 +555,7 @@ public class RssChannel {
          * @param webMaster Email address for person responsible for technical issues relating to channel.
          * @return The Builder.
          */
+        @NonNull
         public Builder webMaster(String webMaster) {
             rssChannel.setWebMaster(webMaster);
             return this;
@@ -561,6 +566,7 @@ public class RssChannel {
          * @param pubDate The publication date for the content in the channel.
          * @return The Builder.
          */
+        @NonNull
         public Builder pubDate(ZonedDateTime pubDate) {
             rssChannel.setPubDate(pubDate);
             return this;
@@ -571,6 +577,7 @@ public class RssChannel {
          * @param lastBuildDate The last time the content of the channel changed.
          * @return The Builder.
          */
+        @NonNull
         public Builder lastBuildDate(ZonedDateTime lastBuildDate) {
             rssChannel.setLastBuildDate(lastBuildDate);
             return this;
@@ -581,6 +588,7 @@ public class RssChannel {
          * @param category a category to associate the RSS Channel with.
          * @return The Builder.
          */
+        @NonNull
         public Builder category(List<List<String>> category) {
             rssChannel.setCategory(category);
             return this;
@@ -591,6 +599,7 @@ public class RssChannel {
          * @param generator A string indicating the program used to generate the channel.
          * @return The Builder.
          */
+        @NonNull
         public Builder generator(String generator) {
             rssChannel.setGenerator(generator);
             return this;
@@ -601,6 +610,7 @@ public class RssChannel {
          * @param docs A URL that points to the documentation for the format used in the RSS file.
          * @return The Builder.
          */
+        @NonNull
         public Builder docs(String docs) {
             rssChannel.setDocs(docs);
             return this;
@@ -611,6 +621,7 @@ public class RssChannel {
          * @param cloud  A cloud.
          * @return The Builder.
          */
+        @NonNull
         public Builder cloud(String cloud) {
             rssChannel.setCloud(cloud);
             return this;
@@ -621,6 +632,7 @@ public class RssChannel {
          * @param ttl time to live expressed in minutes.
          * @return the Builder
          */
+        @NonNull
         public Builder ttl(Integer ttl) {
             rssChannel.setTtl(ttl);
             return this;
@@ -631,6 +643,7 @@ public class RssChannel {
          * @param image GIF, JPEG or PNG image that can be displayed with the channel
          * @return The Builder.
          */
+        @NonNull
         public Builder image(RssChannelImage image) {
             rssChannel.setImage(image);
             return this;
@@ -641,6 +654,7 @@ public class RssChannel {
          * @param rating The PICS rating for the channel.
          * @return The Builder.
          */
+        @NonNull
         public Builder rating(String rating) {
             rssChannel.setRating(rating);
             return this;
@@ -651,6 +665,7 @@ public class RssChannel {
          * @param textInput a text input box
          * @return The Builder.
          */
+        @NonNull
         public Builder textInput(RssTextInput textInput) {
             rssChannel.setTextInput(textInput);
             return this;
@@ -661,6 +676,7 @@ public class RssChannel {
          * @param skipHours a List of {@link RssSkipHours}.
          * @return The Builder.
          */
+        @NonNull
         public Builder skipHours(List<RssSkipHours> skipHours) {
             rssChannel.setSkipHours(skipHours);
             return this;
@@ -671,6 +687,7 @@ public class RssChannel {
          * @param skipDays a List of {@link RssSkipDays}.
          * @return The Builder.
          */
+        @NonNull
         public Builder skipDays(List<RssSkipDays> skipDays) {
             rssChannel.setSkipDays(skipDays);
             return this;
@@ -681,6 +698,7 @@ public class RssChannel {
          * @param item An RSS Item.
          * @return The Builder.
          */
+        @NonNull
         public Builder item(RssItem item) {
             if (rssChannel.getItem().isPresent()) {
                 rssChannel.addItem(item);
@@ -694,6 +712,7 @@ public class RssChannel {
          *
          * @return A RSS Channel.
          */
+        @NonNull
         public RssChannel build() {
             return this.rssChannel;
         }
