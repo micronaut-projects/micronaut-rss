@@ -1,0 +1,15 @@
+https://jsonfeed.org[JSON Feed] is a format similar to RSS and Atom but in JSON.
+
+To get such JSON:
+
+[source, json]
+----
+include::{sourcedir}/jsonfeed-core/src/test/groovy/io/micronaut/rss/jsonfeed/JsonFeedSpec.groovy[tag=json]
+----
+
+You can write:
+
+[source, java]
+----
+include::{sourcedir}/jsonfeed-core/src/test/groovy/io/micronaut/rss/jsonfeed/JsonFeedSpec.groovy[tag=builder,indent=false]
+----

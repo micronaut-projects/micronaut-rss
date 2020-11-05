@@ -15,6 +15,8 @@
  */
 package io.micronaut.rss.language;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -146,6 +148,7 @@ public enum RssLanguage {
     /**
      * @return The languageName
      */
+    @NonNull
     public String getLanguageName() {
         return languageName;
     }
@@ -153,6 +156,7 @@ public enum RssLanguage {
     /**
      * @return The languageCode
      */
+    @NonNull
     public String getLanguageCode() {
         return languageCode;
     }
@@ -161,6 +165,7 @@ public enum RssLanguage {
      *
      * @return a RssLanguage as Map
      */
+    @NonNull
     public Map<String, Object> toMap() {
         Map<String, Object> m = new HashMap<>();
         m.put("name", getLanguageName());
@@ -168,6 +173,7 @@ public enum RssLanguage {
         return m;
     }
 
+    @NonNull
     public static Optional<RssLanguage> of(String languageCode) {
         return Arrays.stream(RssLanguage.values())
             .filter(lang -> lang.getLanguageCode().equals(languageCode))

@@ -230,6 +230,7 @@ public class ItunesPodcast extends RssChannel {
          * @param title Podcast's title
          * @return a Podcast Builder
          */
+        @NonNull
         public Builder title(String title) {
             podcast.setTitle(title);
             return this;
