@@ -1,0 +1,5 @@
+micronaut:
+  codec:
+    json:
+      additionalTypes:
+        - application/json+feed
