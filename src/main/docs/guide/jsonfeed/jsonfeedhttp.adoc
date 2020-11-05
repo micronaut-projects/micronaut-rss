@@ -18,6 +18,8 @@ Then, if you provide a bean of type api:rss.jsonfeed.http.JsonFeedProvider[] suc
 include::{sourcedir}/jsonfeed/src/test/java/io/micronaut/rss/jsonfeed/http/ExampleJsonFeedProvider.java[tag=class]
 ----
 
+WARNING: If the creation of the JSON feed is a blocking I/O operation, https://docs.micronaut.io/latest/guide/index.html#reactiveServer[offload that tasks to a separate thread pool] that does not block the Event loop.
+
 A GET request to `/feeds/json` returns a 200 OK response with HTTP Header with name `Content-Type` with value `application/json+feed` and a JSON Payload in the body such as:
 
 [source json]
