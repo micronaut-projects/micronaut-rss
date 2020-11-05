@@ -55,7 +55,9 @@
                                 
                                 <div class="toc-item" style="margin-left:0"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#repository"><strong>7</strong><span>Repository</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#jsonfeed"><strong>7</strong><span>JSON Feeds</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#repository"><strong>8</strong><span>Repository</span></a></div>
                                 
                             </div>
                         </div>
@@ -98,7 +100,9 @@
         
         <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-repository"><a href="#repository"><strong>7</strong><span>Repository</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-jsonfeed"><a href="#jsonfeed"><strong>7</strong><span>JSON Feeds</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-repository"><a href="#repository"><strong>8</strong><span>Repository</span></a></div>
         
         </div>
     </div>
@@ -570,7 +574,68 @@ public class DefaultRssFeedProvider implements RssFeedProvider {
 </div>
 </div>
 
-<h1 id="repository"><a class="anchor" href="#repository"></a>7 Repository</h1>
+<h1 id="jsonfeed"><a class="anchor" href="#jsonfeed"></a>7 JSON Feeds</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/jsonfeed.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p><a href="https://jsonfeed.org">JSON Feed</a> is a format similar to RSS and Atom but in JSON.</p>
+</div>
+<div class="paragraph">
+<p>To get such JSON:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "My Example Feed",
+    "home_page_url": "https://example.org/",
+    "feed_url": "https://example.org/feed.json",
+    "items": [
+        {
+            "id": "2",
+            "content_text": "This is a second item.",
+            "url": "https://example.org/second-item"
+        },
+        {
+            "id": "1",
+            "content_html": "&lt;p&gt;Hello, world!&lt;/p&gt;",
+            "url": "https://example.org/initial-post"
+       }
+    ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can write:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JsonFeed feed = JsonFeed.builder()
+        .version("https://jsonfeed.org/version/1.1")
+        .title("My Example Feed")
+        .homePageUrl("https://example.org/")
+        .feedUrl("https://example.org/feed.json")
+        .item(JsonFeedItem.builder()
+                .id("2")
+                .contentText("This is a second item.")
+                .url("https://example.org/second-item")
+                .build())
+        .item(JsonFeedItem.builder()
+                .id("1")
+                .contentHtml("&lt;p&gt;Hello, world!&lt;/p&gt;")
+                .url("https://example.org/initial-post")
+                .build())
+        .build()</code></pre>
+</div>
+</div>
+
+<h1 id="repository"><a class="anchor" href="#repository"></a>8 Repository</h1>
 
 <div class='contribute-btn'>
     <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/repository.adoc"'>
