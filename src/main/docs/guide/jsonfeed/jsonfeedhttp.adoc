@@ -1,0 +1,32 @@
+The following dependency contains functionality to expose an endpoint to return a JSON Feed:
+
+dependency:micronaut-jsonfeed[groupId="io.micronaut.rss"]
+
+Your JSON Feed will be of content type `application/json+feed`.
+
+You have to  https://docs.micronaut.io/latest/guide/index.html#consumesAnnotation[register an additional type] for Micronaut's `json` codec:
+
+[source, yaml]
+----
+include::{sourcedir}/jsonfeed/src/test/resources/application.yml[]
+----
+
+Then, if you provide a bean of type api:rss.jsonfeed.http.JsonFeedProvider[] such as:
+
+[source, java]
+----
+include::{sourcedir}/jsonfeed/src/test/java/io/micronaut/rss/jsonfeed/http/ExampleJsonFeedProvider.java[tag=class]
+----
+
+A GET request to `/feeds/json` returns a 200 OK response with HTTP Header with name `Content-Type` with value `application/json+feed` and a JSON Payload in the body such as:
+
+[source json]
+----
+include::{sourcedir}/jsonfeed/src/test/groovy/io/micronaut/rss/jsonfeed/http/JsonFeedControllerSpec.groovy[tag=json]
+----
+
+There are additional configuration options for the JSON Feed Controller:
+
+include::{includedir}configurationProperties/io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties.adoc[]
+
+You can implement pagination by supplying `maxNumberOfItems` and `pageNumber` which will be passed to your implementation of  api:rss.jsonfeed.http.JsonFeedProvider[].

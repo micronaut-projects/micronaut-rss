@@ -1,5 +1,9 @@
 https://jsonfeed.org[JSON Feed] is a format similar to RSS and Atom but in JSON.
 
+The following dependency contains the core classes to build a JSON Feed.
+
+dependency:micronaut-jsonfeed-core[groupId="io.micronaut.rss"]
+
 To get such JSON:
 
 [source, json]

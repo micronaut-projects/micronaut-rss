@@ -7,5 +7,7 @@ rss:
   title: RSS 2.0
 itunespodcast:
   title: Itunes Podcast RSS Feed
-jsonfeed: JSON Feeds
+jsonfeed:
+  title: JSON Feeds
+  jsonfeedhttp: JSON Feeds Endpoint
 repository: Repository
