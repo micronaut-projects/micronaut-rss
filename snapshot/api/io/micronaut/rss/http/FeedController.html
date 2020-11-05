@@ -107,7 +107,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>@Controller(value="${micronaut.rss.feed.path:/feed}")
+<pre>@Requires(beans={<a href="../../../../io/micronaut/rss/RssFeedProvider.html" title="interface in io.micronaut.rss">RssFeedProvider.class</a>,<a href="../../../../io/micronaut/rss/RssFeedRenderer.html" title="interface in io.micronaut.rss">RssFeedRenderer.class</a>}) @Requires(property="micronaut.rss.feed.enabled",notEquals="false")
+ @Controller(value="${micronaut.rss.feed.path:/feed}")
 public class <span class="typeNameLabel">FeedController</span>
 extends java.lang.Object</pre>
 <div class="block">Micronaut <code>Controller</code> which exposes an RSS 2.0 Feed.</div>

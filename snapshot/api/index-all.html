@@ -86,6 +86,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/JsonFeedItem.html#addTag-java.lang.String-">addTag(String)</a></span> - Method in class io.micronaut.rss.jsonfeed.<a href="io/micronaut/rss/jsonfeed/JsonFeedItem.html" title="class in io.micronaut.rss.jsonfeed">JsonFeedItem</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html#APPLICATION_JSON_FEED">APPLICATION_JSON_FEED</a></span> - Static variable in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedController</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/JsonFeedItem.Builder.html#attachment-io.micronaut.rss.jsonfeed.JsonFeedAttachment-">attachment(JsonFeedAttachment)</a></span> - Method in class io.micronaut.rss.jsonfeed.<a href="io/micronaut/rss/jsonfeed/JsonFeedItem.Builder.html" title="class in io.micronaut.rss.jsonfeed">JsonFeedItem.Builder</a></dt>
 <dd>
 <div class="block">Attachments associated with the item.</div>
@@ -264,10 +266,18 @@
 <dd>
 <div class="block">The default enable value.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#DEFAULT_ENABLED">DEFAULT_ENABLED</a></span> - Static variable in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>
+<div class="block">The default enable value.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html#DEFAULT_PATH">DEFAULT_PATH</a></span> - Static variable in class io.micronaut.rss.http.<a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.http">FeedControllerConfigurationProperties</a></dt>
 <dd>
 <div class="block">The default path.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#DEFAULT_PATH">DEFAULT_PATH</a></span> - Static variable in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#DEFAULT_ROOT_PATH">DEFAULT_ROOT_PATH</a></span> - Static variable in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io/micronaut/rss/itunespodcast/DefaultItunesPodcastRenderer.html" title="class in io.micronaut.rss.itunespodcast"><span class="typeNameLink">DefaultItunesPodcastRenderer</span></a> - Class in <a href="io/micronaut/rss/itunespodcast/package-summary.html">io.micronaut.rss.itunespodcast</a></dt>
 <dd>
 <div class="block"><a href="io/micronaut/rss/RssFeedRenderer.html" title="interface in io.micronaut.rss"><code>RssFeedRenderer</code></a> implementation for generating iTunes Podcast RSS 2.0 Feed.</div>
@@ -364,6 +374,14 @@
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/JsonFeed.Builder.html#favicon-java.lang.String-">favicon(String)</a></span> - Method in class io.micronaut.rss.jsonfeed.<a href="io/micronaut/rss/jsonfeed/JsonFeed.Builder.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed.Builder</a></dt>
 <dd>
 <div class="block">The URL of an image for the feed suitable to be used in a source list.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html#feed-java.lang.Integer-java.lang.Integer-">feed(Integer, Integer)</a></span> - Method in interface io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html" title="interface in io.micronaut.rss.jsonfeed.http">JsonFeedProvider</a></dt>
+<dd>
+<div class="block">Retrieves a JSON Feed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html#feed--">feed()</a></span> - Method in interface io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html" title="interface in io.micronaut.rss.jsonfeed.http">JsonFeedProvider</a></dt>
+<dd>
+<div class="block">Retrieves a JSON Feed.</div>
 </dd>
 <dt><a href="io/micronaut/rss/http/FeedController.html" title="class in io.micronaut.rss.http"><span class="typeNameLink">FeedController</span></a> - Class in <a href="io/micronaut/rss/http/package-summary.html">io.micronaut.rss.http</a></dt>
 <dd>
@@ -635,6 +653,10 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html#getPath--">getPath()</a></span> - Method in class io.micronaut.rss.http.<a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.http">FeedControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfiguration.html#getPath--">getPath()</a></span> - Method in interface io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfiguration.html" title="interface in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfiguration</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#getPath--">getPath()</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/RssChannel.html#getPubDate--">getPubDate()</a></span> - Method in class io.micronaut.rss.<a href="io/micronaut/rss/RssChannel.html" title="class in io.micronaut.rss">RssChannel</a></dt>
 <dd>
 <div class="block">The publication date for the content in the channel.</div>
@@ -647,6 +669,10 @@
 <dd>
 <div class="block">The PICS rating for the channel.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfiguration.html#getRootPath--">getRootPath()</a></span> - Method in interface io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfiguration.html" title="interface in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfiguration</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#getRootPath--">getRootPath()</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/DefaultRssFeedRenderer.html#getRssAttributes--">getRssAttributes()</a></span> - Method in class io.micronaut.rss.<a href="io/micronaut/rss/DefaultRssFeedRenderer.html" title="class in io.micronaut.rss">DefaultRssFeedRenderer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/itunespodcast/DefaultItunesPodcastRenderer.html#getRssAttributes--">getRssAttributes()</a></span> - Method in class io.micronaut.rss.itunespodcast.<a href="io/micronaut/rss/itunespodcast/DefaultItunesPodcastRenderer.html" title="class in io.micronaut.rss.itunespodcast">DefaultItunesPodcastRenderer</a></dt>
@@ -811,6 +837,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/http/FeedController.html#index--">index()</a></span> - Method in class io.micronaut.rss.http.<a href="io/micronaut/rss/http/FeedController.html" title="class in io.micronaut.rss.http">FeedController</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html#index-java.lang.Integer-java.lang.Integer-">index(Integer, Integer)</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedController</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io/micronaut/rss/package-summary.html">io.micronaut.rss</a> - package io.micronaut.rss</dt>
 <dd>
 <div class="block">RSS related classes in Micronaut.</div>
@@ -827,11 +855,17 @@
 <dd>
 <div class="block">JSON Feed.</div>
 </dd>
+<dt><a href="io/micronaut/rss/jsonfeed/http/package-summary.html">io.micronaut.rss.jsonfeed.http</a> - package io.micronaut.rss.jsonfeed.http</dt>
+<dd>
+<div class="block">JSON Feed HTTP related classes.</div>
+</dd>
 <dt><a href="io/micronaut/rss/language/package-summary.html">io.micronaut.rss.language</a> - package io.micronaut.rss.language</dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/JsonFeedAuthor.html#isEmpty--">isEmpty()</a></span> - Method in class io.micronaut.rss.jsonfeed.<a href="io/micronaut/rss/jsonfeed/JsonFeedAuthor.html" title="class in io.micronaut.rss.jsonfeed">JsonFeedAuthor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.rss.http.<a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.http">FeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#isEnabled--">isEnabled()</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/itunespodcast/ItunesPodcast.html#isExplicit--">isExplicit()</a></span> - Method in class io.micronaut.rss.itunespodcast.<a href="io/micronaut/rss/itunespodcast/ItunesPodcast.html" title="class in io.micronaut.rss.itunespodcast">ItunesPodcast</a></dt>
 <dd>&nbsp;</dd>
@@ -945,6 +979,22 @@
 <dd>
 <div class="block">JSON Feed Author's Builder.</div>
 </dd>
+<dt><a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http"><span class="typeNameLink">JsonFeedController</span></a> - Class in <a href="io/micronaut/rss/jsonfeed/http/package-summary.html">io.micronaut.rss.jsonfeed.http</a></dt>
+<dd>
+<div class="block">Exposes an endpoint, by default /feeds/json, which return a JSON Feed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html#JsonFeedController-io.micronaut.rss.jsonfeed.http.JsonFeedProvider-">JsonFeedController(JsonFeedProvider)</a></span> - Constructor for class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedController</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfiguration.html" title="interface in io.micronaut.rss.jsonfeed.http"><span class="typeNameLink">JsonFeedControllerConfiguration</span></a> - Interface in <a href="io/micronaut/rss/jsonfeed/http/package-summary.html">io.micronaut.rss.jsonfeed.http</a></dt>
+<dd>
+<div class="block">Configuration for <a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http"><code>JsonFeedController</code></a>.</div>
+</dd>
+<dt><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http"><span class="typeNameLink">JsonFeedControllerConfigurationProperties</span></a> - Class in <a href="io/micronaut/rss/jsonfeed/http/package-summary.html">io.micronaut.rss.jsonfeed.http</a></dt>
+<dd>
+<div class="block"><code>ConfigurationProperties</code> implementation of <a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfiguration.html" title="interface in io.micronaut.rss.jsonfeed.http"><code>JsonFeedControllerConfiguration</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#JsonFeedControllerConfigurationProperties--">JsonFeedControllerConfigurationProperties()</a></span> - Constructor for class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io/micronaut/rss/jsonfeed/JsonFeedItem.html" title="class in io.micronaut.rss.jsonfeed"><span class="typeNameLink">JsonFeedItem</span></a> - Class in <a href="io/micronaut/rss/jsonfeed/package-summary.html">io.micronaut.rss.jsonfeed</a></dt>
 <dd>
 <div class="block">Object in a JSON Feed.</div>
@@ -954,6 +1004,10 @@
 <dt><a href="io/micronaut/rss/jsonfeed/JsonFeedItem.Builder.html" title="class in io.micronaut.rss.jsonfeed"><span class="typeNameLink">JsonFeedItem.Builder</span></a> - Class in <a href="io/micronaut/rss/jsonfeed/package-summary.html">io.micronaut.rss.jsonfeed</a></dt>
 <dd>
 <div class="block">JSON Feed Item Builder.</div>
+</dd>
+<dt><a href="io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html" title="interface in io.micronaut.rss.jsonfeed.http"><span class="typeNameLink">JsonFeedProvider</span></a> - Interface in <a href="io/micronaut/rss/jsonfeed/http/package-summary.html">io.micronaut.rss.jsonfeed.http</a></dt>
+<dd>
+<div class="block">Defines a provider of a JSON Feed.</div>
 </dd>
 <dt><a href="io/micronaut/rss/jsonfeed/JsonHub.html" title="class in io.micronaut.rss.jsonfeed"><span class="typeNameLink">JsonHub</span></a> - Class in <a href="io/micronaut/rss/jsonfeed/package-summary.html">io.micronaut.rss.jsonfeed</a></dt>
 <dd>
@@ -1159,6 +1213,8 @@
 <dl>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html#PREFIX">PREFIX</a></span> - Static variable in class io.micronaut.rss.http.<a href="io/micronaut/rss/http/FeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.http">FeedControllerConfigurationProperties</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#PREFIX">PREFIX</a></span> - Static variable in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/RssConfiguration.html#PREFIX">PREFIX</a></span> - Static variable in interface io.micronaut.rss.<a href="io/micronaut/rss/RssConfiguration.html" title="interface in io.micronaut.rss">RssConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/itunespodcast/ItunesPodcast.Builder.html#pubDate-java.time.ZonedDateTime-">pubDate(ZonedDateTime)</a></span> - Method in class io.micronaut.rss.itunespodcast.<a href="io/micronaut/rss/itunespodcast/ItunesPodcast.Builder.html" title="class in io.micronaut.rss.itunespodcast">ItunesPodcast.Builder</a></dt>
@@ -1363,6 +1419,10 @@
 <dd>
 <div class="block">Whether <a href="io/micronaut/rss/http/FeedController.html" title="class in io.micronaut.rss.http"><code>FeedController</code></a> should be enabled.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#setEnabled-boolean-">setEnabled(boolean)</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>
+<div class="block">Whether <a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http"><code>JsonFeedController</code></a> should be enabled.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/RssItem.html#setEnclosure-io.micronaut.rss.RssItemEnclosure-">setEnclosure(RssItemEnclosure)</a></span> - Method in class io.micronaut.rss.<a href="io/micronaut/rss/RssItem.html" title="class in io.micronaut.rss">RssItem</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/itunespodcast/ItunesPodcastEpisode.html#setEpisode-java.lang.Integer-">setEpisode(Integer)</a></span> - Method in class io.micronaut.rss.itunespodcast.<a href="io/micronaut/rss/itunespodcast/ItunesPodcastEpisode.html" title="class in io.micronaut.rss.itunespodcast">ItunesPodcastEpisode</a></dt>
@@ -1505,12 +1565,20 @@
 <dd>
 <div class="block">Configures <a href="io/micronaut/rss/http/FeedController.html" title="class in io.micronaut.rss.http"><code>FeedController</code></a> path.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#setPath-java.lang.String-">setPath(String)</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>
+<div class="block">Configures <a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http"><code>JsonFeedController</code></a> path.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/RssChannel.html#setPubDate-java.time.ZonedDateTime-">setPubDate(ZonedDateTime)</a></span> - Method in class io.micronaut.rss.<a href="io/micronaut/rss/RssChannel.html" title="class in io.micronaut.rss">RssChannel</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/RssItem.html#setPubDate-java.time.ZonedDateTime-">setPubDate(ZonedDateTime)</a></span> - Method in class io.micronaut.rss.<a href="io/micronaut/rss/RssItem.html" title="class in io.micronaut.rss">RssItem</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/RssChannel.html#setRating-java.lang.String-">setRating(String)</a></span> - Method in class io.micronaut.rss.<a href="io/micronaut/rss/RssChannel.html" title="class in io.micronaut.rss">RssChannel</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html#setRootPath-java.lang.String-">setRootPath(String)</a></span> - Method in class io.micronaut.rss.jsonfeed.http.<a href="io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html" title="class in io.micronaut.rss.jsonfeed.http">JsonFeedControllerConfigurationProperties</a></dt>
+<dd>
+<div class="block">Configures <a href="io/micronaut/rss/jsonfeed/http/JsonFeedController.html" title="class in io.micronaut.rss.jsonfeed.http"><code>JsonFeedController</code></a> rootpath.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/micronaut/rss/itunespodcast/ItunesPodcastEpisode.html#setSeason-java.lang.Integer-">setSeason(Integer)</a></span> - Method in class io.micronaut.rss.itunespodcast.<a href="io/micronaut/rss/itunespodcast/ItunesPodcastEpisode.html" title="class in io.micronaut.rss.itunespodcast">ItunesPodcastEpisode</a></dt>
 <dd>
 <div class="block">Sets episode season number.</div>
