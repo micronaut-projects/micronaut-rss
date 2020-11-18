@@ -55,7 +55,9 @@
                                 
                                 <div class="toc-item" style="margin-left:0"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
                                 
-                                <div class="toc-item" style="margin-left:0"><a href="#repository"><strong>7</strong><span>Repository</span></a></div>
+                                <div class="toc-item" style="margin-left:0"><a href="#jsonfeed"><strong>7</strong><span>JSON Feeds</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#repository"><strong>8</strong><span>Repository</span></a></div>
                                 
                             </div>
                         </div>
@@ -98,7 +100,11 @@
         
         <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
         
-        <div class="toc-item" style="margin-left:0px" id="toc-item-repository"><a href="#repository"><strong>7</strong><span>Repository</span></a></div>
+        <div class="toc-item" style="margin-left:0px" id="toc-item-jsonfeed"><a href="#jsonfeed"><strong>7</strong><span>JSON Feeds</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-jsonfeedhttp"><a href="#jsonfeedhttp"><strong>7.1</strong><span>JSON Feeds Endpoint</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-repository"><a href="#repository"><strong>8</strong><span>Repository</span></a></div>
         
         </div>
     </div>
@@ -108,13 +114,13 @@
         <h1>Micronaut RSS</h1>
         <p></p>
         <p>It eases the creation of RSS feeds with Micronaut</p>
-        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select></p>
+        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.0/guide/index.html'>2.3.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select></p>
     </div>
     
 <h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/introduction.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/introduction.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -127,7 +133,7 @@
 <h1 id="releaseHistory"><a class="anchor" href="#releaseHistory"></a>2 Release History</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/releaseHistory.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/releaseHistory.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -143,7 +149,7 @@
 <h1 id="whatsNew"><a class="anchor" href="#whatsNew"></a>3 What's New?</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/whatsNew.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/whatsNew.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -159,7 +165,7 @@
 <h1 id="breaks"><a class="anchor" href="#breaks"></a>4 Breaking Changes</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/breaks.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breaks.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -202,7 +208,7 @@
 <h1 id="rss"><a class="anchor" href="#rss"></a>5 RSS 2.0</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/rss.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/rss.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -324,7 +330,7 @@ class MockRssFeedProvider implements RssFeedProvider {
 <h1 id="itunespodcast"><a class="anchor" href="#itunespodcast"></a>6 Itunes Podcast RSS Feed</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/itunespodcast.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/itunespodcast.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>
@@ -570,10 +576,246 @@ public class DefaultRssFeedProvider implements RssFeedProvider {
 </div>
 </div>
 
-<h1 id="repository"><a class="anchor" href="#repository"></a>7 Repository</h1>
+<h1 id="jsonfeed"><a class="anchor" href="#jsonfeed"></a>7 JSON Feeds</h1>
 
 <div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/2.1.x/src/main/docs/guide/repository.adoc"'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/jsonfeed.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p><a href="https://jsonfeed.org">JSON Feed</a> is a format similar to RSS and Atom but in JSON.</p>
+</div>
+<div class="paragraph">
+<p>The following dependency contains the core classes to build a JSON Feed.</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="title"></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.rss:micronaut-jsonfeed-core")</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.rss&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-jsonfeed-core&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+<div class="paragraph">
+<p>To get such JSON:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "My Example Feed",
+    "home_page_url": "https://example.org/",
+    "feed_url": "https://example.org/feed.json",
+    "items": [
+        {
+            "id": "2",
+            "content_text": "This is a second item.",
+            "url": "https://example.org/second-item"
+        },
+        {
+            "id": "1",
+            "content_html": "&lt;p&gt;Hello, world!&lt;/p&gt;",
+            "url": "https://example.org/initial-post"
+       }
+    ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can write:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JsonFeed feed = JsonFeed.builder()
+        .version("https://jsonfeed.org/version/1.1")
+        .title("My Example Feed")
+        .homePageUrl("https://example.org/")
+        .feedUrl("https://example.org/feed.json")
+        .item(JsonFeedItem.builder()
+                .id("2")
+                .contentText("This is a second item.")
+                .url("https://example.org/second-item")
+                .build())
+        .item(JsonFeedItem.builder()
+                .id("1")
+                .contentHtml("&lt;p&gt;Hello, world!&lt;/p&gt;")
+                .url("https://example.org/initial-post")
+                .build())
+        .build()</code></pre>
+</div>
+</div>
+
+<h2 id="jsonfeedhttp"><a class="anchor" href="#jsonfeedhttp"></a>7.1 JSON Feeds Endpoint</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/jsonfeed/jsonfeedhttp.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The following dependency contains functionality to expose an endpoint to return a JSON Feed:</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="title"></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.rss:micronaut-jsonfeed")</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.rss&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-jsonfeed&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</p>
+</div>
+<div class="paragraph">
+<p>Your JSON Feed will be of content type <code>application/json+feed</code>.</p>
+</div>
+<div class="paragraph">
+<p>You have to  <a href="https://docs.micronaut.io/latest/guide/index.html#consumesAnnotation">register an additional type</a> for Micronaut&#8217;s <code>json</code> codec:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  codec:
+    json:
+      additionalTypes:
+        - application/json+feed</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, if you provide a bean of type <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html">JsonFeedProvider</a> such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+public class ExampleJsonFeedProvider implements JsonFeedProvider {
+
+    @NotNull
+    @Override
+    public Publisher&lt;JsonFeed&gt; feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
+        return Flowable.create( emitter -&gt; {
+            emitter.onNext(JsonFeed.builder()
+                    .version("https://jsonfeed.org/version/1.1")
+                    .title("My Example Feed")
+                    .homePageUrl("https://example.org/")
+                    .feedUrl("https://example.org/feed.json")
+                    .item(JsonFeedItem.builder()
+                            .id("2")
+                            .contentText("This is a second item.")
+                            .url("https://example.org/second-item")
+                            .build())
+                    .item(JsonFeedItem.builder()
+                            .id("1")
+                            .contentHtml("&lt;p&gt;Hello, world!&lt;/p&gt;")
+                            .url("https://example.org/initial-post")
+                            .build())
+                    .build());
+            emitter.onComplete();
+        }, BackpressureStrategy.ERROR);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+If the creation of the JSON feed is a blocking I/O operation, <a href="https://docs.micronaut.io/latest/guide/index.html#reactiveServer">offload that tasks to a separate thread pool</a> that does not block the Event loop.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A GET request to <code>/feeds/json</code> returns a 200 OK response with HTTP Header with name <code>Content-Type</code> with value <code>application/json+feed</code> and a JSON Payload in the body such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "My Example Feed",
+    "home_page_url": "https://example.org/",
+    "feed_url": "https://example.org/feed.json",
+    "items": [
+        {
+            "id": "2",
+            "content_text": "This is a second item.",
+            "url": "https://example.org/second-item"
+        },
+        {
+            "id": "1",
+            "content_html": "&lt;p&gt;Hello, world!&lt;/p&gt;",
+            "url": "https://example.org/initial-post"
+       }
+    ]
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are additional configuration options for the JSON Feed Controller:</p>
+</div>
+<a id="io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties" href="#io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html">JsonFeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> should be enabled. Default value (true).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.root-path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> rootpath. Default value "/feeds"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> path. Default value "/json"</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can implement pagination by supplying <code>maxNumberOfItems</code> and <code>pageNumber</code> which will be passed to your implementation of  <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html">JsonFeedProvider</a>.</p>
+</div>
+
+<h1 id="repository"><a class="anchor" href="#repository"></a>8 Repository</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/repository.adoc"'>
         <i class='fa fa-pencil-square-o'></i> Improve this doc
     </button>
 </div>

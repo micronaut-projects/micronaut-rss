@@ -1,3 +1,6 @@
 io.micronaut.rss
 io.micronaut.rss.http
 io.micronaut.rss.itunespodcast
+io.micronaut.rss.jsonfeed
+io.micronaut.rss.jsonfeed.http
+io.micronaut.rss.language
