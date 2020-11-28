@@ -514,8 +514,8 @@ public class JsonFeedItem {
      * JSON Feed Item Builder.
      */
     public static final class Builder {
-        private static final DateTimeFormatter RFC_822_DATE_FORMAT = DateTimeFormatter
-                .ofPattern("EEE, dd MMM yyyy HH:mm:ss z");
+        private static final String RFC_822_PATTERN = "yyyy-MM-dd'T'HH:mm:ssXXX";
+        private static final DateTimeFormatter RFC_822_DATE_FORMAT = DateTimeFormatter.ofPattern(RFC_822_PATTERN);
 
         private final JsonFeedItem feedItem = new JsonFeedItem();
 
