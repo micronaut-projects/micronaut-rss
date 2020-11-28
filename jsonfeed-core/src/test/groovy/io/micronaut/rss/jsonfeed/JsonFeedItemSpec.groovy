@@ -2,6 +2,10 @@ package io.micronaut.rss.jsonfeed
 
 import io.micronaut.core.beans.BeanIntrospection
 
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.ZonedDateTime
+
 class JsonFeedItemSpec extends ApplicationContextSpecification {
     void "JsonFeedItem is annotated with Introspected"() {
         when:
@@ -9,6 +13,34 @@ class JsonFeedItemSpec extends ApplicationContextSpecification {
 
         then:
         noExceptionThrown()
+    }
+
+    void "dateModified is formatted as RFC 3339"() {
+        given:
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(LocalDateTime.of(2020, 11, 27, 7, 37, 55),
+                ZoneId.of("Europe/Madrid"))
+
+        when:
+        JsonFeedItem feed = JsonFeedItem.builder()
+                .dateModified(zonedDateTime)
+                .build()
+
+        then:
+        feed.dateModified == '2020-11-27T07:37:55+01:00'
+    }
+
+    void "datePublished is formatted as RFC 3339"() {
+        given:
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(LocalDateTime.of(2020, 11, 27, 7, 37, 55),
+                ZoneId.of("Europe/Madrid"))
+
+        when:
+        JsonFeedItem feed = JsonFeedItem.builder()
+                .datePublished(zonedDateTime)
+                .build()
+
+        then:
+        feed.datePublished == '2020-11-27T07:37:55+01:00'
     }
 
     void "valid JsonFeedItem does not trigger any constraint exception"() {
