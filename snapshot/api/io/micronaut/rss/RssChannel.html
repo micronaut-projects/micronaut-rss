@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":42,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":42,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
+var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -148,29 +148,6 @@ extends java.lang.Object</pre>
 </table>
 </li>
 </ul>
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.summary">
-<!--   -->
-</a>
-<h3>Field Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
-<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#RSS_LANGUAGE_CODE_REGEX">RSS_LANGUAGE_CODE_REGEX</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">Use <a href="../../../io/micronaut/rss/language/RssLanguage.html#LANGUAGE_CODE_PATTERN"><code>RssLanguage.LANGUAGE_CODE_PATTERN</code></a>.</span></div>
-</div>
-</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -195,7 +172,7 @@ extends java.lang.Object</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -259,9 +236,9 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../io/micronaut/rss/RssLanguage.html" title="enum in io.micronaut.rss">RssLanguage</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../io/micronaut/rss/language/RssLanguage.html" title="enum in io.micronaut.rss.language">RssLanguage</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#getLanguage--">getLanguage</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<div class="block">The language the channel is written in.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -358,57 +335,49 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLanguage-io.micronaut.rss.RssLanguage-">setLanguage</a></span>(<a href="../../../io/micronaut/rss/RssLanguage.html" title="enum in io.micronaut.rss">RssLanguage</a>&nbsp;language)</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">Use <a href="../../../io/micronaut/rss/RssChannel.html#setLanguage-io.micronaut.rss.language.RssLanguage-"><code>setLanguage(RssLanguage)</code></a> instead;</span></div>
-</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLanguage-io.micronaut.rss.language.RssLanguage-">setLanguage</a></span>(<a href="../../../io/micronaut/rss/language/RssLanguage.html" title="enum in io.micronaut.rss.language">RssLanguage</a>&nbsp;language)</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLanguage-io.micronaut.rss.language.RssLanguage-">setLanguage</a></span>(<a href="../../../io/micronaut/rss/language/RssLanguage.html" title="enum in io.micronaut.rss.language">RssLanguage</a>&nbsp;language)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLastBuildDate-java.time.ZonedDateTime-">setLastBuildDate</a></span>(java.time.ZonedDateTime&nbsp;lastBuildDate)</code>&nbsp;</td>
 </tr>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLastBuildDate-java.time.ZonedDateTime-">setLastBuildDate</a></span>(java.time.ZonedDateTime&nbsp;lastBuildDate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLink-java.lang.String-">setLink</a></span>(java.lang.String&nbsp;link)</code>&nbsp;</td>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setLink-java.lang.String-">setLink</a></span>(java.lang.String&nbsp;link)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setManagingEditor-java.lang.String-">setManagingEditor</a></span>(java.lang.String&nbsp;managingEditor)</code>&nbsp;</td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setManagingEditor-java.lang.String-">setManagingEditor</a></span>(java.lang.String&nbsp;managingEditor)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setPubDate-java.time.ZonedDateTime-">setPubDate</a></span>(java.time.ZonedDateTime&nbsp;pubDate)</code>&nbsp;</td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setPubDate-java.time.ZonedDateTime-">setPubDate</a></span>(java.time.ZonedDateTime&nbsp;pubDate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setRating-java.lang.String-">setRating</a></span>(java.lang.String&nbsp;rating)</code>&nbsp;</td>
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setRating-java.lang.String-">setRating</a></span>(java.lang.String&nbsp;rating)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setSkipDays-java.util.List-">setSkipDays</a></span>(java.util.List&lt;<a href="../../../io/micronaut/rss/RssSkipDays.html" title="enum in io.micronaut.rss">RssSkipDays</a>&gt;&nbsp;skipDays)</code>&nbsp;</td>
 </tr>
 <tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setSkipDays-java.util.List-">setSkipDays</a></span>(java.util.List&lt;<a href="../../../io/micronaut/rss/RssSkipDays.html" title="enum in io.micronaut.rss">RssSkipDays</a>&gt;&nbsp;skipDays)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setSkipHours-java.util.List-">setSkipHours</a></span>(java.util.List&lt;<a href="../../../io/micronaut/rss/RssSkipHours.html" title="enum in io.micronaut.rss">RssSkipHours</a>&gt;&nbsp;skipHours)</code>&nbsp;</td>
 </tr>
 <tr id="i38" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setSkipHours-java.util.List-">setSkipHours</a></span>(java.util.List&lt;<a href="../../../io/micronaut/rss/RssSkipHours.html" title="enum in io.micronaut.rss">RssSkipHours</a>&gt;&nbsp;skipHours)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setTextInput-io.micronaut.rss.RssTextInput-">setTextInput</a></span>(<a href="../../../io/micronaut/rss/RssTextInput.html" title="class in io.micronaut.rss">RssTextInput</a>&nbsp;textInput)</code>&nbsp;</td>
 </tr>
 <tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setTextInput-io.micronaut.rss.RssTextInput-">setTextInput</a></span>(<a href="../../../io/micronaut/rss/RssTextInput.html" title="class in io.micronaut.rss">RssTextInput</a>&nbsp;textInput)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setTitle-java.lang.String-">setTitle</a></span>(java.lang.String&nbsp;title)</code>&nbsp;</td>
 </tr>
 <tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setTitle-java.lang.String-">setTitle</a></span>(java.lang.String&nbsp;title)</code>&nbsp;</td>
-</tr>
-<tr id="i41" class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setTtl-java.lang.Integer-">setTtl</a></span>(java.lang.Integer&nbsp;ttl)</code>&nbsp;</td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../io/micronaut/rss/RssChannel.html#setWebMaster-java.lang.String-">setWebMaster</a></span>(java.lang.String&nbsp;webMaster)</code>&nbsp;</td>
 </tr>
@@ -428,29 +397,6 @@ extends java.lang.Object</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.detail">
-<!--   -->
-</a>
-<h3>Field Detail</h3>
-<a name="RSS_LANGUAGE_CODE_REGEX">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>RSS_LANGUAGE_CODE_REGEX</h4>
-<pre>@Deprecated
-public static final&nbsp;java.lang.String RSS_LANGUAGE_CODE_REGEX</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../io/micronaut/rss/language/RssLanguage.html#LANGUAGE_CODE_PATTERN"><code>RssLanguage.LANGUAGE_CODE_PATTERN</code></a>.</span></div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#io.micronaut.rss.RssChannel.RSS_LANGUAGE_CODE_REGEX">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.detail">
@@ -523,9 +469,7 @@ public static final&nbsp;java.lang.String RSS_LANGUAGE_CODE_REGEX</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getLanguage</h4>
-<pre>@Deprecated
-public&nbsp;java.util.Optional&lt;<a href="../../../io/micronaut/rss/RssLanguage.html" title="enum in io.micronaut.rss">RssLanguage</a>&gt;&nbsp;getLanguage()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<pre>public&nbsp;java.util.Optional&lt;<a href="../../../io/micronaut/rss/language/RssLanguage.html" title="enum in io.micronaut.rss.language">RssLanguage</a>&gt;&nbsp;getLanguage()</pre>
 <div class="block">The language the channel is written in. This allows aggregators to group all Italian language sites, for example, on a single page. A list of allowable values for this element, as provided by Netscape, is here. You may also use values defined by the W3C</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -963,21 +907,6 @@ public&nbsp;java.util.Optional&lt;<a href="../../../io/micronaut/rss/RssLanguage
 </dl>
 </li>
 </ul>
-<a name="setLanguage-io.micronaut.rss.RssLanguage-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setLanguage</h4>
-<pre>@Deprecated
-public&nbsp;void&nbsp;setLanguage(<a href="../../../io/micronaut/rss/RssLanguage.html" title="enum in io.micronaut.rss">RssLanguage</a>&nbsp;language)</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../io/micronaut/rss/RssChannel.html#setLanguage-io.micronaut.rss.language.RssLanguage-"><code>setLanguage(RssLanguage)</code></a> instead;</span></div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>language</code> - The language the channel is written in.</dd>
-</dl>
-</li>
-</ul>
 <a name="setLanguage-io.micronaut.rss.language.RssLanguage-">
 <!--   -->
 </a>
@@ -1115,13 +1044,13 @@ public&nbsp;void&nbsp;setLanguage(<a href="../../../io/micronaut/rss/RssLanguage
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
