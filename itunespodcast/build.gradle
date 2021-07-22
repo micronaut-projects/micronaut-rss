@@ -4,7 +4,7 @@ dependencies {
 
     annotationProcessor("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-validation")
-
+    implementation 'jakarta.inject:jakarta.inject-api:2.0.0'
     api("io.micronaut:micronaut-inject")
 
     api project(":rss-core")

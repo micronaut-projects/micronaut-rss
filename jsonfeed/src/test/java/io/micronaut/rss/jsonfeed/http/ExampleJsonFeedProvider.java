@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.reactivestreams.Publisher;
 
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 @Requires(property = "spec.name", value = "JsonFeedControllerSpec")
 //tag::class[]
 @Singleton
