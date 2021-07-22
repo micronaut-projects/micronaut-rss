@@ -6,8 +6,8 @@ import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
 import io.micronaut.rss.jsonfeed.JsonFeed
 import io.micronaut.rss.jsonfeed.JsonFeedItem
-import io.reactivex.BackpressureStrategy
-import io.reactivex.Flowable
+import reactor.core.publisher.FluxSink
+import reactor.core.publisher.Flux
 import org.jetbrains.annotations.NotNull
 import org.jetbrains.annotations.Nullable
 import org.reactivestreams.Publisher
@@ -47,8 +47,8 @@ class JsonFeedControllerPathSpec extends EmbeddedServerSpecification {
         @NotNull
         @Override
         Publisher<JsonFeed> feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
-            return Flowable.create(emitter -> {
-                emitter.onNext(JsonFeed.builder()
+            return Flux.create(emitter -> {
+                emitter.next(JsonFeed.builder()
                         .version("https://jsonfeed.org/version/1.1")
                         .title("My Example Feed")
                         .homePageUrl("https://example.org/")
@@ -63,9 +63,9 @@ class JsonFeedControllerPathSpec extends EmbeddedServerSpecification {
                                 .contentHtml("<p>Hello, world!</p>")
                                 .url("https://example.org/initial-post")
                                 .build())
-                        .build());
-                emitter.onComplete();
-            }, BackpressureStrategy.ERROR);
+                        .build())
+                emitter.complete()
+            }, FluxSink.OverflowStrategy.ERROR)
         }
     }
 }

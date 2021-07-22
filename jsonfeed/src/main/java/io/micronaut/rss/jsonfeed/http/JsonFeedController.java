@@ -15,19 +15,18 @@
  */
 package io.micronaut.rss.jsonfeed.http;
 
-import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.context.annotation.Requires;
+import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.http.HttpResponse;
-import io.micronaut.http.HttpStatus;
 import io.micronaut.http.MutableHttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
 import io.micronaut.http.annotation.QueryValue;
 import io.micronaut.rss.jsonfeed.JsonFeed;
-import io.reactivex.Flowable;
-import io.reactivex.Single;
+import org.reactivestreams.Publisher;
+import reactor.core.publisher.Mono;
 
 /**
  * Exposes an endpoint, by default /feeds/json, which return a JSON Feed.
@@ -60,14 +59,11 @@ public class JsonFeedController {
      */
     @Produces(APPLICATION_JSON_FEED)
     @Get("${" + JsonFeedControllerConfigurationProperties.PREFIX + ".path:/json}{?maxNumberOfItems,pageNumber}")
-    public Single<MutableHttpResponse<?>> index(@QueryValue @Nullable Integer maxNumberOfItems,
-                                                      @QueryValue @Nullable Integer pageNumber) {
-        return Flowable.fromPublisher(jsonFeedProvider.feed(maxNumberOfItems, pageNumber))
-                .map(this::okResponse)
-                .first(HttpResponse.status(HttpStatus.NOT_FOUND));
-    }
-
-    private MutableHttpResponse<?> okResponse(@NonNull JsonFeed jsonFeed) {
-        return HttpResponse.ok(jsonFeed);
+    @SingleResult
+    public Publisher<MutableHttpResponse<JsonFeed>> index(@QueryValue @Nullable Integer maxNumberOfItems,
+                                                   @QueryValue @Nullable Integer pageNumber) {
+        return Mono.from(jsonFeedProvider.feed(maxNumberOfItems, pageNumber))
+                .map(HttpResponse::ok)
+                .defaultIfEmpty(HttpResponse.notFound());
     }
 }

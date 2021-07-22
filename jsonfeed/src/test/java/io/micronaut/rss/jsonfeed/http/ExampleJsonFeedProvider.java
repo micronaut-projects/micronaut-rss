@@ -3,9 +3,8 @@ package io.micronaut.rss.jsonfeed.http;
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.rss.jsonfeed.JsonFeed;
 import io.micronaut.rss.jsonfeed.JsonFeedItem;
-import io.reactivex.BackpressureStrategy;
-import io.reactivex.Flowable;
-import io.reactivex.Single;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.FluxSink;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.reactivestreams.Publisher;
@@ -19,8 +18,8 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
     @NotNull
     @Override
     public Publisher<JsonFeed> feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
-        return Flowable.create( emitter -> {
-            emitter.onNext(JsonFeed.builder()
+        return Flux.create( emitter -> {
+            emitter.next(JsonFeed.builder()
                     .version("https://jsonfeed.org/version/1.1")
                     .title("My Example Feed")
                     .homePageUrl("https://example.org/")
@@ -36,8 +35,8 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
                             .url("https://example.org/initial-post")
                             .build())
                     .build());
-            emitter.onComplete();
-        }, BackpressureStrategy.ERROR);
+            emitter.complete();
+        }, FluxSink.OverflowStrategy.ERROR);
     }
 }
 //end::class[]
