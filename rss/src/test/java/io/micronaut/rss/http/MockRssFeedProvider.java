@@ -1,10 +1,14 @@
 package io.micronaut.rss.http;
 
+import io.micronaut.core.async.annotation.SingleResult;
+import io.micronaut.core.async.publisher.Publishers;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssFeedProvider;
 import io.micronaut.rss.RssItem;
 import io.micronaut.rss.language.RssLanguage;
 import jakarta.inject.Singleton;
+import org.reactivestreams.Publisher;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -53,16 +57,18 @@ class MockRssFeedProvider implements RssFeedProvider {
             .build();
 
     @Override
-    public RssChannel fetch() {
-        return rssChannel;
+    @SingleResult
+    public Publisher<RssChannel> fetch() {
+        return Publishers.just(rssChannel);
     }
 
     @Override
-    public RssChannel fetchById(Serializable id) {
+    @SingleResult
+    public Publisher<RssChannel> fetchById(Serializable id) {
         if(id != null && id.equals("1")) {
-            return rssChannel;
+            return Publishers.just(rssChannel);
         }
-        return null;
+        return Publishers.empty();
     }
 }
 //end::class[]

@@ -15,6 +15,9 @@
  */
 package io.micronaut.rss;
 
+import io.micronaut.core.async.annotation.SingleResult;
+import org.reactivestreams.Publisher;
+
 import java.io.Serializable;
 
 /**
@@ -28,12 +31,14 @@ public interface RssFeedProvider {
      *
      * @return the default RSS channel.
      */
-    RssChannel fetch();
+    @SingleResult
+    Publisher<RssChannel> fetch();
 
     /**
      *
      * @param id RSS Channel unique identifier.
      * @return An RSS channel identified by the ID parameter.
      */
-    RssChannel fetchById(Serializable id);
+    @SingleResult
+    Publisher<RssChannel> fetchById(Serializable id);
 }

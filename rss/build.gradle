@@ -6,7 +6,7 @@ dependencies {
     api project(":rss-core")
 
     implementation("io.micronaut:micronaut-http")
-    
+    implementation "io.projectreactor:reactor-core"
     testImplementation("org.spockframework:spock-core:${spockVersion}") {
         exclude module:'groovy-all'
     }
