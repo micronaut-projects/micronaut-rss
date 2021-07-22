@@ -22,8 +22,7 @@ import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssChannelImage;
 import io.micronaut.rss.RssFeedProvider;
 import io.micronaut.rss.RssItemEnclosure;
-import io.micronaut.rss.RssLanguage;
-
+import io.micronaut.rss.language.RssLanguage;
 import jakarta.inject.Singleton;
 import java.io.Serializable;
 import java.time.LocalDateTime;

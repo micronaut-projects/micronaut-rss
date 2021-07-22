@@ -17,6 +17,8 @@ package io.micronaut.rss;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;
+import io.micronaut.rss.language.RssLanguage;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -36,12 +38,6 @@ import java.util.Optional;
  */
 public class RssChannel {
 
-    /**
-     * @deprecated Use {@link io.micronaut.rss.language.RssLanguage#LANGUAGE_CODE_PATTERN}.
-     */
-    @Deprecated
-    public static final String RSS_LANGUAGE_CODE_REGEX = "af|sq|eu|be|bg|ca|zh-cn|zh-tw|hr|cs|da|nl|nl-be|nl-nl|en|en-au|en-bz|en-ca|en-ie|en-jm|en-nz|en-ph|en-za|en-tt|en-gb|en-us|en-zw| et|fo|fi|fr|fr-be|fr-ca|fr-fr|fr-lu|fr-mc|fr-ch|gl|gd|de|de-at|de-de|de-li|de-lu|de-ch|el|haw|hu|is|in|ga|it|it-it|it-ch|ja|ko|mk|no|pl|pt|pt-br|pt-pt|ro|ro-mo|ro-ro|ru|ru-mo|ru-ru|sr|sk|sl|es|es-ar|es-bo|es-cl|es-co|es-cr|es-do|es-ec|es-sv|es-gt|es-hn|es-mx|es-ni|es-pa|es-py|es-pe|es-pr|es-es|es-uy|es-ve|sv|sv-fi|sv-se|tr|uk";
-
     @NotBlank
     @NotNull
     private String title;
@@ -54,9 +50,9 @@ public class RssChannel {
     @NotNull
     private String description;
 
-    @Pattern(regexp = io.micronaut.rss.language.RssLanguage.LANGUAGE_CODE_PATTERN)
+    @Pattern(regexp = RssLanguage.LANGUAGE_CODE_PATTERN)
     @Nullable
-    private io.micronaut.rss.language.RssLanguage language;
+    private RssLanguage language;
 
     @Nullable
     private String copyright;
@@ -136,7 +132,6 @@ public class RssChannel {
      * The language the channel is written in. This allows aggregators to group all Italian language sites, for example, on a single page. A list of allowable values for this element, as provided by Netscape, is here. You may also use values defined by the W3C
      * @return The language the channel is written in.
      */
-    @Deprecated
     public Optional<RssLanguage> getLanguage() {
         if (language == null) {
             return Optional.empty();
@@ -452,18 +447,8 @@ public class RssChannel {
     /**
      *
      * @param language The language the channel is written in.
-     * @deprecated Use {@link RssChannel#setLanguage(RssLanguage)} instead;
      */
-    @Deprecated
     public void setLanguage(RssLanguage language) {
-        io.micronaut.rss.language.RssLanguage.of(language.getLanguageCode()).ifPresent(rssLanguage -> this.language = rssLanguage);
-    }
-
-    /**
-     *
-     * @param language The language the channel is written in.
-     */
-    public void setLanguage(io.micronaut.rss.language.RssLanguage language) {
         this.language = language;
     }
 
@@ -536,22 +521,9 @@ public class RssChannel {
          *
          * @param language The language the channel is written in.
          * @return The Builder.
-         * @deprecated Use {@link RssChannel.Builder#language} instead.
          */
-        @Deprecated
         @NonNull
         public Builder language(RssLanguage language) {
-            rssChannel.setLanguage(language);
-            return this;
-        }
-
-        /**
-         *
-         * @param language The language the channel is written in.
-         * @return The Builder.
-         */
-        @NonNull
-        public Builder language(io.micronaut.rss.language.RssLanguage language) {
             rssChannel.setLanguage(language);
             return this;
         }

@@ -164,29 +164,11 @@ public class ItunesPodcastEpisode extends RssItem {
     }
 
     /**
-     * @deprecated Use {@link ItunesPodcastEpisode#isExplicit()} instead
-     * @return whether an episode is explicit.
-     */
-    @Deprecated
-    public boolean isExplict() {
-        return isExplicit();
-    }
-
-    /**
      *
      * @return whether an episode is explicit.
      */
     public boolean isExplicit() {
         return explicit;
-    }
-
-    /**
-     * @param explicit whether an episode is explicit.
-     * @deprecated Use {@link ItunesPodcastEpisode#setExplicit(boolean)} instead.
-     */
-    @Deprecated
-    public void setExplict(boolean explicit) {
-        setExplicit(explicit);
     }
 
     /**
