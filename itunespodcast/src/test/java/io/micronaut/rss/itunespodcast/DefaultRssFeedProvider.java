@@ -18,12 +18,16 @@ package io.micronaut.rss.itunespodcast;
 
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.context.env.Environment;
+import io.micronaut.core.async.annotation.SingleResult;
+import io.micronaut.core.async.publisher.Publishers;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssChannelImage;
 import io.micronaut.rss.RssFeedProvider;
 import io.micronaut.rss.RssItemEnclosure;
 import io.micronaut.rss.language.RssLanguage;
 import jakarta.inject.Singleton;
+import org.reactivestreams.Publisher;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -40,8 +44,9 @@ import java.util.Arrays;
 public class DefaultRssFeedProvider implements RssFeedProvider {
 
     @Override
-    public RssChannel fetch() {
-        return ItunesPodcast.builder()
+    @SingleResult
+    public Publisher<RssChannel> fetch() {
+        return Publishers.just(ItunesPodcast.builder()
                 .title("Hiking Treks")
                 .link("https://www.apple.com/itunes/podcasts/")
                 .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
@@ -240,12 +245,13 @@ public class DefaultRssFeedProvider implements RssFeedProvider {
                         .duration("23:59")
                         .explicit(false)
                         .contentEncoded("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on <a href=\"https://www.apple.com/itunes/podcasts/\">Apple Podcasts</a>")
-                        .build()).build();
+                        .build()).build());
     }
 
     @Override
-    public RssChannel fetchById(Serializable id) {
-        return null;
+    @SingleResult
+    public Publisher<RssChannel> fetchById(Serializable id) {
+        return Publishers.empty();
     }
 }
 //end::class[]

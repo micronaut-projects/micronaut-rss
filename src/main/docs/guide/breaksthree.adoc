@@ -1,2 +1,3 @@
-Classes, constructors, etc that have been deprecated in previous versions of Micronaut RSS have been removed.
+* Classes, constructors, etc that have been deprecated in previous versions of Micronaut RSS have been removed.
+* api:rss.RssFeedProvider[] returns a `Publisher`
 

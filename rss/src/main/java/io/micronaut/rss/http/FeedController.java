@@ -16,15 +16,20 @@
 package io.micronaut.rss.http;
 
 import io.micronaut.context.annotation.Requires;
+import io.micronaut.core.annotation.NonNull;
+import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.core.io.Writable;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.MediaType;
+import io.micronaut.http.MutableHttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssFeedProvider;
 import io.micronaut.rss.RssFeedRenderer;
+import org.reactivestreams.Publisher;
+import reactor.core.publisher.Mono;
 
 import java.io.Serializable;
 
@@ -60,12 +65,9 @@ public class FeedController {
      */
     @Produces(MediaType.APPLICATION_XML)
     @Get
-    public HttpResponse<Writable> index() {
-        RssChannel rssChannel = rssFeedProvider.fetch();
-        if (rssChannel == null) {
-            return HttpResponse.notFound();
-        }
-        return HttpResponse.ok(render(rssChannel));
+    @SingleResult
+    public Publisher<MutableHttpResponse<Writable>> index() {
+        return createResponse(rssFeedProvider.fetch());
     }
 
     /**
@@ -75,18 +77,20 @@ public class FeedController {
      */
     @Produces(MediaType.APPLICATION_XML)
     @Get("/{id}")
-    public HttpResponse<Writable> find(Serializable id) {
-        RssChannel rssChannel = rssFeedProvider.fetchById(id);
-        if (rssChannel == null) {
-            return HttpResponse.notFound();
-        }
-        return HttpResponse.ok(render(rssChannel));
+    @SingleResult
+    public Publisher<MutableHttpResponse<Writable>> find(Serializable id) {
+        return createResponse(rssFeedProvider.fetchById(id));
     }
 
-    private Writable render(RssChannel rssChannel) {
-        return (writer) -> {
-            rssFeedRenderer.render(writer, rssChannel);
-        };
+    @NonNull
+    private Publisher<MutableHttpResponse<Writable>> createResponse(@NonNull Publisher<RssChannel> rssChannelPublisher) {
+        return Mono.from(rssChannelPublisher)
+                .map(rssChannel -> HttpResponse.ok(render(rssChannel)))
+                .defaultIfEmpty(HttpResponse.notFound());
     }
 
+    @NonNull
+    private Writable render(@NonNull RssChannel rssChannel) {
+        return (writer) -> rssFeedRenderer.render(writer, rssChannel);
+    }
 }
