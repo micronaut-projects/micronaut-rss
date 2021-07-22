@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull
 import org.jetbrains.annotations.Nullable
 import org.reactivestreams.Publisher
 
-import javax.inject.Singleton
+import jakarta.inject.Singleton
 
 class JsonFeedControllerParamsSpec extends EmbeddedServerSpecification {
 

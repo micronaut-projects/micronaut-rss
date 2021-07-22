@@ -5,7 +5,7 @@ import io.micronaut.rss.RssFeedProvider;
 import io.micronaut.rss.RssItem;
 import io.micronaut.rss.RssLanguage;
 
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.ZoneId;

@@ -7,6 +7,7 @@ dependencies {
 
     implementation("io.micronaut:micronaut-http")
 
+    testImplementation 'jakarta.inject:jakarta.inject-api:2.0.0'
     testImplementation("org.spockframework:spock-core:${spockVersion}") {
         exclude module:'groovy-all'
     }
