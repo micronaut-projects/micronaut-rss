@@ -186,8 +186,15 @@
 </div>
 
 
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>Classes, constructors, etc that have been deprecated in previous versions of Micronaut RSS have been removed.</p>
+</li>
+<li>
+<p><a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> returns a <code>Publisher</code></p>
+</li>
+</ul>
 </div>
 
 <h2 id="breakstwo"><a class="anchor" href="#breakstwo"></a>4.2 Breaking Changes in Micronaut RSS 2.0.0</h2>
@@ -340,16 +347,18 @@ class MockRssFeedProvider implements RssFeedProvider {
             .build();
 
     @Override
-    public RssChannel fetch() {
-        return rssChannel;
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetch() {
+        return Publishers.just(rssChannel);
     }
 
     @Override
-    public RssChannel fetchById(Serializable id) {
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetchById(Serializable id) {
         if(id != null &amp;&amp; id.equals("1")) {
-            return rssChannel;
+            return Publishers.just(rssChannel);
         }
-        return null;
+        return Publishers.empty();
     }
 }</code></pre>
 </div>
@@ -393,8 +402,9 @@ class MockRssFeedProvider implements RssFeedProvider {
 public class DefaultRssFeedProvider implements RssFeedProvider {
 
     @Override
-    public RssChannel fetch() {
-        return ItunesPodcast.builder()
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetch() {
+        return Publishers.just(ItunesPodcast.builder()
                 .title("Hiking Treks")
                 .link("https://www.apple.com/itunes/podcasts/")
                 .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
@@ -593,12 +603,13 @@ public class DefaultRssFeedProvider implements RssFeedProvider {
                         .duration("23:59")
                         .explicit(false)
                         .contentEncoded("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on &lt;a href=\"https://www.apple.com/itunes/podcasts/\"&gt;Apple Podcasts&lt;/a&gt;")
-                        .build()).build();
+                        .build()).build());
     }
 
     @Override
-    public RssChannel fetchById(Serializable id) {
-        return null;
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetchById(Serializable id) {
+        return Publishers.empty();
     }
 }</code></pre>
 </div>

@@ -155,11 +155,11 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>io.micronaut.http.HttpResponse&lt;io.micronaut.core.io.Writable&gt;</code></td>
+<td class="colFirst"><code>org.reactivestreams.Publisher&lt;io.micronaut.http.MutableHttpResponse&lt;io.micronaut.core.io.Writable&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/micronaut/rss/http/FeedController.html#find-java.io.Serializable-">find</a></span>(java.io.Serializable&nbsp;id)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>io.micronaut.http.HttpResponse&lt;io.micronaut.core.io.Writable&gt;</code></td>
+<td class="colFirst"><code>org.reactivestreams.Publisher&lt;io.micronaut.http.MutableHttpResponse&lt;io.micronaut.core.io.Writable&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../io/micronaut/rss/http/FeedController.html#index--">index</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
@@ -215,7 +215,8 @@ extends java.lang.Object</pre>
 <h4>index</h4>
 <pre>@Produces(value="application/xml")
  @Get
-public&nbsp;io.micronaut.http.HttpResponse&lt;io.micronaut.core.io.Writable&gt;&nbsp;index()</pre>
+ @SingleResult
+public&nbsp;org.reactivestreams.Publisher&lt;io.micronaut.http.MutableHttpResponse&lt;io.micronaut.core.io.Writable&gt;&gt;&nbsp;index()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Return the default RSS 2.0 provided by <a href="../../../../io/micronaut/rss/RssFeedProvider.html" title="interface in io.micronaut.rss"><code>RssFeedProvider</code></a> and rendered by <a href="../../../../io/micronaut/rss/RssFeedRenderer.html" title="interface in io.micronaut.rss"><code>RssFeedRenderer</code></a>.</dd>
@@ -230,7 +231,8 @@ public&nbsp;io.micronaut.http.HttpResponse&lt;io.micronaut.core.io.Writable&gt;&
 <h4>find</h4>
 <pre>@Produces(value="application/xml")
  @Get(value="/{id}")
-public&nbsp;io.micronaut.http.HttpResponse&lt;io.micronaut.core.io.Writable&gt;&nbsp;find(java.io.Serializable&nbsp;id)</pre>
+ @SingleResult
+public&nbsp;org.reactivestreams.Publisher&lt;io.micronaut.http.MutableHttpResponse&lt;io.micronaut.core.io.Writable&gt;&gt;&nbsp;find(java.io.Serializable&nbsp;id)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - RSS guid</dd>
