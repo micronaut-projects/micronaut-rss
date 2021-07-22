@@ -122,7 +122,7 @@ public class JsonHub {
     }
 
     /**
-     * JsonHub Builder
+     * JsonHub Builder.
      */
     public static final class Builder {
 
