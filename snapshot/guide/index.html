@@ -712,8 +712,8 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
     @NotNull
     @Override
     public Publisher&lt;JsonFeed&gt; feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
-        return Flowable.create( emitter -&gt; {
-            emitter.onNext(JsonFeed.builder()
+        return Flux.create( emitter -&gt; {
+            emitter.next(JsonFeed.builder()
                     .version("https://jsonfeed.org/version/1.1")
                     .title("My Example Feed")
                     .homePageUrl("https://example.org/")
@@ -729,8 +729,8 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
                             .url("https://example.org/initial-post")
                             .build())
                     .build());
-            emitter.onComplete();
-        }, BackpressureStrategy.ERROR);
+            emitter.complete();
+        }, FluxSink.OverflowStrategy.ERROR);
     }
 }</code></pre>
 </div>
