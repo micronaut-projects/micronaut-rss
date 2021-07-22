@@ -16,10 +16,9 @@
 package io.micronaut.rss.jsonfeed;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import edu.umd.cs.findbugs.annotations.NonNull;
-import edu.umd.cs.findbugs.annotations.Nullable;
+import io.micronaut.core.annotation.NonNull;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.core.annotation.Introspected;
-import javax.annotation.Nonnull;
 import javax.validation.constraints.NotBlank;
 import java.util.HashMap;
 import java.util.Map;
@@ -39,12 +38,12 @@ public class JsonFeedAttachment {
     public static final String KEY_SIZE_IN_BYTES = "size_in_bytes";
     public static final String KEY_DURATION_IN_SECONDS = "duration_in_seconds";
 
-    @Nonnull
+    @NonNull
     @NotBlank
     private String url;
 
     @JsonProperty(KEY_MIME_TYPE)
-    @Nonnull
+    @NonNull
     @NotBlank
     private String mimeType;
 
@@ -88,7 +87,7 @@ public class JsonFeedAttachment {
      *
      * @return location of the attachment
      */
-    @Nonnull
+    @NonNull
     public String getUrl() {
         return this.url;
     }
@@ -98,7 +97,7 @@ public class JsonFeedAttachment {
      *
      * @param url the location of the attachment
      */
-    public void setUrl(@Nonnull String url) {
+    public void setUrl(@NonNull String url) {
         this.url = url;
     }
 
@@ -107,7 +106,7 @@ public class JsonFeedAttachment {
      *
      * @return mime type of the attachment
      */
-    @Nonnull
+    @NonNull
     public String getMimeType() {
         return this.mimeType;
     }
@@ -117,7 +116,7 @@ public class JsonFeedAttachment {
      *
      * @param mimeType mime type of the attachment
      */
-    public void setMimeType(@Nonnull String mimeType) {
+    public void setMimeType(@NonNull String mimeType) {
         this.mimeType = mimeType;
     }
 

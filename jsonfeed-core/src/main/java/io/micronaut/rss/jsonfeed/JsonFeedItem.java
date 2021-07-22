@@ -16,8 +16,8 @@
 package io.micronaut.rss.jsonfeed;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import edu.umd.cs.findbugs.annotations.NonNull;
-import edu.umd.cs.findbugs.annotations.Nullable;
+import io.micronaut.core.annotation.NonNull;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.rss.language.RssLanguage;
 
@@ -28,7 +28,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import javax.annotation.Nonnull;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -58,7 +57,7 @@ public class JsonFeedItem {
     public static final String KEY_ATTACHMENTS = "attachments";
 
     @NotBlank
-    @Nonnull
+    @NonNull
     private String id;
 
     @Nullable
@@ -151,7 +150,7 @@ public class JsonFeedItem {
      *
      * @param id unique id of the item
      */
-    public void setId(@Nonnull String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 

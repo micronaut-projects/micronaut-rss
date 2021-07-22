@@ -15,7 +15,7 @@
  */
 package io.micronaut.rss.itunespodcast;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
+import io.micronaut.core.annotation.NonNull;
 
 /**
  * Itunes Podcast owner.

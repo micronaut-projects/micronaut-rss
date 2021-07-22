@@ -15,7 +15,7 @@
  */
 package io.micronaut.rss.jsonfeed;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
+import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Introspected;
 
 import javax.validation.constraints.NotBlank;
@@ -121,6 +121,9 @@ public class JsonHub {
         return new Builder().type(type).url(url);
     }
 
+    /**
+     * JsonHub Builder
+     */
     public static final class Builder {
 
         private JsonHub jsonHub = new JsonHub();
