@@ -1,0 +1,2 @@
+Classes, constructors, etc that have been deprecated in previous versions of Micronaut RSS have been removed.
+

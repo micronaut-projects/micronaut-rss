@@ -3,7 +3,7 @@ package io.micronaut.rss.http;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssFeedProvider;
 import io.micronaut.rss.RssItem;
-import io.micronaut.rss.RssLanguage;
+import io.micronaut.rss.language.RssLanguage;
 import jakarta.inject.Singleton;
 import java.io.Serializable;
 import java.time.LocalDateTime;

@@ -2,7 +2,10 @@ introduction:
   title: Introduction
 releaseHistory: Release History
 whatsNew: What's New?
-breaks: Breaking Changes
+breaks:
+  title: Breaking Changes
+  breaksthree: Breaking Changes in Micronaut RSS 3.0.0
+  breakstwo: Breaking Changes in Micronaut RSS 2.0.0
 rss:
   title: RSS 2.0
 itunespodcast:

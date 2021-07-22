@@ -20,10 +20,10 @@ import io.micronaut.core.annotation.Nullable;
 import io.micronaut.rss.RssChannel;
 import io.micronaut.rss.RssChannelImage;
 import io.micronaut.rss.RssItem;
-import io.micronaut.rss.RssLanguage;
 import io.micronaut.rss.RssSkipDays;
 import io.micronaut.rss.RssSkipHours;
 import io.micronaut.rss.RssTextInput;
+import io.micronaut.rss.language.RssLanguage;
 
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -131,30 +131,11 @@ public class ItunesPodcast extends RssChannel {
     }
 
     /**
-     * @deprecated Use {@link ItunesPodcast#isExplicit()} instead
-     * @return The podcast explicit flag.
-     */
-    @Deprecated
-    public boolean isExplict() {
-        return isExplicit();
-    }
-
-    /**
      *
      * @return The podcast explicit flag.
      */
     public boolean isExplicit() {
         return explicit;
-    }
-
-    /**
-     * Sets the Podcast's explicit flag.
-     * @param explicit Podcast's explicit flag.
-     * @deprecated Use {@link ItunesPodcast#setExplicit(boolean)} instead.
-     */
-    @Deprecated
-    public void setExplict(boolean explicit) {
-        setExplicit(explicit);
     }
 
     /**
@@ -254,20 +235,8 @@ public class ItunesPodcast extends RssChannel {
          */
         @NonNull
         public Builder explicit(boolean explicit) {
-            podcast.setExplict(explicit);
+            podcast.setExplicit(explicit);
             return this;
-        }
-
-        /**
-         * Populates Podcast's explicit flag.
-         * @param explicit Podcast's explicit flag
-         * @deprecated {@link ItunesPodcast.Builder#setExplicit(boolean)} instead.
-         * @return a Podcast Builder
-         */
-        @Deprecated
-        @NonNull
-        public Builder explict(boolean explicit) {
-            return explicit(explicit);
         }
 
         /**

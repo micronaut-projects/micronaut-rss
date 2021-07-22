@@ -1,0 +1,12 @@
+api::io.micronaut.rss.http.FeedController[], api::io.micronaut.rss.http.FeedControllerConfiguration[] and api::io.micronaut.rss.http.FeedControllerProperties[] moved to package `io.micronaut.rss.http`.
+
+`:micronaut-itunespodcast` depends only on `micronaut-rss-core`. You may want to use it in combination with `micronaut-rss` if you want to use the api::io.micronaut.rss.http.FeedController[].
+
+The artifacts' maven group has been changed to `micronaut-rss`. The next table shows the maven coordinates changes:
+
+|===
+|Old | New
+|`io.micronaut.configuration:micronaut-rss` | `io.micronaut.rss:micronaut-rss`
+|`io.micronaut.configuration:micronaut-itunespodcast` | `io.micronaut.rss:micronaut-itunespodcast`
+|`io.micronaut.rss:rss-core` | `io.micronaut.rss:rss-core`
+|===
