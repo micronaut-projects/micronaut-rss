@@ -15,11 +15,11 @@
  */
 package io.micronaut.rss.itunespodcast;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
+import io.micronaut.core.annotation.NonNull;
 import io.micronaut.rss.RssItem;
 import io.micronaut.rss.RssItemEnclosure;
 
-import edu.umd.cs.findbugs.annotations.Nullable;
+import io.micronaut.core.annotation.Nullable;
 import javax.validation.constraints.Positive;
 import java.time.ZonedDateTime;
 import java.util.Optional;

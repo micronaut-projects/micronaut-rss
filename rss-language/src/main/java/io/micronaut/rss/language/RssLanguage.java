@@ -15,7 +15,7 @@
  */
 package io.micronaut.rss.language;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
+import io.micronaut.core.annotation.NonNull;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -15,7 +15,7 @@
  */
 package io.micronaut.rss.jsonfeed.http;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
+import io.micronaut.core.annotation.NonNull;
 import io.micronaut.context.annotation.ConfigurationProperties;
 
 import javax.validation.constraints.NotBlank;

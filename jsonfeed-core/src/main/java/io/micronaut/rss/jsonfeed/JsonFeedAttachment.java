@@ -16,8 +16,8 @@
 package io.micronaut.rss.jsonfeed;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import edu.umd.cs.findbugs.annotations.NonNull;
-import edu.umd.cs.findbugs.annotations.Nullable;
+import io.micronaut.core.annotation.NonNull;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.core.annotation.Introspected;
 import javax.annotation.Nonnull;
 import javax.validation.constraints.NotBlank;

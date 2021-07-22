@@ -15,8 +15,8 @@
  */
 package io.micronaut.rss.jsonfeed.http;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
-import edu.umd.cs.findbugs.annotations.Nullable;
+import io.micronaut.core.annotation.NonNull;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.rss.jsonfeed.JsonFeed;
 import org.reactivestreams.Publisher;
 
