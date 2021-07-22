@@ -121,6 +121,9 @@ public class JsonHub {
         return new Builder().type(type).url(url);
     }
 
+    /**
+     * JsonHub Builder
+     */
     public static final class Builder {
 
         private JsonHub jsonHub = new JsonHub();
