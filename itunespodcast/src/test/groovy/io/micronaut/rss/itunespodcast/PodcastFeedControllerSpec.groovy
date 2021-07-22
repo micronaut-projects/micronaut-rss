@@ -2,7 +2,7 @@ package io.micronaut.rss.itunespodcast
 
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.HttpRequest
-import io.micronaut.http.client.RxHttpClient
+import io.micronaut.http.client.HttpClient
 import io.micronaut.rss.RssFeedRenderer
 import io.micronaut.runtime.server.EmbeddedServer
 import spock.lang.AutoCleanup
@@ -21,7 +21,7 @@ class PodcastFeedControllerSpec extends Specification {
 
     @Shared
     @AutoCleanup
-    RxHttpClient client = embeddedServer.applicationContext.createBean(RxHttpClient, embeddedServer.getURL())
+    HttpClient client = embeddedServer.applicationContext.createBean(HttpClient, embeddedServer.getURL())
 
     void "fetch feed"() {
         expect:
