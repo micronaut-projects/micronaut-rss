@@ -22,6 +22,7 @@ import io.micronaut.core.annotation.Introspected;
 import javax.validation.constraints.NotBlank;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Related resource for a JSON Feed item. Podcasts, for instance, would include an attachment that’s an audio or video file.
@@ -58,10 +59,9 @@ public class JsonFeedAttachment {
     @JsonProperty(KEY_DURATION_IN_SECONDS)
     private Integer durationInSeconds;
 
-    /**
-     * Constructor.
-     */
-    public JsonFeedAttachment() {
+    JsonFeedAttachment(@NonNull String url, @NonNull String mimeType) {
+        this.url = url;
+        this.mimeType = mimeType;
     }
 
     /**
@@ -184,12 +184,8 @@ public class JsonFeedAttachment {
     @NonNull
     public Map<String, Object> toMap() {
         Map<String, Object> m = new HashMap<>();
-        if (getUrl() != null) {
-            m.put(KEY_URL, getUrl());
-        }
-        if (getMimeType() != null) {
-            m.put(KEY_MIME_TYPE, getMimeType());
-        }
+        m.put(KEY_URL, getUrl());
+        m.put(KEY_MIME_TYPE, getMimeType());
         if (getTitle() != null) {
             m.put(KEY_TITLE, getTitle());
         }
@@ -207,7 +203,20 @@ public class JsonFeedAttachment {
      */
     public static final class Builder {
 
-        private final JsonFeedAttachment feedAttachment = new JsonFeedAttachment();
+        @Nullable
+        private String url;
+
+        @Nullable
+        private String mimeType;
+
+        @Nullable
+        private String title;
+
+        @Nullable
+        private Long sizeInBytes;
+
+        @Nullable
+        private Integer durationInSeconds;
 
         /**
          * JSON Feed Attachment Builder Constructor.
@@ -222,7 +231,7 @@ public class JsonFeedAttachment {
          */
         @NonNull
         public Builder url(@NonNull String url) {
-            this.feedAttachment.url = url;
+            this.url = url;
             return this;
         }
 
@@ -233,7 +242,7 @@ public class JsonFeedAttachment {
          */
         @NonNull
         public Builder mimeType(@NonNull String mimeType) {
-            this.feedAttachment.mimeType = mimeType;
+            this.mimeType = mimeType;
             return this;
         }
 
@@ -245,7 +254,7 @@ public class JsonFeedAttachment {
          */
         @NonNull
         public Builder title(@NonNull String title) {
-            this.feedAttachment.setTitle(title);
+            this.title = title;
             return this;
         }
 
@@ -257,7 +266,7 @@ public class JsonFeedAttachment {
          */
         @NonNull
         public Builder sizeInBytes(@NonNull Long sizeInBytes) {
-            this.feedAttachment.setSizeInBytes(sizeInBytes);
+            this.sizeInBytes = sizeInBytes;
             return this;
         }
 
@@ -269,7 +278,7 @@ public class JsonFeedAttachment {
          */
         @NonNull
         public Builder durationInSeconds(@NonNull Integer durationInSeconds) {
-            this.feedAttachment.setDurationInSeconds(durationInSeconds);
+            this.durationInSeconds = durationInSeconds;
             return this;
         }
 
@@ -279,7 +288,13 @@ public class JsonFeedAttachment {
          */
         @NonNull
         public JsonFeedAttachment build() {
-            return this.feedAttachment;
+            Objects.requireNonNull(url);
+            Objects.requireNonNull(mimeType);
+            JsonFeedAttachment attachment = new JsonFeedAttachment(url, mimeType);
+            attachment.setTitle(title);
+            attachment.setSizeInBytes(sizeInBytes);
+            attachment.setDurationInSeconds(durationInSeconds);
+            return attachment;
         }
     }
 }

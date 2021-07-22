@@ -21,7 +21,9 @@ class JsonFeedAttachmentSpec extends ApplicationContextSpecification {
 
     void "JsonFeedAttachment::toString() does not throw NPE"() {
         when:
-        new JsonFeedAttachment().toString()
+        JsonFeedAttachment.builder("https://micronaut.io", "application/json")
+                .build()
+                .toString()
 
         then:
         noExceptionThrown()
