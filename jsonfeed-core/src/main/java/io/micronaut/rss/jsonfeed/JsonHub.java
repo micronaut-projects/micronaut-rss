@@ -126,7 +126,7 @@ public class JsonHub {
      */
     public static final class Builder {
 
-        private JsonHub jsonHub = new JsonHub();
+        private final JsonHub jsonHub = new JsonHub();
 
         /**
          * JSON Hub Builder Constructor.
