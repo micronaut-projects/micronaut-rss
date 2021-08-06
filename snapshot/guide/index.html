@@ -163,7 +163,7 @@
 <p>Micronaut RSS 2.0 uses Micronaut 2.0.</p>
 </div>
 <div class="paragraph">
-<p>A new module, <code>rss-core</code>, contains core RSS related file.  <code>rss</code> module depends on <code>rss-core</code> and HTTP related classes such as <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
+<p>A new module, <code>rss-core</code>, contains core RSS related file.  <code>rss</code> module depends on <code>rss-core</code> and HTTP related classes such as <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
 </div>
 
 <h1 id="breaks"><a class="anchor" href="#breaks"></a>4 Breaking Changes</h1>
@@ -207,10 +207,10 @@
 
 
 <div class="paragraph">
-<p><a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>, <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedControllerConfiguration.html">FeedControllerConfiguration</a> and <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedControllerProperties.html">FeedControllerProperties</a> moved to package <code>io.micronaut.rss.http</code>.</p>
+<p><a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>, <a href="../api/io/micronaut/rss/http/FeedControllerConfiguration.html">FeedControllerConfiguration</a> and <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a> moved to package <code>io.micronaut.rss.http</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
+<p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
 </div>
 <div class="paragraph">
 <p>The artifacts' maven group has been changed to <code>micronaut-rss</code>. The next table shows the maven coordinates changes:</p>
@@ -267,7 +267,7 @@
 </p>
 </div>
 <div class="paragraph">
-<p>This modules exposes a controller <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
+<p>This modules exposes a controller <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
 </div>
 <div class="paragraph">
 <p>The following table displays several characteristics which can be configured:</p>
@@ -301,7 +301,7 @@
 </tbody>
 </table>
 <div class="paragraph">
-<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DeafultRssFeedRenderer.html">DeafultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
+<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/rss/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DefaultRssFeedRenderer.html">DefaultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
 </div>
 <div class="paragraph">
 <p>For example, if you wanted to generate a feed as the one described in the <a href="https://cyber.harvard.edu/rss/examples/rss2sample.xml"&gt;https://cyber.harvard.edu/rss/examples/rss2sample.xml">RSS 2.0 specifiation&#8217;s sample</a> you could create the next bean:</p>
