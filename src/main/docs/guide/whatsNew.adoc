@@ -1,3 +1,3 @@
 Micronaut RSS 2.0 uses Micronaut 2.0.
 
-A new module, `rss-core`, contains core RSS related file.  `rss` module depends on `rss-core` and HTTP related classes such as api::io.micronaut.rss.http.FeedController[].
+A new module, `rss-core`, contains core RSS related file.  `rss` module depends on `rss-core` and HTTP related classes such as api:rss.http.FeedController[].
