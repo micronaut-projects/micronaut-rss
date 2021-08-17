@@ -96,6 +96,10 @@
         
         <div class="toc-item" style="margin-left:0px" id="toc-item-breaks"><a href="#breaks"><strong>4</strong><span>Breaking Changes</span></a></div>
         
+        <div class="toc-item" style="margin-left:10px" id="toc-item-breaksthree"><a href="#breaksthree"><strong>4.1</strong><span>Breaking Changes in Micronaut RSS 3.0.0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-breakstwo"><a href="#breakstwo"><strong>4.2</strong><span>Breaking Changes in Micronaut RSS 2.0.0</span></a></div>
+        
         <div class="toc-item" style="margin-left:0px" id="toc-item-rss"><a href="#rss"><strong>5</strong><span>RSS 2.0</span></a></div>
         
         <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
@@ -114,7 +118,7 @@
         <h1>Micronaut RSS</h1>
         <p></p>
         <p>It eases the creation of RSS feeds with Micronaut</p>
-        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/2.4.0/guide/index.html'>2.4.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.1/guide/index.html'>2.3.1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.0/guide/index.html'>2.3.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select></p>
+        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/3.0.0/guide/index.html'>3.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0-M1/guide/index.html'>3.0.0-M1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.4.0/guide/index.html'>2.4.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.1/guide/index.html'>2.3.1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.0/guide/index.html'>2.3.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select></p>
     </div>
     
 <h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
@@ -159,7 +163,7 @@
 <p>Micronaut RSS 2.0 uses Micronaut 2.0.</p>
 </div>
 <div class="paragraph">
-<p>A new module, <code>rss-core</code>, contains core RSS related file.  <code>rss</code> module depends on <code>rss-core</code> and HTTP related classes such as <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
+<p>A new module, <code>rss-core</code>, contains core RSS related file.  <code>rss</code> module depends on <code>rss-core</code> and HTTP related classes such as <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
 </div>
 
 <h1 id="breaks"><a class="anchor" href="#breaks"></a>4 Breaking Changes</h1>
@@ -171,11 +175,42 @@
 </div>
 
 
+
+
+<h2 id="breaksthree"><a class="anchor" href="#breaksthree"></a>4.1 Breaking Changes in Micronaut RSS 3.0.0</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breaksthree.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="ulist">
+<ul>
+<li>
+<p>Classes, constructors, etc that have been deprecated in previous versions of Micronaut RSS have been removed.</p>
+</li>
+<li>
+<p><a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> returns a <code>Publisher</code></p>
+</li>
+</ul>
+</div>
+
+<h2 id="breakstwo"><a class="anchor" href="#breakstwo"></a>4.2 Breaking Changes in Micronaut RSS 2.0.0</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breakstwo.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
 <div class="paragraph">
-<p><a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>, <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedControllerConfiguration.html">FeedControllerConfiguration</a> and <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedControllerProperties.html">FeedControllerProperties</a> moved to package <code>io.micronaut.rss.http</code>.</p>
+<p><a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>, <a href="../api/io/micronaut/rss/http/FeedControllerConfiguration.html">FeedControllerConfiguration</a> and <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a> moved to package <code>io.micronaut.rss.http</code>.</p>
 </div>
 <div class="paragraph">
-<p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/:io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
+<p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
 </div>
 <div class="paragraph">
 <p>The artifacts' maven group has been changed to <code>micronaut-rss</code>. The next table shows the maven coordinates changes:</p>
@@ -232,7 +267,7 @@
 </p>
 </div>
 <div class="paragraph">
-<p>This modules exposes a controller <a href="../api/io/micronaut/rss/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
+<p>This modules exposes a controller <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
 </div>
 <div class="paragraph">
 <p>The following table displays several characteristics which can be configured:</p>
@@ -266,7 +301,7 @@
 </tbody>
 </table>
 <div class="paragraph">
-<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DeafultRssFeedRenderer.html">DeafultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
+<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/rss/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DefaultRssFeedRenderer.html">DefaultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
 </div>
 <div class="paragraph">
 <p>For example, if you wanted to generate a feed as the one described in the <a href="https://cyber.harvard.edu/rss/examples/rss2sample.xml"&gt;https://cyber.harvard.edu/rss/examples/rss2sample.xml">RSS 2.0 specifiation&#8217;s sample</a> you could create the next bean:</p>
@@ -312,16 +347,18 @@ class MockRssFeedProvider implements RssFeedProvider {
             .build();
 
     @Override
-    public RssChannel fetch() {
-        return rssChannel;
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetch() {
+        return Publishers.just(rssChannel);
     }
 
     @Override
-    public RssChannel fetchById(Serializable id) {
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetchById(Serializable id) {
         if(id != null &amp;&amp; id.equals("1")) {
-            return rssChannel;
+            return Publishers.just(rssChannel);
         }
-        return null;
+        return Publishers.empty();
     }
 }</code></pre>
 </div>
@@ -365,8 +402,9 @@ class MockRssFeedProvider implements RssFeedProvider {
 public class DefaultRssFeedProvider implements RssFeedProvider {
 
     @Override
-    public RssChannel fetch() {
-        return ItunesPodcast.builder()
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetch() {
+        return Publishers.just(ItunesPodcast.builder()
                 .title("Hiking Treks")
                 .link("https://www.apple.com/itunes/podcasts/")
                 .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
@@ -565,12 +603,13 @@ public class DefaultRssFeedProvider implements RssFeedProvider {
                         .duration("23:59")
                         .explicit(false)
                         .contentEncoded("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on &lt;a href=\"https://www.apple.com/itunes/podcasts/\"&gt;Apple Podcasts&lt;/a&gt;")
-                        .build()).build();
+                        .build()).build());
     }
 
     @Override
-    public RssChannel fetchById(Serializable id) {
-        return null;
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetchById(Serializable id) {
+        return Publishers.empty();
     }
 }</code></pre>
 </div>
@@ -712,8 +751,8 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
     @NotNull
     @Override
     public Publisher&lt;JsonFeed&gt; feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
-        return Flowable.create( emitter -&gt; {
-            emitter.onNext(JsonFeed.builder()
+        return Flux.create( emitter -&gt; {
+            emitter.next(JsonFeed.builder()
                     .version("https://jsonfeed.org/version/1.1")
                     .title("My Example Feed")
                     .homePageUrl("https://example.org/")
@@ -729,8 +768,8 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
                             .url("https://example.org/initial-post")
                             .build())
                     .build());
-            emitter.onComplete();
-        }, BackpressureStrategy.ERROR);
+            emitter.complete();
+        }, FluxSink.OverflowStrategy.ERROR);
     }
 }</code></pre>
 </div>
