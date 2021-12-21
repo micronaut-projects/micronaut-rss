@@ -117,8 +117,8 @@
     <div class="project">
         <h1>Micronaut RSS</h1>
         <p></p>
-        <p>It eases the creation of RSS feeds with Micronaut</p>
-        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0/guide/index.html'>3.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0-M1/guide/index.html'>3.0.0-M1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.4.0/guide/index.html'>2.4.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.1/guide/index.html'>2.3.1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.0/guide/index.html'>2.3.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select></p>
+        <p>Eases the creation of RSS feeds with Micronaut</p>
+        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0/guide/index.html'>3.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0-M1/guide/index.html'>3.0.0-M1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.4.0/guide/index.html'>2.4.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.1/guide/index.html'>2.3.1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.0/guide/index.html'>2.3.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select> </p>
     </div>
     
 <h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
@@ -272,9 +272,34 @@
 <div class="paragraph">
 <p>The following table displays several characteristics which can be configured:</p>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in &lt;stdin&gt; - include::/home/runner/work/micronaut-rss/micronaut-rss/build/generated/configurationProperties/io.micronaut.rss.http.FeedControllerConfigurationProperties.adoc[]</p>
-</div>
+<a id="io.micronaut.rss.http.FeedControllerConfigurationProperties" href="#io.micronaut.rss.http.FeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> should be enabled. Default value (true).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> path. Default value "/feed"</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/rss/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DefaultRssFeedRenderer.html">DefaultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
 </div>
@@ -789,9 +814,39 @@ If the creation of the JSON feed is a blocking I/O operation, <a href="https://d
 <div class="paragraph">
 <p>There are additional configuration options for the JSON Feed Controller:</p>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in &lt;stdin&gt; - include::/home/runner/work/micronaut-rss/micronaut-rss/build/generated/configurationProperties/io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties.adoc[]</p>
-</div>
+<a id="io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties" href="#io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html">JsonFeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> should be enabled. Default value (true).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.root-path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> rootpath. Default value "/feeds"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> path. Default value "/json"</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>You can implement pagination by supplying <code>maxNumberOfItems</code> and <code>pageNumber</code> which will be passed to your implementation of  <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html">JsonFeedProvider</a>.</p>
 </div>
