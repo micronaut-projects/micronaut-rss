@@ -1,13 +1,9 @@
-dependencies {
-    annotationProcessor("io.micronaut:micronaut-inject-java")
-    annotationProcessor("io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion")
-    annotationProcessor("io.micronaut:micronaut-validation")
-    implementation("io.micronaut:micronaut-validation")
-    api project(":rss-language")
-    implementation("io.micronaut:micronaut-inject")
+plugins {
+    id 'io.micronaut.build.internal.rss-module'
+}
 
-    testImplementation("org.spockframework:spock-core:${spockVersion}") {
-        exclude module:'groovy-all'
-    }
-    testImplementation("io.micronaut.test:micronaut-test-spock:$micronautTestVersion")
+dependencies {
+    api projects.rssLanguage
+    implementation mn.micronaut.inject
+    testImplementation "io.micronaut.test:micronaut-test-spock:$micronautTestVersion"
 }

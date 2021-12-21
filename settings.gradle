@@ -1,7 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'io.micronaut.build.shared.settings' version '5.1.0'
+}
+
+rootProject.name = 'micronaut-rss'
+
 include 'rss'
 include 'rss-core'
 include 'itunespodcast'
 include 'jsonfeed-core'
 include 'jsonfeed'
 include 'rss-language'
-rootProject.name = 'micronaut-rss'
+
+enableFeaturePreview 'TYPESAFE_PROJECT_ACCESSORS'
+enableFeaturePreview 'VERSION_CATALOGS'
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+    versionCatalogs {
+        mn {
+            from "io.micronaut:micronaut-bom:${providers.gradleProperty('micronautVersion').get()}"
+        }
+    }
+}

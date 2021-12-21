@@ -1,20 +1,14 @@
+plugins {
+    id 'io.micronaut.build.internal.rss-module'
+}
+
 dependencies {
-    annotationProcessor("io.micronaut:micronaut-inject-java")
-    annotationProcessor("io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion")
-
-    annotationProcessor("io.micronaut:micronaut-validation")
-    implementation("io.micronaut:micronaut-validation")
-    api("io.micronaut:micronaut-inject")
-
-    api project(":rss-core")
-
-    testImplementation("org.spockframework:spock-core:${spockVersion}") {
-        exclude module:'groovy-all'
-    }
-    testImplementation("org.codehaus.groovy:groovy-xml")
-    testImplementation("io.micronaut.test:micronaut-test-spock:$micronautTestVersion")
-    testImplementation("io.micronaut:micronaut-http-server-netty")
-    testImplementation("io.micronaut:micronaut-http-client")
-    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
-    testImplementation project(":rss")
+    api mn.micronaut.inject
+    api projects.rssCore
+    testAnnotationProcessor mn.micronaut.inject.java
+    testImplementation 'org.codehaus.groovy:groovy-xml'
+    testImplementation mn.micronaut.http.client
+    testImplementation mn.micronaut.http.server.netty
+    testImplementation mn.micronaut.test.spock
+    testImplementation projects.rss
 }
