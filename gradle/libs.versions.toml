@@ -1,0 +1,10 @@
+[versions]
+# Micronaut
+micronaut-test = "3.1.1"
+
+
+[libraries]
+# Micronaut
+micronaut-test-spock = { module = "io.micronaut.test:micronaut-test-spock", version.ref = "micronaut-test" }
+
+groovy-xml = { module = "org.codehaus.groovy:groovy-xml" }
