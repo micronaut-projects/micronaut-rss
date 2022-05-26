@@ -5,7 +5,9 @@ plugins {
 dependencies {
     api mn.micronaut.inject
     api projects.rssCore
+
     testAnnotationProcessor mn.micronaut.inject.java
+
     testImplementation(libs.groovy.xml)
     testImplementation mn.micronaut.http.client
     testImplementation mn.micronaut.http.server.netty

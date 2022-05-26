@@ -1,12 +1,12 @@
 package io.micronaut.rss.jsonfeed.http;
 
 import io.micronaut.context.annotation.Requires;
+import io.micronaut.core.annotation.NonNull;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.rss.jsonfeed.JsonFeed;
 import io.micronaut.rss.jsonfeed.JsonFeedItem;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.reactivestreams.Publisher;
 
 import jakarta.inject.Singleton;
@@ -15,7 +15,7 @@ import jakarta.inject.Singleton;
 @Singleton
 public class ExampleJsonFeedProvider implements JsonFeedProvider {
 
-    @NotNull
+    @NonNull
     @Override
     public Publisher<JsonFeed> feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
         return Flux.create( emitter -> {

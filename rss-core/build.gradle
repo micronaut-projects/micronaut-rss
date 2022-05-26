@@ -5,5 +5,5 @@ plugins {
 dependencies {
     api projects.rssLanguage
     implementation mn.micronaut.inject
-    testImplementation(libs.micronaut.test.spock)
+    testImplementation(mn.micronaut.test.spock)
 }
