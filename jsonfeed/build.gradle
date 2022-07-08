@@ -5,9 +5,10 @@ plugins {
 dependencies {
     api mn.micronaut.http
     api mn.micronaut.inject
-    api mn.rxjava2
     api projects.jsonfeedCore
+
     implementation mn.reactor
+
     testAnnotationProcessor mn.micronaut.inject.java
     testImplementation mn.groovy.json
     testImplementation mn.micronaut.http.client
