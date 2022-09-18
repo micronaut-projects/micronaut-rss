@@ -21,6 +21,13 @@ include 'rss-language'
 
 enableFeaturePreview 'TYPESAFE_PROJECT_ACCESSORS'
 
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
 micronautBuild {
     importMicronautCatalog()
 }
