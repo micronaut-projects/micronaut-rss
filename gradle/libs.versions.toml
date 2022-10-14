@@ -1,2 +1,2 @@
 [libraries]
-groovy-xml = { module = "org.codehaus.groovy:groovy-xml" }
+groovy-xml = { module = "org.apache.groovy:groovy-xml" }

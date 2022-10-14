@@ -1,5 +1,6 @@
 package io.micronaut.rss.itunespodcast
 
+import groovy.xml.XmlParser
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.client.HttpClient
