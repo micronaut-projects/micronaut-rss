@@ -4,7 +4,6 @@ import groovy.json.JsonSlurper
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
-import spock.lang.PendingFeature
 
 class JsonFeedControllerSpec extends EmbeddedServerSpecification {
 
@@ -13,7 +12,6 @@ class JsonFeedControllerSpec extends EmbeddedServerSpecification {
         'JsonFeedControllerSpec'
     }
 
-    @PendingFeature
     void "/feeds/json returns a json feed if JsonFeedProvider exists"() {
         given:
         String expected = '''
