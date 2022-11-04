@@ -6,6 +6,7 @@ dependencies {
     api mn.jackson.annotations
     api mn.micronaut.inject
     api projects.rssLanguage
+    testImplementation(mn.micronaut.jackson.databind)
     testImplementation mn.groovy.json
     testImplementation mn.micronaut.http.client
 }

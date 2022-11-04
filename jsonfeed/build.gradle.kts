@@ -8,6 +8,7 @@ dependencies {
     api(projects.jsonfeedCore)
     implementation(mn.reactor)
     testAnnotationProcessor(mn.micronaut.inject.java)
+    testImplementation(mn.micronaut.jackson.databind)
     testImplementation(mn.groovy.json)
     testImplementation(mn.micronaut.http.client)
     testImplementation(mn.micronaut.http.server.netty)

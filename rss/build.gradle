@@ -8,6 +8,7 @@ dependencies {
     implementation mn.micronaut.http
     implementation mn.reactor
     testAnnotationProcessor mn.micronaut.inject.java
+    testImplementation(mn.micronaut.jackson.databind)
     testImplementation(libs.groovy.xml)
     testImplementation mn.micronaut.http.client
     testImplementation mn.micronaut.http.server.netty
