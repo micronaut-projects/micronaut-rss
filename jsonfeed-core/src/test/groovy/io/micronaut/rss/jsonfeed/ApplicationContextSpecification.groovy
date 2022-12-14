@@ -1,7 +1,7 @@
 package io.micronaut.rss.jsonfeed
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import io.micronaut.context.ApplicationContext
+import io.micronaut.serde.ObjectMapper
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
