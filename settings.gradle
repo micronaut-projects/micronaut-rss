@@ -25,5 +25,4 @@ micronautBuild {
     addSnapshotRepository()
     importMicronautCatalog()
     importMicronautCatalog("micronaut-serde")
-    importMicronautCatalog("micronaut-test")
 }
