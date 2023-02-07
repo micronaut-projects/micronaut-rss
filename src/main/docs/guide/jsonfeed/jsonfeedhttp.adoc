@@ -6,7 +6,7 @@ Your JSON Feed will be of content type `application/json+feed`.
 
 You have to  https://docs.micronaut.io/latest/guide/index.html#consumesAnnotation[register an additional type] for Micronaut's `json` codec:
 
-[source, yaml]
+[configuration]
 ----
 include::{sourcedir}/jsonfeed/src/test/resources/application.yml[]
 ----
