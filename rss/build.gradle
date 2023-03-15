@@ -4,7 +4,7 @@ plugins {
 
 dependencies {
     api mn.micronaut.inject
-    api projects.rssCore
+    api projects.micronautRssCore
     implementation mn.micronaut.http
     implementation mn.reactor
     testAnnotationProcessor mn.micronaut.inject.java

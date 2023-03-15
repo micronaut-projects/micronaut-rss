@@ -5,7 +5,7 @@ plugins {
 dependencies {
     api(mn.micronaut.http)
     api(mn.micronaut.inject)
-    api(projects.jsonfeedCore)
+    api(projects.micronautJsonfeedCore)
     implementation(mn.reactor)
     testAnnotationProcessor(mn.micronaut.inject.java)
     testImplementation(mnSerde.micronaut.serde.jackson)

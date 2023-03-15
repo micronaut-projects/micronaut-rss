@@ -6,7 +6,7 @@ import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
 
-import javax.validation.Validator
+import jakarta.validation.Validator
 
 abstract class ApplicationContextSpecification extends Specification implements ConfigurationFixture {
 
