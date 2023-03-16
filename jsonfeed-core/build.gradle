@@ -5,7 +5,7 @@ plugins {
 dependencies {
     api mn.jackson.annotations
     api mn.micronaut.inject
-    api projects.rssLanguage
+    api projects.micronautRssLanguage
     testImplementation(mnSerde.micronaut.serde.jackson)
     testImplementation mn.groovy.json
     testImplementation mn.micronaut.http.client

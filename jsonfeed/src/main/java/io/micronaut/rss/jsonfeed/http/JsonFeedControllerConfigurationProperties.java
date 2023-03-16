@@ -18,7 +18,7 @@ package io.micronaut.rss.jsonfeed.http;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.context.annotation.ConfigurationProperties;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 /**
  * {@link ConfigurationProperties} implementation of {@link JsonFeedControllerConfiguration}.

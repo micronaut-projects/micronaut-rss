@@ -18,7 +18,7 @@ package io.micronaut.rss.jsonfeed;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Introspected;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -20,7 +20,7 @@ import io.micronaut.rss.RssItem;
 import io.micronaut.rss.RssItemEnclosure;
 
 import io.micronaut.core.annotation.Nullable;
-import javax.validation.constraints.Positive;
+import jakarta.validation.constraints.Positive;
 import java.time.ZonedDateTime;
 import java.util.Optional;
 
