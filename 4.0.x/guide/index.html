@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>Micronaut RSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
+    <link rel="stylesheet" href="../css/custom.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
+    <link rel="stylesheet" href="../css/highlight/agate.css">
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/guide.js"></script>
+    <script src="../js/multi-language-sample.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="../css/multi-language-sample.css"/>
+    <script src="../js/docs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+    <script type="text/javascript">
+        function addJsClass(el) {
+            var classes = document.body.className.split(" ");
+            classes.push("js");
+            document.body.className = classes.join(" ");
+        }
+    </script>
+
+</head>
+
+<body class="body" id="docs" onload="addJsClass();" onhashchange="highlightMenu()">
+
+<div id="table-of-content-nav-link" class="desktop">
+    <a id="theme-switcher" title="Switch to dark theme" href="javascript:switchTheme(true)"><i class="fa fa-moon-o"></i></a>
+    <a title="Collapse/Open Table of contents" title="Hide Table of Contents" href="javascript:hideTableOfContents();" class="button">[ + ]</a>
+</div>
+
+<div id="main">
+    <div id="navigation" class="no-print">
+        <div class="navTitle">
+            <span id="logo"><a href="http://micronaut.io" title="Go to Micronaut Website"><img src="../img/micronaut-logo-white.svg" alt="Micronaut"/></a></span>
+        </div>
+        <div class="navLinks">
+            <ul>
+                    <li><div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)" class="desktop">
+                            <a href="../guide/index.html" class="button">Table of contents</a>
+                            <div id="nav-summary-childs" style="display:none;">
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#releaseHistory"><strong>2</strong><span>Release History</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#whatsNew"><strong>3</strong><span>What's New?</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#breaks"><strong>4</strong><span>Breaking Changes</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#rss"><strong>5</strong><span>RSS 2.0</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#jsonfeed"><strong>7</strong><span>JSON Feeds</span></a></div>
+                                
+                                <div class="toc-item" style="margin-left:0"><a href="#repository"><strong>8</strong><span>Repository</span></a></div>
+                                
+                            </div>
+                        </div>
+                    </li>
+
+                <li id="table-of-content-nav-link-mobile" class="mobile">
+                    <a title="Scroll to Table of contents" href="javascript:scrollToTop();" class="button">Toc</a>
+                </li>
+                <li class="desktop">
+                    <a title="Go to API documentation" href="../api/index.html" class="button">API Reference</a>
+                </li>
+                <li class="mobile">
+                    <a title="Go to API documentation" href="../api/index.html" class="button">API</a>
+                </li>
+                <li class="desktop">
+                    <a title="Go to Configuration Reference documentation" href="../guide/configurationreference.html" class="button">Configuration Reference</a>
+                </li>
+                <li class="mobile">
+                    <a title="Go to Configuration Reference documentation" href="../guide/configurationreference.html" class="button">Conf</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    
+    <div id="table-of-content">
+        <div class="toc-content">
+
+        <h2>Table of Contents</h2>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-introduction"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-releaseHistory"><a href="#releaseHistory"><strong>2</strong><span>Release History</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-whatsNew"><a href="#whatsNew"><strong>3</strong><span>What's New?</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-breaks"><a href="#breaks"><strong>4</strong><span>Breaking Changes</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-breaksthree"><a href="#breaksthree"><strong>4.1</strong><span>Breaking Changes in Micronaut RSS 3.0.0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-breakstwo"><a href="#breakstwo"><strong>4.2</strong><span>Breaking Changes in Micronaut RSS 2.0.0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-rss"><a href="#rss"><strong>5</strong><span>RSS 2.0</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-itunespodcast"><a href="#itunespodcast"><strong>6</strong><span>Itunes Podcast RSS Feed</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-jsonfeed"><a href="#jsonfeed"><strong>7</strong><span>JSON Feeds</span></a></div>
+        
+        <div class="toc-item" style="margin-left:10px" id="toc-item-jsonfeedhttp"><a href="#jsonfeedhttp"><strong>7.1</strong><span>JSON Feeds Endpoint</span></a></div>
+        
+        <div class="toc-item" style="margin-left:0px" id="toc-item-repository"><a href="#repository"><strong>8</strong><span>Repository</span></a></div>
+        
+        </div>
+    </div>
+    
+    <div class="docs-content">
+    <div class="project">
+        <h1>Micronaut RSS</h1>
+        <p></p>
+        <p>Eases the creation of RSS feeds with Micronaut</p>
+        <p><strong>Version:</strong> <select style='max-width: 200px' onChange='window.document.location.href=this.options[this.selectedIndex].value;'><option value='https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/index.html'>SNAPSHOT</option><option value='https://micronaut-projects.github.io/micronaut-rss/latest/guide/index.html'>LATEST</option><option selected='selected' value='https://micronaut-projects.github.io/micronaut-rss/4.0.0-M1/guide/index.html'>4.0.0-M1</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.2.0/guide/index.html'>3.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.1.0/guide/index.html'>3.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.1/guide/index.html'>3.0.1</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0/guide/index.html'>3.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/3.0.0-M1/guide/index.html'>3.0.0-M1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.4.0/guide/index.html'>2.4.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.1/guide/index.html'>2.3.1</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.3.0/guide/index.html'>2.3.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.2.0/guide/index.html'>2.2.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.1.0/guide/index.html'>2.1.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/2.0.0/guide/index.html'>2.0.0</option><option value='https://micronaut-projects.github.io/micronaut-rss/1.0.0/guide/index.html'>1.0.0</option></select> </p>
+    </div>
+    
+<h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/introduction.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>Micronaut RSS eases the creation of RSS feeds with Micronaut.</p>
+</div>
+
+<h1 id="releaseHistory"><a class="anchor" href="#releaseHistory"></a>2 Release History</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/releaseHistory.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>For this project, you can find a list of releases (with release notes) here:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/micronaut-projects/micronaut-rss/releases">https://github.com/micronaut-projects/micronaut-rss/releases</a></p>
+</div>
+
+<h1 id="whatsNew"><a class="anchor" href="#whatsNew"></a>3 What's New?</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/whatsNew.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>Micronaut RSS 2.0 uses Micronaut 2.0.</p>
+</div>
+<div class="paragraph">
+<p>A new module, <code>rss-core</code>, contains core RSS related file.  <code>rss</code> module depends on <code>rss-core</code> and HTTP related classes such as <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
+</div>
+
+<h1 id="breaks"><a class="anchor" href="#breaks"></a>4 Breaking Changes</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breaks.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+
+
+<h2 id="breaksthree"><a class="anchor" href="#breaksthree"></a>4.1 Breaking Changes in Micronaut RSS 3.0.0</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breaksthree.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="ulist">
+<ul>
+<li>
+<p>Classes, constructors, etc that have been deprecated in previous versions of Micronaut RSS have been removed.</p>
+</li>
+<li>
+<p><a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> returns a <code>Publisher</code></p>
+</li>
+</ul>
+</div>
+
+<h2 id="breakstwo"><a class="anchor" href="#breakstwo"></a>4.2 Breaking Changes in Micronaut RSS 2.0.0</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/breakstwo.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p><a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>, <a href="../api/io/micronaut/rss/http/FeedControllerConfiguration.html">FeedControllerConfiguration</a> and <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a> moved to package <code>io.micronaut.rss.http</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>:micronaut-itunespodcast</code> depends only on <code>micronaut-rss-core</code>. You may want to use it in combination with <code>micronaut-rss</code> if you want to use the <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a>.</p>
+</div>
+<div class="paragraph">
+<p>The artifacts' maven group has been changed to <code>micronaut-rss</code>. The next table shows the maven coordinates changes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Old</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.configuration:micronaut-rss</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:micronaut-rss</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.configuration:micronaut-itunespodcast</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:micronaut-itunespodcast</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:rss-core</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.micronaut.rss:rss-core</code></p></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="rss"><a class="anchor" href="#rss"></a>5 RSS 2.0</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/rss.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="title"></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.rss:micronaut-rss")</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.rss&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-rss&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div></p>
+</div>
+<div class="paragraph">
+<p>This modules exposes a controller <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> which exposes feeds as described by <a href="https://cyber.harvard.edu/rss/rss.html">RSS 2.0 Specification</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following table displays several characteristics which can be configured:</p>
+</div>
+<a id="io.micronaut.rss.http.FeedControllerConfigurationProperties" href="#io.micronaut.rss.http.FeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether  should be enabled. Default value ().</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>FeedController</code> requires two beans to be present <a href="../api/io/micronaut/rss/RssFeedProvider.html">RssFeedProvider</a> and <a href="../api/io/micronaut/rss/RssFeedRenderer.html">RssFeedRenderer</a>. While <a href="../api/io/micronaut/rss/DefaultRssFeedRenderer.html">DefaultRssFeedRenderer</a> provides a default implementation for <code>RssFeedRenderer</code>, you will need to provide an implementation for <code>RssFeedProvider</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you wanted to generate a feed as the one described in the <a href="https://cyber.harvard.edu/rss/examples/rss2sample.xml"&gt;https://cyber.harvard.edu/rss/examples/rss2sample.xml">RSS 2.0 specifiation&#8217;s sample</a> you could create the next bean:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+class MockRssFeedProvider implements RssFeedProvider {
+    RssChannel rssChannel = RssChannel.builder("Liftoff News", "http://liftoff.msfc.nasa.gov/", "Liftoff to Space Exploration.")
+            .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
+            .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 10, 4, 0, 0), ZoneId.of("GMT")))
+            .lastBuildDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 10, 9, 41, 1), ZoneId.of("GMT")))
+            .docs("http://blogs.law.harvard.edu/tech/rss")
+            .generator("Weblog Editor 2.0")
+            .managingEditor("editor@example.com")
+            .webMaster("webmaster@example.com")
+            .item(RssItem.builder()
+                .title("Star City")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp")
+                .description("How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia's &amp;lt;a href=\"http://howe.iki.rssi.ru/GCTC/gctc_e.htm\"&amp;gt;Star City&amp;lt;/a&amp;gt;.")
+               .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 6, 3, 9, 39, 21), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/06/03.html#item573")
+                .build())
+            .item(RssItem.builder()
+                .description("Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a &amp;lt;a href=\"http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm\"&amp;gt;partial eclipse of the Sun&amp;lt;/a&amp;gt; on Saturday, May 31st.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 30, 11, 6, 42), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/30.html#item572")
+                .build())
+            .item(RssItem.builder()
+                .title("The Engine That Does More")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-VASIMR.asp")
+                .description("Before man travels to Mars, NASA hopes to design new engines that will let us fly through the Solar System more quickly.  The proposed VASIMR engine would do that.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 27, 8, 37, 32), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/27.html#item571")
+            .build())
+            .item(RssItem.builder()
+                .title("Astronauts' Dirty Laundry")
+                .link("http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp")
+                .description("Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.")
+                .pubDate(ZonedDateTime.of(LocalDateTime.of(2003, 5, 20, 8, 56, 02), ZoneId.of("GMT")))
+                .guid("http://liftoff.msfc.nasa.gov/2003/05/20.html#item570")
+                .build())
+            .build();
+
+    @Override
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetch() {
+        return Publishers.just(rssChannel);
+    }
+
+    @Override
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetchById(Serializable id) {
+        if(id != null &amp;&amp; id.equals("1")) {
+            return Publishers.just(rssChannel);
+        }
+        return Publishers.empty();
+    }
+}</code></pre>
+</div>
+</div>
+
+<h1 id="itunespodcast"><a class="anchor" href="#itunespodcast"></a>6 Itunes Podcast RSS Feed</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/itunespodcast.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="title"></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.rss:micronaut-itunespodcast")</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.rss&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-itunespodcast&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div></p>
+</div>
+<div class="paragraph">
+<p>An <a href="https://itunespartner.apple.com/en/podcasts/overview">Itunes podcast</a> feed, is a valid RSS 2.0 feed with additional tags.</p>
+</div>
+<div class="paragraph">
+<p>For example, the following bean will generate the <a href="https://help.apple.com/itc/podcasts_connect/#/itcbaf351599">Itunes Podcast RSS Feed&#8217;s sample</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+public class DefaultRssFeedProvider implements RssFeedProvider {
+
+    @Override
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetch() {
+        return Publishers.just(ItunesPodcast.builder()
+                .title("Hiking Treks")
+                .link("https://www.apple.com/itunes/podcasts/")
+                .language(RssLanguage.LANG_ENGLISH_UNITED_STATES)
+                .copyright("&amp;#8471; &amp;amp; &amp;#xA9; 2017 John Appleseed")
+                .description("Love to get outdoors and discover nature&amp;apos;s treasures? Hiking Treks is the show for you. We review hikes and excursions, review outdoor gear and interview a variety of naturalists and adventurers. Look for new episodes each week.")
+                .subtitle("Find your trail. Great hikes and outdoor adventures.")
+                .author("The Sunset Explorers")
+                .subtitle("Find your trail. Great hikes and outdoor adventures.")
+                .type(ItunesPodcastType.SERIAL)
+                .owner(ItunesPodcastOwner.builder()
+                        .name("Sunset Explorers")
+                        .email("mountainscape@icloud.com")
+                        .build())
+                .image(RssChannelImage
+                        .builder("Hiking Treks", "http://podcasts.apple.com/resources/example/hiking_treks/images/cover_art.jpg", "https://www.apple.com/itunes/podcasts/")
+                        .build())
+                .summary("Love to get outdoors and discover nature&amp;apos;s treasures? Hiking Treks is the show for you. We review hikes and excursions, review outdoor gear and interview a variety of naturalists and adventurers. Look for new episodes each week.")
+                .category(Arrays.asList(ItunesPodcastCategory.SPORTS_AND_RECREATION_OUTDOOR.getCategories()))
+                .explicit(false)
+                .item(ItunesPodcastEpisode.builder("Hiking Treks Trailer")
+                        .episodeType(ItunesPodcastEpisodeType.TRAILER)
+                        .author("The Sunset Adventurers")
+                        .subtitle("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States.")
+                        .summary("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States.")
+                        .description("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States.")
+                        .contentEncoded("&lt;![CDATA[The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on &lt;a href=\"https://www.apple.com/itunes/podcasts/\"&gt;Apple Podcasts&lt;/a&gt;]]&gt;")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160418.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2016, 4, 12, 1, 15, 0), ZoneId.of("GMT")))
+                        .duration("17:59")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Mt. Hood, Oregon")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(4)
+                        .season(2)
+                        .title("S02 EP04 Mt. Hood, Oregon")
+                        .author("The Sunset Explorers")
+                        .subtitle("Tips for trekking around the tallest mountain in Oregon")
+                        .summary("Tips for trekking around the tallest mountain in Oregon")
+                        .description("Tips for trekking around the tallest mountain in Oregon")
+                        .contentEncoded("Tips for trekking around the tallest mountain in Oregon")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(8727310)
+                                .type("audio/x-m4a")
+                                .url("http://example.com/podcasts/everything/mthood.m4a")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170606.m4a")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2016, 6, 06, 12, 0, 0), ZoneId.of("GMT")))
+                        .duration("17:04")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Bouldering Around Boulder")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(3)
+                        .season(2)
+                        .title("S02 EP03 Bouldering Around Boulder")
+                        .author("The Sunset Adventurers")
+                        .subtitle("We explore fun walks to climbing areas about the beautiful Colorado city of Boulder.")
+                        .summary("We explore fun walks to climbing areas about the beautiful Colorado city of Boulder.")
+                        .description("We explore fun walks to climbing areas about the beautiful Colorado city of Boulder.")
+                        .image("http://example.com/podcasts/everything/AllAboutEverything/Episode2.jpg")
+                        .contentEncoded("href=\"http://example.com/podcasts/everything/\"")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(5650889)
+                                .type("video/mp4")
+                                .url("http://example.com/podcasts/boulder.mp4")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170530.mp4")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 30, 13, 0, 0), ZoneId.of("GMT")))
+                        .duration("06:27")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Caribou Mountain, Maine")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(2)
+                        .season(2)
+                        .title("S02 EP02 Caribou Mountain, Maine")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Put your fitness to the test with this invigorating hill climb.")
+                        .summary("Put your fitness to the test with this invigorating hill climb.")
+                        .description("Put your fitness to the test with this invigorating hill climb.")
+                        .image("http://example.com/podcasts/everything/AllAboutEverything/Episode3.jpg")
+                        .contentEncoded("href=\"http://example.com/podcasts/everything/\"")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(5650889)
+                                .type("audio/x-m4v")
+                                .url("http://example.com/podcasts/everything/caribou.m4v")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170523.m4v")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 23, 02, 0, 0), ZoneId.of("GMT")))
+                        .duration("04:34")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Stawamus Chief")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(1)
+                        .season(2)
+                        .title("S02 EP01 Stawamus Chief")
+                        .author("The Sunset Adventurers")
+                        .subtitle("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .summary("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .description("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .contentEncoded("We tackle Stawamus Chief outside of Vancouver, BC and you should too!")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20170516.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 16, 02, 0, 0), ZoneId.of("GMT")))
+                        .duration("13:24")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Kuliouou Ridge Trail")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(4)
+                        .season(1)
+                        .title("S01 EP04 Kuliouou Ridge Trail")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .summary("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .description("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .contentEncoded("Oahu, Hawaii, has some picturesque hikes and this is one of the best!")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160509.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 10, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("15:29")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Blood Mountain Loop")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(3)
+                        .season(1)
+                        .title("S01 EP03 Blood Mountain Loop")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .summary("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .description("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .contentEncoded("Hiking the Appalachian Trail and Freeman Trail in Georgia")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160502.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 5, 3, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("24:59")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Garden of the Gods Wilderness")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(2)
+                        .season(1)
+                        .title("S01 EP02 Garden of the Gods Wilderness")
+                        .author("The Sunset Adventurers")
+                        .subtitle("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .summary("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .description("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .contentEncoded("Wilderness Area Garden of the Gods in Illinois is a delightful spot for an extended hike.")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160425.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 4, 26, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("13:59")
+                        .explicit(false)
+                        .build())
+                .item(ItunesPodcastEpisode.builder("Upper Priest Lake Trail to Continental Creek Trail")
+                        .episodeType(ItunesPodcastEpisodeType.FULL)
+                        .episode(1)
+                        .season(1)
+                        .title("S01 EP01 Upper Priest Lake Trail to Continental Creek Trail")
+                        .author("The Sunset Adventurers")
+                        .subtitle("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .summary("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .description("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .contentEncoded("We check out this powerfully scenic hike following the river in the Idaho Panhandle National Forests.")
+                        .enclosure(RssItemEnclosure.builder()
+                                .length(498537)
+                                .type("audio/mpeg")
+                                .url("http://example.com/podcasts/everything/AllAboutEverythingEpisode4.mp3")
+                                .build())
+                        .guid("http://example.com/podcasts/archive/aae20160418a.mp3")
+                        .pubDate(ZonedDateTime.of(LocalDateTime.of(2017, 4, 19, 01, 15, 0), ZoneId.of("GMT")))
+                        .duration("23:59")
+                        .explicit(false)
+                        .contentEncoded("The Sunset Explorers share tips, techniques and recommendations for great hikes and adventures around the United States. Listen on &lt;a href=\"https://www.apple.com/itunes/podcasts/\"&gt;Apple Podcasts&lt;/a&gt;")
+                        .build()).build());
+    }
+
+    @Override
+    @SingleResult
+    public Publisher&lt;RssChannel&gt; fetchById(Serializable id) {
+        return Publishers.empty();
+    }
+}</code></pre>
+</div>
+</div>
+
+<h1 id="jsonfeed"><a class="anchor" href="#jsonfeed"></a>7 JSON Feeds</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/jsonfeed.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p><a href="https://jsonfeed.org">JSON Feed</a> is a format similar to RSS and Atom but in JSON.</p>
+</div>
+<div class="paragraph">
+<p>The following dependency contains the core classes to build a JSON Feed.</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="title"></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.rss:micronaut-jsonfeed-core")</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.rss&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-jsonfeed-core&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div></p>
+</div>
+<div class="paragraph">
+<p>To get such JSON:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "My Example Feed",
+    "home_page_url": "https://example.org/",
+    "feed_url": "https://example.org/feed.json",
+    "items": [
+        {
+            "id": "2",
+            "content_text": "This is a second item.",
+            "url": "https://example.org/second-item"
+        },
+        {
+            "id": "1",
+            "content_html": "&lt;p&gt;Hello, world!&lt;/p&gt;",
+            "url": "https://example.org/initial-post"
+       }
+    ]
+}        </code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can write:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JsonFeed feed = JsonFeed.builder()
+        .version("https://jsonfeed.org/version/1.1")
+        .title("My Example Feed")
+        .homePageUrl("https://example.org/")
+        .feedUrl("https://example.org/feed.json")
+        .item(JsonFeedItem.builder()
+                .id("2")
+                .contentText("This is a second item.")
+                .url("https://example.org/second-item")
+                .build())
+        .item(JsonFeedItem.builder()
+                .id("1")
+                .contentHtml("&lt;p&gt;Hello, world!&lt;/p&gt;")
+                .url("https://example.org/initial-post")
+                .build())
+        .build()</code></pre>
+</div>
+</div>
+
+<h2 id="jsonfeedhttp"><a class="anchor" href="#jsonfeedhttp"></a>7.1 JSON Feeds Endpoint</h2>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/jsonfeed/jsonfeedhttp.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>The following dependency contains functionality to expose an endpoint to return a JSON Feed:</p>
+</div>
+<div class="paragraph">
+<p>        <div class="listingblock multi-language-sample">
+<div class="title"></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="gradle">implementation(<span class="hljs-string">"io.micronaut.rss:micronaut-jsonfeed")</span></code></pre>
+</div>
+</div>
+<div class="listingblock multi-language-sample">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="maven">&lt;dependency&gt;
+    &lt;groupId&gt;io.micronaut.rss&lt;/groupId&gt;
+    &lt;artifactId&gt;micronaut-jsonfeed&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div></p>
+</div>
+<div class="paragraph">
+<p>Your JSON Feed will be of content type <code>application/json+feed</code>.</p>
+</div>
+<div class="paragraph">
+<p>You have to  <a href="https://docs.micronaut.io/latest/guide/index.html#consumesAnnotation">register an additional type</a> for Micronaut&#8217;s <code>json</code> codec:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">micronaut:
+  codec:
+    json:
+      additional-types:
+        - application/json+feed</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, if you provide a bean of type <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html">JsonFeedProvider</a> such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Singleton
+public class ExampleJsonFeedProvider implements JsonFeedProvider {
+
+    @NonNull
+    @Override
+    public Publisher&lt;JsonFeed&gt; feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
+        return Flux.create( emitter -&gt; {
+            emitter.next(JsonFeed.builder()
+                    .version("https://jsonfeed.org/version/1.1")
+                    .title("My Example Feed")
+                    .homePageUrl("https://example.org/")
+                    .feedUrl("https://example.org/feed.json")
+                    .item(JsonFeedItem.builder()
+                            .id("2")
+                            .contentText("This is a second item.")
+                            .url("https://example.org/second-item")
+                            .build())
+                    .item(JsonFeedItem.builder()
+                            .id("1")
+                            .contentHtml("&lt;p&gt;Hello, world!&lt;/p&gt;")
+                            .url("https://example.org/initial-post")
+                            .build())
+                    .build());
+            emitter.complete();
+        }, FluxSink.OverflowStrategy.ERROR);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+If the creation of the JSON feed is a blocking I/O operation, <a href="https://docs.micronaut.io/latest/guide/index.html#reactiveServer">offload that tasks to a separate thread pool</a> that does not block the Event loop.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A GET request to <code>/feeds/json</code> returns a 200 OK response with HTTP Header with name <code>Content-Type</code> with value <code>application/json+feed</code> and a JSON Payload in the body such as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "My Example Feed",
+    "home_page_url": "https://example.org/",
+    "feed_url": "https://example.org/feed.json",
+    "items": [
+        {
+            "id": "2",
+            "content_text": "This is a second item.",
+            "url": "https://example.org/second-item"
+        },
+        {
+            "id": "1",
+            "content_html": "&lt;p&gt;Hello, world!&lt;/p&gt;",
+            "url": "https://example.org/initial-post"
+       }
+    ]
+}        </pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are additional configuration options for the JSON Feed Controller:</p>
+</div>
+<a id="io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties" href="#io.micronaut.rss.jsonfeed.http.JsonFeedControllerConfigurationProperties">&#128279;</a>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html">JsonFeedControllerConfigurationProperties</a></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.root-path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures  rootpath. Default value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures  path. Default value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether  should be enabled. Default value ().</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can implement pagination by supplying <code>maxNumberOfItems</code> and <code>pageNumber</code> which will be passed to your implementation of  <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedProvider.html">JsonFeedProvider</a>.</p>
+</div>
+
+<h1 id="repository"><a class="anchor" href="#repository"></a>8 Repository</h1>
+
+<div class='contribute-btn'>
+    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/micronaut-projects/micronaut-rss/edit/master/src/main/docs/guide/repository.adoc"'>
+        <i class='fa fa-pencil-square-o'></i> Improve this doc
+    </button>
+</div>
+
+
+<div class="paragraph">
+<p>You can find the source code of this project in this repository:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/micronaut-projects/micronaut-rss">https://github.com/micronaut-projects/micronaut-rss</a></p>
+</div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
