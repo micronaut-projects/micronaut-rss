@@ -3,6 +3,9 @@ plugins {
 }
 
 dependencies {
+    annotationProcessor(mnValidation.micronaut.validation.processor)
+    implementation(mnValidation.micronaut.validation)
+
     api mn.jackson.annotations
     api mn.micronaut.inject
     api projects.micronautRssLanguage
