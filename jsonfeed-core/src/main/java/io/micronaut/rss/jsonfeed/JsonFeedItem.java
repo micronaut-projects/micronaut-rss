@@ -108,7 +108,6 @@ public class JsonFeedItem {
     @Nullable
     private List<String> tags;
 
-    @Pattern(regexp = RssLanguage.LANGUAGE_CODE_PATTERN)
     @Nullable
     private RssLanguage language;
 
