@@ -13,6 +13,9 @@ spock = "2.3-groovy-4.0"
 
 
 [libraries]
+# Core
+micronaut-core = { module = 'io.micronaut:micronaut-core-bom', version.ref = 'micronaut' }
+
 micronaut-logging = { module = "io.micronaut.logging:micronaut-logging-bom", version.ref = "micronaut-logging" }
 
 findbugs = { module = "com.google.code.findbugs:jsr305", version.ref = "findbugs" }
