@@ -94,14 +94,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default @NonNull org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#feed()" class="member-name-link">feed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Retrieves a JSON Feed.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#feed(java.lang.Integer,java.lang.Integer)" class="member-name-link">feed</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxNumberOfItems,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pageNumber)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NonNull org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#feed(java.lang.Integer,java.lang.Integer)" class="member-name-link">feed</a><wbr>(@Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxNumberOfItems,
+ @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pageNumber)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Retrieves a JSON Feed.</div>
 </div>
@@ -123,10 +123,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="feed(java.lang.Integer,java.lang.Integer)">
 <h3>feed</h3>
 <div class="member-signature"><span class="annotations">@NonNull
-</span><span class="return-type">org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</span>&nbsp;<span class="element-name">feed</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxNumberOfItems,
+</span><span class="return-type">@NonNull org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</span>&nbsp;<span class="element-name">feed</span><wbr><span class="parameters">(@Nullable
+ @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxNumberOfItems,
  @Nullable
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pageNumber)</span></div>
+ @Nullable <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pageNumber)</span></div>
 <div class="block">Retrieves a JSON Feed. You can use the paramters `maxNumberOfItems` and `pageNumber` in combination with <a href="../JsonFeed.html#getNextURL()"><code>JsonFeed.getNextURL()</code></a></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -141,7 +141,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="feed()">
 <h3>feed</h3>
 <div class="member-signature"><span class="annotations">@NonNull
-</span><span class="modifiers">default</span>&nbsp;<span class="return-type">org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</span>&nbsp;<span class="element-name">feed</span>()</div>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type">@NonNull org.reactivestreams.Publisher&lt;<a href="../JsonFeed.html" title="class in io.micronaut.rss.jsonfeed">JsonFeed</a>&gt;</span>&nbsp;<span class="element-name">feed</span>()</div>
 <div class="block">Retrieves a JSON Feed.</div>
 <dl class="notes">
 <dt>Returns:</dt>
