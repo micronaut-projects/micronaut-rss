@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.micronaut.rss"},{"l":"io.micronaut.rss.http"},{"l":"io.micronaut.rss.itunespodcast"},{"l":"io.micronaut.rss.jsonfeed"},{"l":"io.micronaut.rss.jsonfeed.http"},{"l":"io.micronaut.rss.language"}];updateSearchResults();
