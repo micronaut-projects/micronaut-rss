@@ -2,12 +2,12 @@
 
 findbugs = "3.0.2"
 
-micronaut-serde = "2.0.0-M12"
-micronaut-validation = "4.0.0-M11"
+micronaut-serde = "2.0.0-M13"
+micronaut-validation = "4.0.0-M12"
 micronaut-logging = "1.0.0-M5"
 micronaut-docs = "2.0.0"
-micronaut = "4.0.0-RC4"
-micronaut-test = "4.0.0-M5"
+micronaut = "4.0.0-RC5"
+micronaut-test = "4.0.0-M9"
 groovy = "4.0.12"
 spock = "2.3-groovy-4.0"
 
