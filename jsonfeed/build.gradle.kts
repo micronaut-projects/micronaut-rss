@@ -12,6 +12,5 @@ dependencies {
     testImplementation(mn.groovy.json)
     testImplementation(mn.micronaut.http.client)
     testImplementation(mn.micronaut.http.server.netty)
-    testImplementation(mn.snakeyaml)
     testRuntimeOnly(mnLogging.logback.classic)
 }
