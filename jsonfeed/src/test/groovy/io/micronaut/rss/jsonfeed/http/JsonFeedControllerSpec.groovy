@@ -1,16 +1,22 @@
 package io.micronaut.rss.jsonfeed.http
 
 import groovy.json.JsonSlurper
+import io.micronaut.context.annotation.Property
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
+import io.micronaut.http.client.HttpClient
+import io.micronaut.http.client.annotation.Client
+import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import jakarta.inject.Inject
+import spock.lang.Specification
 
-class JsonFeedControllerSpec extends EmbeddedServerSpecification {
-
-    @Override
-    String getSpecName() {
-        'JsonFeedControllerSpec'
-    }
+@MicronautTest
+@Property(name = 'spec.name', value = 'JsonFeedControllerSpec')
+class JsonFeedControllerSpec extends Specification {
+    @Inject
+    @Client("/")
+    HttpClient httpClient
 
     void "/feeds/json returns a json feed if JsonFeedProvider exists"() {
         given:
@@ -36,12 +42,8 @@ class JsonFeedControllerSpec extends EmbeddedServerSpecification {
 }        
 //end::json[]
 '''
-
-        expect:
-        applicationContext.containsBean(JsonFeedProvider)
-
         when:
-        HttpResponse<?> rsp = client.exchange(HttpRequest.GET('/feeds/json'), String)
+        HttpResponse<?> rsp = httpClient.toBlocking().exchange(HttpRequest.GET('/feeds/json'), String)
 
         then:
         noExceptionThrown()

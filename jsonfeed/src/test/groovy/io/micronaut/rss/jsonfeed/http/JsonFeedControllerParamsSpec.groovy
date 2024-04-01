@@ -1,25 +1,36 @@
 package io.micronaut.rss.jsonfeed.http
 
+import io.micronaut.context.ApplicationContext
+import io.micronaut.context.annotation.Property
 import io.micronaut.context.annotation.Requires
 import io.micronaut.core.annotation.NonNull
 import io.micronaut.core.annotation.Nullable
+import io.micronaut.core.async.annotation.SingleResult
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
+import io.micronaut.http.client.HttpClient
+import io.micronaut.http.client.annotation.Client
 import io.micronaut.rss.jsonfeed.JsonFeed
 import io.micronaut.rss.jsonfeed.JsonFeedItem
+import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import jakarta.inject.Inject
 import reactor.core.publisher.Flux
 import reactor.core.publisher.FluxSink
 import org.reactivestreams.Publisher
 
 import jakarta.inject.Singleton
+import spock.lang.Specification
 
-class JsonFeedControllerParamsSpec extends EmbeddedServerSpecification {
+@Property(name = 'spec.name', value = 'JsonFeedControllerParamsSpec')
+@MicronautTest
+class JsonFeedControllerParamsSpec extends Specification {
+    @Inject
+    ApplicationContext applicationContext
 
-    @Override
-    String getSpecName() {
-        'JsonFeedControllerParamsSpec'
-    }
+    @Inject
+    @Client("/")
+    HttpClient httpClient
 
     void "/feeds/json passes query values parameters to JSON Feed Provider"() {
         given:
@@ -27,7 +38,7 @@ class JsonFeedControllerParamsSpec extends EmbeddedServerSpecification {
         applicationContext.containsBean(JsonFeedProvider)
 
         when:
-        HttpResponse<?> rsp = client.exchange(HttpRequest.GET('/feeds/json?maxNumberOfItems=50&pageNumber=0'), String)
+        HttpResponse<?> rsp = httpClient.toBlocking().exchange(HttpRequest.GET('/feeds/json?maxNumberOfItems=50&pageNumber=0'), String)
 
         then:
         noExceptionThrown()
@@ -54,6 +65,7 @@ class JsonFeedControllerParamsSpec extends EmbeddedServerSpecification {
         Integer pageNumber
 
         @NonNull
+        @SingleResult
         @Override
         Publisher<JsonFeed> feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
             this.maxNumberOfItems = maxNumberOfItems

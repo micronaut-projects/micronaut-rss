@@ -17,6 +17,7 @@ package io.micronaut.rss.jsonfeed.http;
 
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;
+import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.rss.jsonfeed.JsonFeed;
 import org.reactivestreams.Publisher;
 
@@ -36,6 +37,7 @@ public interface JsonFeedProvider {
      * @return A Json Feed
      */
     @NonNull
+    @SingleResult
     Publisher<JsonFeed> feed(@Nullable Integer maxNumberOfItems,
                              @Nullable Integer pageNumber);
 
@@ -44,6 +46,7 @@ public interface JsonFeedProvider {
      * @return A Json Feed
      */
     @NonNull
+    @SingleResult
     default Publisher<JsonFeed> feed() {
         return feed(null, null);
     }
