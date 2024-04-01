@@ -1,6 +1,14 @@
 package io.micronaut.rss.jsonfeed.http
 
-class JsonFeedControllerConfigurationSpec extends ApplicationContextSpecification {
+import io.micronaut.context.ApplicationContext
+import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import jakarta.inject.Inject
+import spock.lang.Specification
+
+@MicronautTest
+class JsonFeedControllerConfigurationSpec extends Specification {
+    @Inject
+    ApplicationContext applicationContext
 
     void "path defaults to /json"() {
         expect:

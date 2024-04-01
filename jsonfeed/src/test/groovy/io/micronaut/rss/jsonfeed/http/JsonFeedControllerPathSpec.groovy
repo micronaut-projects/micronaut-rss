@@ -1,38 +1,36 @@
 package io.micronaut.rss.jsonfeed.http
 
+import io.micronaut.context.annotation.Property
 import io.micronaut.context.annotation.Requires
 import io.micronaut.core.annotation.NonNull
 import io.micronaut.core.annotation.Nullable
+import io.micronaut.core.async.annotation.SingleResult
 import io.micronaut.http.HttpRequest
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.HttpStatus
+import io.micronaut.http.client.HttpClient
+import io.micronaut.http.client.annotation.Client
 import io.micronaut.rss.jsonfeed.JsonFeed
 import io.micronaut.rss.jsonfeed.JsonFeedItem
+import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import jakarta.inject.Inject
 import reactor.core.publisher.FluxSink
 import reactor.core.publisher.Flux
 import org.reactivestreams.Publisher
-
 import jakarta.inject.Singleton
+import spock.lang.Specification
 
-class JsonFeedControllerPathSpec extends EmbeddedServerSpecification {
-
-    @Override
-    String getSpecName() {
-        'JsonFeedControllerPathSpec'
-    }
-
-    @Override
-    Map<String, Object> getConfiguration() {
-        super.configuration + ['jsonfeed.path': 'all']
-    }
+@Property(name = "spec.name", value = "JsonFeedControllerPathSpec")
+@Property(name = "jsonfeed.path", value = "all")
+@MicronautTest
+class JsonFeedControllerPathSpec extends Specification {
+    @Inject
+    @Client("/")
+    HttpClient httpClient
 
     void "it is possible to change the url of the JSON Feed Controller"() {
-        given:
-        expect:
-        applicationContext.containsBean(JsonFeedProvider)
-
         when:
-        HttpResponse<?> rsp = client.exchange(HttpRequest.GET('/feeds/all'), String)
+        HttpResponse<?> rsp = httpClient.toBlocking().exchange(HttpRequest.GET('/feeds/all'), String)
 
         then:
         noExceptionThrown()
@@ -45,6 +43,7 @@ class JsonFeedControllerPathSpec extends EmbeddedServerSpecification {
     static class ExampleJsonFeedProvider implements JsonFeedProvider {
 
         @NonNull
+        @SingleResult
         @Override
         Publisher<JsonFeed> feed(@Nullable Integer maxNumberOfItems, @Nullable Integer pageNumber) {
             return Flux.create(emitter -> {
