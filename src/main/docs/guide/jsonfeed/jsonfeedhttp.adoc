@@ -8,7 +8,7 @@ You have to  https://docs.micronaut.io/latest/guide/index.html#consumesAnnotatio
 
 [source, yaml]
 ----
-include::{sourcedir}/jsonfeed/src/test/resources/application.yml[]
+include::{sourcedir}/jsonfeed/src/test/resources/application.properties[]
 ----
 
 Then, if you provide a bean of type api:rss.jsonfeed.http.JsonFeedProvider[] such as:
