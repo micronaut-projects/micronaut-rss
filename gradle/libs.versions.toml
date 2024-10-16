@@ -3,7 +3,7 @@
 findbugs = "3.0.2"
 
 micronaut-serde = "2.11.0"
-micronaut-validation = "4.7.0"
+micronaut-validation = "4.8.0"
 micronaut-logging = "1.4.0"
 micronaut-docs = "2.0.0"
 micronaut = "4.6.6"
