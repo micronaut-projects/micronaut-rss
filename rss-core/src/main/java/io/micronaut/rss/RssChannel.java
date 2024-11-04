@@ -194,7 +194,7 @@ public class RssChannel {
     }
 
     /**
-     * Specify one or more categories that the channel belongs to. Follows the same rules as the <item>-level category element. More info.
+     * Specify one or more categories that the channel belongs to. Follows the same rules as the {@code <item>}-level category element. More info.
      * @return Specify one or more categories that the channel belongs to.
      */
     public Optional<List<List<String>>> getCategory() {
