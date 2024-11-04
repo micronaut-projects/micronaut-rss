@@ -110,7 +110,7 @@ public class DefaultRssFeedRenderer implements RssFeedRenderer {
     /**
      *
      * @param description RSS Item description
-     * @return Whether description should be wrapped with <![CDATA[ ]]
+     * @return Whether description should be wrapped with {@code <![CDATA[ ]]}
      */
     protected boolean shouldWrapDescriptionWithCData(@NonNull String description) {
         return description.contains(LOWER_THAN);
