@@ -8,7 +8,7 @@ micronaut-logging = "1.6.1"
 micronaut-docs = "2.0.0"
 micronaut = "4.8.18"
 micronaut-test = "4.5.0"
-groovy = "4.0.20"
+groovy = "4.0.27"
 spock = "2.3-groovy-4.0"
 sonatype-scan = "3.0.0"
 
