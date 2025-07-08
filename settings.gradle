@@ -18,6 +18,7 @@ include 'itunespodcast'
 include 'jsonfeed-core'
 include 'jsonfeed'
 include 'rss-language'
+include 'test-suite'
 
 enableFeaturePreview 'TYPESAFE_PROJECT_ACCESSORS'
 

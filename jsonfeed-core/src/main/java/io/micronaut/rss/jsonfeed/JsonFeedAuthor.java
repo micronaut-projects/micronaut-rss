@@ -15,6 +15,7 @@
  */
 package io.micronaut.rss.jsonfeed;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.core.annotation.Introspected;
@@ -115,6 +116,7 @@ public class JsonFeedAuthor {
      *
      * @return true if all author's, name, url and avatar are empty or null.
      */
+    @JsonIgnore
     public boolean isEmpty() {
         return StringUtils.isEmpty(this.avatar) &&
             StringUtils.isEmpty(this.url) &&

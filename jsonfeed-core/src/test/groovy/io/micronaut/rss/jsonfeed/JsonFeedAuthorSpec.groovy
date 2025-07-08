@@ -1,8 +1,30 @@
 package io.micronaut.rss.jsonfeed
 
+import io.micronaut.context.ApplicationContext
 import io.micronaut.core.beans.BeanIntrospection
+import io.micronaut.json.JsonMapper
 
 class JsonFeedAuthorSpec extends ApplicationContextSpecification {
+
+    void "JsonFeedAuthor serialization"() {
+        given:
+        ApplicationContext ctx = ApplicationContext.run()
+        JsonMapper jsonMapper = ctx.getBean(JsonMapper)
+        JsonFeedAuthor author = JsonFeedAuthor.builder()
+                .name("John Doe")
+                .url("mailto:support@mycompany.com")
+                .avatar("https://staging.storage.noticeable.io/users/1hvH7RWx9CWe8QCskAHBcsgpbkF2/01h5m04a42c02czp09khyrx3bm-avatar.png")
+                .build()
+        when:
+        String json = jsonMapper.writeValueAsString(author)
+
+        then:
+        json
+        !json.contains("empty")
+
+        cleanup:
+        ctx.close()
+    }
     void "JsonFeedAuthor is annotated with Introspected"() {
         when:
         BeanIntrospection.getIntrospection(JsonFeedAuthor)

@@ -1,7 +1,7 @@
 package io.micronaut.rss.jsonfeed
 
 import io.micronaut.context.ApplicationContext
-import io.micronaut.serde.ObjectMapper
+import io.micronaut.json.JsonMapper
 import spock.lang.AutoCleanup
 import spock.lang.Shared
 import spock.lang.Specification
@@ -18,5 +18,5 @@ abstract class ApplicationContextSpecification extends Specification implements 
     Validator validator = applicationContext.getBean(Validator)
 
     @Shared
-    ObjectMapper objectMapper = applicationContext.getBean(ObjectMapper)
+    JsonMapper objectMapper = applicationContext.getBean(JsonMapper)
 }

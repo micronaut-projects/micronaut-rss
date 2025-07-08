@@ -1,0 +1,14 @@
+plugins {
+    id("io.micronaut.build.internal.rss-module")
+}
+
+dependencies {
+    annotationProcessor(mnValidation.micronaut.validation.processor)
+    implementation(mnValidation.micronaut.validation)
+    api(mn.jackson.annotations)
+    api(mn.micronaut.inject)
+    api(projects.micronautRssLanguage)
+    testImplementation(mn.micronaut.jackson.databind)
+    testImplementation(mn.groovy.json)
+    testImplementation(mn.micronaut.http.client)
+}
