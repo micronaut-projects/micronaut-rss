@@ -119,7 +119,7 @@
         <h1>Micronaut RSS</h1>
         <p></p>
         <p>Eases the creation of RSS feeds with Micronaut</p>
-        <p><strong>Version:</strong> 4.8.0-SNAPSHOT </p>
+        <p><strong>Version:</strong> 4.8.1-SNAPSHOT </p>
     </div>
     
 <h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
@@ -276,15 +276,17 @@
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/http/FeedControllerConfigurationProperties.html">FeedControllerConfigurationProperties</a></caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property</th>
 <th class="tableblock halign-left valign-top">Type</th>
 <th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 </tr>
 </thead>
 <tbody>
@@ -292,11 +294,13 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.enabled</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> should be enabled. Default value (true).</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>micronaut.rss.path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/http/FeedController.html">FeedController</a> path. Default value "/feed"</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -812,15 +816,17 @@ If the creation of the JSON feed is a blocking I/O operation, <a href="https://d
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Configuration Properties for <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedControllerConfigurationProperties.html">JsonFeedControllerConfigurationProperties</a></caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property</th>
 <th class="tableblock halign-left valign-top">Type</th>
 <th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default value</th>
 </tr>
 </thead>
 <tbody>
@@ -828,16 +834,19 @@ If the creation of the JSON feed is a blocking I/O operation, <a href="https://d
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.root-path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> rootpath. Default value "/feeds"</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.path</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">java.lang.String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Configures <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> path. Default value "/json"</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfeed.enabled</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whether <a href="../api/io/micronaut/rss/jsonfeed/http/JsonFeedController.html">JsonFeedController</a> should be enabled. Default value (true).</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
