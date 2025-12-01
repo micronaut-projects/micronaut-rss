@@ -15,7 +15,7 @@
  */
 package io.micronaut.rss.jsonfeed;
 
-import io.micronaut.core.annotation.NonNull;
+import org.jspecify.annotations.NonNull;
 import io.micronaut.core.annotation.Introspected;
 
 import jakarta.validation.constraints.NotBlank;

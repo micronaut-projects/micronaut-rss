@@ -15,7 +15,7 @@
  */
 package io.micronaut.rss.language;
 
-import io.micronaut.core.annotation.NonNull;
+import org.jspecify.annotations.NonNull;
 
 import java.util.Arrays;
 import java.util.HashMap;
