@@ -15,11 +15,11 @@
  */
 package io.micronaut.rss.itunespodcast;
 
-import io.micronaut.core.annotation.NonNull;
+import org.jspecify.annotations.NonNull;
 import io.micronaut.rss.RssItem;
 import io.micronaut.rss.RssItemEnclosure;
 
-import io.micronaut.core.annotation.Nullable;
+import org.jspecify.annotations.Nullable;
 import jakarta.validation.constraints.Positive;
 import java.time.ZonedDateTime;
 import java.util.Optional;

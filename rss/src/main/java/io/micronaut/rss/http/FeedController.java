@@ -16,7 +16,7 @@
 package io.micronaut.rss.http;
 
 import io.micronaut.context.annotation.Requires;
-import io.micronaut.core.annotation.NonNull;
+import org.jspecify.annotations.NonNull;
 import io.micronaut.core.async.annotation.SingleResult;
 import io.micronaut.core.io.Writable;
 import io.micronaut.http.HttpResponse;
