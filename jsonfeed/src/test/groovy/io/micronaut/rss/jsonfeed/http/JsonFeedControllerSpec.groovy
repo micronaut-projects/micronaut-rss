@@ -27,10 +27,21 @@ class JsonFeedControllerSpec extends Specification {
     "title": "My Example Feed",
     "home_page_url": "https://example.org/",
     "feed_url": "https://example.org/feed.json",
+    "authors": [
+        {
+            "name": "Feed Author",
+            "url": "mailto:feed@example.org"
+        }
+    ],
     "items": [
         {
             "id": "2",
             "content_text": "This is a second item.",
+            "authors": [
+                {
+                    "name": "Item Author"
+                }
+            ],
             "url": "https://example.org/second-item"
         },
         {
@@ -61,10 +72,15 @@ class JsonFeedControllerSpec extends Specification {
         m['title'] == result['title']
         m['home_page_url'] == result['home_page_url']
         m['feed_url'] ==  result['feed_url']
+        m['authors'][0]['name'] == result['authors'][0]['name']
+        m['authors'][0]['url'] == result['authors'][0]['url']
+        !result['authors'][0].containsKey('empty')
         result['items']
         m['items'].size() == result['items'].size()
         m['items'][0].id == result['items'][0].id
         m['items'][0]['content_text'] == result['items'][0]['content_text']
+        m['items'][0]['authors'][0]['name'] == result['items'][0]['authors'][0]['name']
+        !result['items'][0]['authors'][0].containsKey('empty')
         m['items'][0]['url'] == result['items'][0]['url']
 
         m['items'][1].id == result['items'][1].id

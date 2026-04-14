@@ -4,6 +4,7 @@ import io.micronaut.context.annotation.Requires;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 import io.micronaut.core.async.annotation.SingleResult;
+import io.micronaut.rss.jsonfeed.JsonFeedAuthor;
 import io.micronaut.rss.jsonfeed.JsonFeed;
 import io.micronaut.rss.jsonfeed.JsonFeedItem;
 import reactor.core.publisher.Flux;
@@ -26,9 +27,16 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
                     .title("My Example Feed")
                     .homePageUrl("https://example.org/")
                     .feedUrl("https://example.org/feed.json")
+                    .author(JsonFeedAuthor.builder()
+                            .name("Feed Author")
+                            .url("mailto:feed@example.org")
+                            .build())
                     .item(JsonFeedItem.builder()
                             .id("2")
                             .contentText("This is a second item.")
+                            .author(JsonFeedAuthor.builder()
+                                    .name("Item Author")
+                                    .build())
                             .url("https://example.org/second-item")
                             .build())
                     .item(JsonFeedItem.builder()
