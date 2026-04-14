@@ -29,7 +29,7 @@ import java.util.Map;
  * @author Sergio del Amo, mark1626
  * @since 2.2.0
  */
-@Introspected
+@Introspected(excludes = "empty")
 public class JsonFeedAuthor {
 
     public static final String KEY_AVATAR = "avatar";

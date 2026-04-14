@@ -1,14 +1,16 @@
 package io.micronaut.rss.jsonfeed
 
+import groovy.json.JsonSlurper
 import io.micronaut.core.beans.BeanIntrospection
 
 class JsonFeedAuthorSpec extends ApplicationContextSpecification {
     void "JsonFeedAuthor is annotated with Introspected"() {
         when:
-        BeanIntrospection.getIntrospection(JsonFeedAuthor)
+        BeanIntrospection<JsonFeedAuthor> introspection = BeanIntrospection.getIntrospection(JsonFeedAuthor)
 
         then:
         noExceptionThrown()
+        !introspection.propertyNames.contains("empty")
     }
 
     void "valid JsonFeedAuthor does not trigger any constraint exception"() {
@@ -76,6 +78,25 @@ class JsonFeedAuthorSpec extends ApplicationContextSpecification {
         "Sergio del Amo" == author.name
         "https://sergiodelamo.com" == author.url
         "https://sergiodelamo.com/images/sergiodelamo.png" == author.avatar
+    }
+
+    void "json serialization does not include empty property"() {
+        given:
+        JsonFeedAuthor author = JsonFeedAuthor.builder()
+                .name("Sergio del Amo")
+                .url("https://sergiodelamo.com")
+                .avatar("https://sergiodelamo.com/images/sergiodelamo.png")
+                .build()
+
+        when:
+        String json = objectMapper.writeValueAsString(author)
+        def serialized = new JsonSlurper().parseText(json) as Map<String, Object>
+
+        then:
+        !serialized.containsKey("empty")
+        serialized.name == "Sergio del Amo"
+        serialized.url == "https://sergiodelamo.com"
+        serialized.avatar == "https://sergiodelamo.com/images/sergiodelamo.png"
     }
 
     void "avatar is optional"() {

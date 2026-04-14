@@ -1,5 +1,6 @@
 package io.micronaut.rss.jsonfeed
 
+import groovy.json.JsonSlurper
 import io.micronaut.core.beans.BeanIntrospection
 
 import java.time.LocalDateTime
@@ -260,6 +261,29 @@ class JsonFeedItemSpec extends ApplicationContextSpecification {
         json.contains('date_modified')
         json.contains('external_url')
         json.contains('content_html')
+    }
+
+    void "serialized feed authors do not include empty property"() {
+        given:
+        JsonFeed jsonFeed = JsonFeed.builder("https://jsonfeed.org/version/1.1",
+                "Example Feed",
+                Collections.singletonList(JsonFeedItem.builder("1")
+                        .contentText("Hello, world!")
+                        .author(JsonFeedAuthor.builder()
+                                .name("Item Author")
+                                .build())
+                        .build()))
+                .author(JsonFeedAuthor.builder()
+                        .name("Feed Author")
+                        .build())
+                .build()
+
+        when:
+        Map<String, Object> serialized = new JsonSlurper().parseText(objectMapper.writeValueAsString(jsonFeed)) as Map<String, Object>
+
+        then:
+        !serialized.authors[0].containsKey("empty")
+        !serialized.items[0].authors[0].containsKey("empty")
     }
 
     static JsonFeedItem validJsonFeedItem() {
