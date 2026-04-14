@@ -761,9 +761,16 @@ public class ExampleJsonFeedProvider implements JsonFeedProvider {
                     .title("My Example Feed")
                     .homePageUrl("https://example.org/")
                     .feedUrl("https://example.org/feed.json")
+                    .author(JsonFeedAuthor.builder()
+                            .name("Feed Author")
+                            .url("mailto:feed@example.org")
+                            .build())
                     .item(JsonFeedItem.builder()
                             .id("2")
                             .contentText("This is a second item.")
+                            .author(JsonFeedAuthor.builder()
+                                    .name("Item Author")
+                                    .build())
                             .url("https://example.org/second-item")
                             .build())
                     .item(JsonFeedItem.builder()
@@ -800,10 +807,21 @@ If the creation of the JSON feed is a blocking I/O operation, <a href="https://d
     "title": "My Example Feed",
     "home_page_url": "https://example.org/",
     "feed_url": "https://example.org/feed.json",
+    "authors": [
+        {
+            "name": "Feed Author",
+            "url": "mailto:feed@example.org"
+        }
+    ],
     "items": [
         {
             "id": "2",
             "content_text": "This is a second item.",
+            "authors": [
+                {
+                    "name": "Item Author"
+                }
+            ],
             "url": "https://example.org/second-item"
         },
         {
