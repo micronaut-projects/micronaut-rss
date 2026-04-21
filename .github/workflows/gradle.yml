@@ -70,7 +70,7 @@ jobs:
           OSS_INDEX_USERNAME: ${{ secrets.OSS_INDEX_USERNAME }}
           OSS_INDEX_PASSWORD: ${{ secrets.OSS_INDEX_PASSWORD }}
         run: |
-          ./gradlew check jacocoReport --no-daemon --continue --scan
+          ./gradlew check jacocoReport --no-daemon --continue
 
       - name: "🔎 Run static analysis"
         if: env.SONAR_TOKEN_AVAILABLE == 'true' && matrix.java == '25'
