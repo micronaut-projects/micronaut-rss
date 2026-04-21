@@ -8,7 +8,7 @@ Micronaut RSS is...
 
 ## Documentation
 
-See the [Documentation](https://micronaut-projects.github.io/micronaut-rss/latest/guide/) for more information. 
+See the [Documentation](https://micronaut-projects.github.io/micronaut-rss/latest/guide/) for more information.
 
 See the [Snapshot Documentation](https://micronaut-projects.github.io/micronaut-rss/snapshot/guide/) for the current development docs.
 
