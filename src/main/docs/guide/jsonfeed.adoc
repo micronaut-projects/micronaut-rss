@@ -13,7 +13,4 @@ include::{sourcedir}/jsonfeed-core/src/test/groovy/io/micronaut/rss/jsonfeed/Jso
 
 You can write:
 
-[source, java]
-----
-include::{sourcedir}/jsonfeed-core/src/test/groovy/io/micronaut/rss/jsonfeed/JsonFeedSpec.groovy[tag=builder,indent=false]
-----
+snippet::io.micronaut.rss.docs.JsonFeedBuilderTest[tags="imports,builder",indent=0]
