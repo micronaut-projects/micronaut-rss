@@ -1,6 +1,7 @@
 from typing import Annotated
 
 from jakarta.inject import Inject
+from java.lang import String
 from micronaut.context.annotation import Property
 from micronaut.http import HttpRequest, HttpStatus, MediaType
 from micronaut.http.client import HttpClient
@@ -25,11 +26,11 @@ class MockRssFeedProviderTest:
 
     @Test
     def the_feed_controller_renders_the_channel_of_the_provider(self) -> None:
-        response = self.client.toBlocking().exchange(HttpRequest.GET("/feed"))
+        response = self.client.toBlocking().exchange(HttpRequest.GET("/feed"), String)
 
         assert response.status() == HttpStatus.OK
         assert str(response.getContentType().get()) == MediaType.APPLICATION_XML
-        rss = self.client.toBlocking().retrieve(HttpRequest.GET("/feed"))
+        rss = response.body()
         assert "<title>Liftoff News</title>" in rss
         for guid in EXPECTED_GUIDS:
             assert "<guid>" + guid + "</guid>" in rss

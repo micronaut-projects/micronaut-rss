@@ -2,6 +2,7 @@ import json
 from typing import Annotated
 
 from jakarta.inject import Inject
+from java.lang import String
 from micronaut.context.annotation import Property
 from micronaut.http import HttpRequest, HttpStatus
 from micronaut.http.client import HttpClient
@@ -18,11 +19,11 @@ class ExampleJsonFeedProviderTest:
 
     @Test
     def the_json_feed_controller_serves_the_feed_of_the_provider(self) -> None:
-        response = self.client.toBlocking().exchange(HttpRequest.GET("/feeds/json"))
+        response = self.client.toBlocking().exchange(HttpRequest.GET("/feeds/json"), String)
 
         assert response.status() == HttpStatus.OK
         assert response.header("Content-Type") == "application/json+feed"
-        feed = json.loads(self.client.toBlocking().retrieve(HttpRequest.GET("/feeds/json")))
+        feed = json.loads(response.body())
         assert feed["version"] == "https://jsonfeed.org/version/1.1"
         assert feed["title"] == "My Example Feed"
         assert feed["home_page_url"] == "https://example.org/"
